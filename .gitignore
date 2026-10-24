@@ -1,0 +1,9 @@
+.env
+.venv/
+__pycache__/
+data/raw/*
+!data/raw/.gitkeep
+data/splits/
+results/*/
+prompts/esempi/*/
+!prompts/esempi/.gitkeep

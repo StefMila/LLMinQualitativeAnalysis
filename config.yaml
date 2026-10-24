@@ -1,0 +1,106 @@
+# Unico punto di controllo del progetto.
+# Per passare dal prototipo al disegno completo si cambiano i numeri qui, non il codice.
+
+seed: 42
+
+# --- Dati ---------------------------------------------------------------
+dati:
+  excel: data/raw/risposte.xlsx   # Excel anonimizzato (non si modifica mai)
+  foglio: QL Coding               # contiene sia le risposte sia la codifica umana
+  # Le colonne si indicano con la LETTERA di Excel: i titoli nel file hanno gli accenti corrotti.
+  # L'ID è il numero di riga di Excel (la colonna ID del file non è unica).
+  # col_umano = prima codifica ("Coding 1"); le colonne successive approfondiscono e per ora si ignorano.
+  # Nella prima codifica: "-" = non ancora codificata (riga esclusa), cella vuota = non classificabile.
+  non_codificato: "-"
+
+  domanda_attiva: piaciuto        # quale domanda analizzare; cambiala per passare alle altre
+  domande:
+    descrizione:
+      testo_domanda: "Se dovessi descrivere in una frase quest'attività a un compagno, cosa diresti?"
+      col_testo: AZ
+      col_umano: BA     # approfondimenti: BB, BC
+    piaciuto:
+      testo_domanda: "Cosa ti è piaciuto di più?"
+      col_testo: BD
+      col_umano: BE     # approfondimenti: BF, BG
+    non_piaciuto:
+      testo_domanda: "Cosa invece non ti è piaciuto?"
+      col_testo: BH
+      col_umano: BJ     # approfondimenti: BK, BL
+    diversamente:
+      testo_domanda: "Cosa avresti voluto fare diversamente?"
+      col_testo: BM
+      col_umano: BN     # approfondimenti: BO, BP
+
+split:
+  n_serbatoio: 50       # risposte da cui pescare esempi e fare il pilota dei prompt
+  n_valutazione: 300    # risposte su cui si misura l'accordo con l'umano
+                        # tutto il resto finisce in resto.csv
+
+# --- Codebook -----------------------------------------------------------
+# Dal foglio "Legendacoding". I nomi devono coincidere ESATTAMENTE con quelli della codifica umana.
+# Le definizioni vengono inserite nel prompt al posto di {codebook} in prompts/system.txt.
+categorie:
+  Social: "Enfasi sul lavorare insieme, confronto, condivisione, amicizia (es. gruppi, amici, gare tra compagni)."
+  Making: "Enfasi sul processo, sul fare: fare, provare, sperimentare, costruire."
+  Creativity: "Enfasi sul processo creativo: creare, inventare, progettare, ideare qualcosa di proprio. Non usarla per un 'creare' generico non collegato all'attività."
+  Freedom: "Enfasi sulla libertà di scegliere: fare qualcosa liberamente, da soli, in autonomia, a propria scelta."
+  Activity: "Enfasi sull'obiettivo o sul contenuto specifico dell'attività (es. programmare il gioco, creare un bot, la gara di corsa)."
+  Tool: "Enfasi sull'oggetto, lo strumento o la tecnologia usata (es. micro:bit, microscopio, un software)."
+  Time: "Enfasi sull'aspetto temporale (es. troppo poco tempo)."
+  Learning: "Enfasi sul processo di apprendimento, sugli aspetti formativi, sull'aver imparato cose nuove."
+  Teacher: "Enfasi sul formatore (docenti, prof, nomi dei formatori)."
+  Flow: "Enfasi sul flusso dell'attività: spiegazioni, teoria, attese, momenti morti, organizzazione delle lezioni."
+  Love: "Entusiasmo puro e indistinto per tutta l'esperienza (es. 'tutto' alla domanda su cosa è piaciuto; 'niente/nulla' alla domanda su cosa non è piaciuto o cosa cambiare)."
+  Feeling+: "Enfasi sulle sensazioni personali positive (es. interessante, divertente, coinvolgente, bello)."
+  Feeling-: "Enfasi sulle sensazioni personali negative (es. noioso, faticoso)."
+  Hate: "Rifiuto puro e indistinto di tutta l'esperienza (es. 'niente' alla domanda su cosa è piaciuto; 'tutto' alla domanda su cosa non è piaciuto)."
+  Competence: "Aspetto di competenza: attività percepita come troppo difficile o troppo facile, sentirsi capaci o incapaci."
+  Usefulness: "Enfasi sull'utilità percepita per il futuro."
+  hard fun: "Divertimento che porta ad apprendere: la risposta unisce il divertimento all'aver imparato qualcosa. Usala al posto di Feeling+ quando oltre al divertimento c'è un apprendimento."
+non_classificabile: non classificabile   # risposte vuote, "non so", rumore, fuori tema
+
+# --- Esperimento --------------------------------------------------------
+esperimento_id: exp04_fewshot   # come exp03_zeroshot, tranne gli esempi nel prompt
+n_risposte: 300         # campione completo di valutazione
+n_run: 10               # run previste per modello, strategia e risposta
+temperatura:  null      # gpt-5.6-luna e claude-opus-5 accettano solo il default (1); 0 dà errore
+max_tentativi: 3        # tentativi se il JSON non è valido o l'API dà errore
+livello_ragionamento:
+  openai: medium       # default documentato GPT-5.6 Luna
+  anthropic: high      # default documentato Claude Opus 5
+
+# Prompt caching (approvata dal professore il 2026-10-23 per exp04_fewshot ed eventuale one-shot).
+# Da dichiarare nella tesi: exp03_zeroshot eseguito SENZA cache, exp04 CON cache per Claude.
+# Cambia solo la configurazione della chiamata, non il testo: per Claude si aggiunge
+# cache_control {"type": "ephemeral"} (durata 5 minuti) alla fine del prefisso fisso
+# (system + codebook + esempi); fuori dalla cache resta solo la risposta dello studente.
+# Il testo inviato è identico a prompts/esempi/<domanda>/prompt_esempio_<strategia>.txt
+# (controllo: tests/test_cache.py). Chiamate sempre sequenziali e indipendenti, senza cronologia.
+# GPT non ha un'opzione: la cache è automatica sopra ~1.024 token e si registra solo se scatta.
+# Ogni record di calls.jsonl ha cache_enabled, token_cache_scrittura, token_cache_lettura e
+# token_ragionamento (vedi scripts/03_run.py). Equivalenza verificata con scripts/prova_cache.py.
+cache:
+  anthropic: true
+  openai: false        # nessun cache_control: false = cache non richiesta esplicitamente
+
+verifica_citazioni:
+  versione_verifica: verifica_v2_tre_esiti
+  soglia_somiglianza: 90  # provvisoria: da calibrare sul serbatoio
+  soglie_sensibilita: [80, 85, 90, 95]
+# Decisioni dichiarate il 2026-10-22, prima di lanciare la valutazione (punto M4):
+# le tre versioni delle metriche sono in scripts/metriche.py, i gruppi di stabilità in scripts/common.py.
+calibrazione_serbatoio: false  # include il serbatoio oltre al campione di valutazione. se false si valuta solo il campione di valutazione.
+
+modelli:
+  - provider: openai    # usa "mock" per provare la pipeline senza chiamare l'API, sennò inserisci openai
+    nome: gpt-5.6-luna   # deployment; ultimo modello_versione osservato: gpt-5.6-luna-2026-07-09
+  - provider: anthropic # Claude su Azure AI Foundry -  anthropic
+    nome: claude-opus-5  # nome del deployment su Azure
+
+strategie:
+  - few_shot            # zero_shot (exp03), one_shot, few_shot
+
+# Esempi per one-shot e few-shot (scripts/01b_esempi.py): regola fissata prima di exp04, non modificarla.
+esempi:
+  seed: 42              # ordine casuale delle risposte del serbatoio dentro ogni categoria

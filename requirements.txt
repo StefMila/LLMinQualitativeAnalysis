@@ -1,0 +1,9 @@
+pandas
+openpyxl
+pyyaml
+python-dotenv
+openai
+scikit-learn
+anthropic
+ftfy
+rapidfuzz
