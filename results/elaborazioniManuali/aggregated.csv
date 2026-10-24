@@ -1,0 +1,61 @@
+esperimento_id;modello;strategia;id;umano;etichetta_modale;;quota_modale;pareggio;n_run;n_valide;distribuzione;quota_risposte_con_tutte_le_citazioni_verificate;testo
+baseline_01;claude-opus-5;zero_shot;1020;Activity;Activity;VERO;1.0;False;3;3;{'Activity': np.int64(3)};1.0;Ricercare le informazioni.
+baseline_01;claude-opus-5;zero_shot;1171;Activity;Activity;VERO;1.0;False;3;3;{'Activity': np.int64(3)};1.0;programmare la centralina
+baseline_01;claude-opus-5;zero_shot;161;Activity;Activity;VERO;1.0;False;3;3;{'Activity': np.int64(3)};1.0;accendere le lucine con il computer
+baseline_01;claude-opus-5;zero_shot;179;Tool;Tool;VERO;1.0;False;3;3;{'Tool': np.int64(3)};1.0;usare il computer e comandare il robot
+baseline_01;claude-opus-5;zero_shot;216;Social;Social;VERO;1.0;False;3;3;{'Social': np.int64(3)};1.0;lavoro a gruppi
+baseline_01;claude-opus-5;zero_shot;224;Tool;Tool;VERO;1.0;False;3;3;{'Tool': np.int64(3)};1.0;scratch
+baseline_01;claude-opus-5;zero_shot;459;Activity;Activity;VERO;1.0;False;3;3;{'Activity': np.int64(3)};1.0;l'astronave
+baseline_01;claude-opus-5;zero_shot;471;Activity;Tool;FALSO;1.0;False;3;3;{'Tool': np.int64(3)};1.0;il rover
+baseline_01;claude-opus-5;zero_shot;535;Making;Making;VERO;1.0;False;3;3;{'Making': np.int64(3)};1.0;costruire il robot 
+baseline_01;claude-opus-5;zero_shot;547;Making;Creativity;FALSO;1.0;False;3;3;{'Creativity': np.int64(3)};1.0;creare immagini 
+baseline_01;claude-opus-5;zero_shot;55;Freedom;Freedom;VERO;1.0;False;3;3;{'Freedom': np.int64(3)};1.0;FARE UNA STORIA COME VOLEVAMO NOI
+baseline_01;claude-opus-5;zero_shot;603;Activity;Creativity;FALSO;0.6666666666666666;False;3;3;{'Creativity': np.int64(2), 'Activity': np.int64(1)};1.0;Creare la presentazione.
+baseline_01;claude-opus-5;zero_shot;646;Activity;Making;FALSO;1.0;False;3;3;{'Making': np.int64(3)};1.0;Quando ho finito e ho rivisto tutto il lavoro
+baseline_01;claude-opus-5;zero_shot;648;Activity;Creativity;FALSO;1.0;False;3;3;{'Creativity': np.int64(3)};1.0;il poter creare un sito mio
+baseline_01;claude-opus-5;zero_shot;750;Activity;Flow;FALSO;1.0;False;3;3;{'Flow': np.int64(3)};1.0;il modo in cui si è svolta l'attività e le attività stesse fatte
+baseline_01;claude-opus-5;zero_shot;755;Teacher;Teacher;VERO;1.0;False;3;3;{'Teacher': np.int64(3)};1.0;Le spiegazioni del docente
+baseline_01;claude-opus-5;zero_shot;789;Activity;Making;FALSO;0.6666666666666666;False;3;3;{'Making': np.int64(2), 'Activity': np.int64(1)};1.0;FARE I GIOCHI
+baseline_01;claude-opus-5;zero_shot;805;Activity;Making;FALSO;1.0;False;3;3;{'Making': np.int64(3)};1.0;cercare di far funzionare il tutto
+baseline_01;claude-opus-5;zero_shot;825;Love;Activity;FALSO;1.0;False;3;3;{'Activity': np.int64(3)};1.0;min è piaciuto tutto soprattutto quando abbiamo fatto i percorsi ad esempio slalom tra i banchi
+baseline_01;claude-opus-5;zero_shot;93;Activity;Activity;VERO;1.0;False;3;3;{'Activity': np.int64(3)};1.0;travestire i thymio
+baseline_01;gpt-5.6-luna;zero_shot;1020;Activity;Activity;VERO;1.0;False;3;3;{'Activity': np.int64(3)};1.0;Ricercare le informazioni.
+baseline_01;gpt-5.6-luna;zero_shot;1171;Activity;Activity;VERO;1.0;False;3;3;{'Activity': np.int64(3)};1.0;programmare la centralina
+baseline_01;gpt-5.6-luna;zero_shot;161;Activity;Activity;VERO;1.0;False;3;3;{'Activity': np.int64(3)};1.0;accendere le lucine con il computer
+baseline_01;gpt-5.6-luna;zero_shot;179;Tool;Tool;VERO;1.0;False;3;3;{'Tool': np.int64(3)};1.0;usare il computer e comandare il robot
+baseline_01;gpt-5.6-luna;zero_shot;216;Social;Social;VERO;1.0;False;3;3;{'Social': np.int64(3)};1.0;lavoro a gruppi
+baseline_01;gpt-5.6-luna;zero_shot;224;Tool;Tool;VERO;1.0;False;3;3;{'Tool': np.int64(3)};1.0;scratch
+baseline_01;gpt-5.6-luna;zero_shot;459;Activity;Tool;FALSO;0.6666666666666666;False;3;3;{'Tool': np.int64(2), 'Activity': np.int64(1)};1.0;l'astronave
+baseline_01;gpt-5.6-luna;zero_shot;471;Activity;Tool;FALSO;1.0;False;3;3;{'Tool': np.int64(3)};1.0;il rover
+baseline_01;gpt-5.6-luna;zero_shot;535;Making;Making;VERO;1.0;False;3;3;{'Making': np.int64(3)};1.0;costruire il robot 
+baseline_01;gpt-5.6-luna;zero_shot;547;Making;Activity;FALSO;1.0;False;3;3;{'Activity': np.int64(3)};1.0;creare immagini 
+baseline_01;gpt-5.6-luna;zero_shot;55;Freedom;Freedom;VERO;1.0;False;3;3;{'Freedom': np.int64(3)};1.0;FARE UNA STORIA COME VOLEVAMO NOI
+baseline_01;gpt-5.6-luna;zero_shot;603;Activity;Making;FALSO;0.6666666666666666;False;3;3;{'Making': np.int64(2), 'Activity': np.int64(1)};1.0;Creare la presentazione.
+baseline_01;gpt-5.6-luna;zero_shot;646;Activity;Activity;VERO;0.6666666666666666;False;3;3;{'Activity': np.int64(2), 'Making': np.int64(1)};1.0;Quando ho finito e ho rivisto tutto il lavoro
+baseline_01;gpt-5.6-luna;zero_shot;648;Activity;Creativity;FALSO;1.0;False;3;3;{'Creativity': np.int64(3)};1.0;il poter creare un sito mio
+baseline_01;gpt-5.6-luna;zero_shot;750;Activity;Activity;VERO;1.0;False;3;3;{'Activity': np.int64(3)};1.0;il modo in cui si è svolta l'attività e le attività stesse fatte
+baseline_01;gpt-5.6-luna;zero_shot;755;Teacher;Teacher;VERO;1.0;False;3;3;{'Teacher': np.int64(3)};1.0;Le spiegazioni del docente
+baseline_01;gpt-5.6-luna;zero_shot;789;Activity;Activity;VERO;1.0;False;3;3;{'Activity': np.int64(3)};1.0;FARE I GIOCHI
+baseline_01;gpt-5.6-luna;zero_shot;805;Activity;Making;FALSO;1.0;False;3;3;{'Making': np.int64(3)};1.0;cercare di far funzionare il tutto
+baseline_01;gpt-5.6-luna;zero_shot;825;Love;Love;VERO;1.0;False;3;3;{'Love': np.int64(3)};0.0;min è piaciuto tutto soprattutto quando abbiamo fatto i percorsi ad esempio slalom tra i banchi
+baseline_01;gpt-5.6-luna;zero_shot;93;Activity;Activity;VERO;1.0;False;3;3;{'Activity': np.int64(3)};1.0;travestire i thymio
+legacy;gpt-5.6-luna;zero_shot;1020;Activity;Activity;VERO;1.0;False;3;3;{'Activity': np.int64(3)};1.0;Ricercare le informazioni.
+legacy;gpt-5.6-luna;zero_shot;1171;Activity;Activity;VERO;1.0;False;3;3;{'Activity': np.int64(3)};1.0;programmare la centralina
+legacy;gpt-5.6-luna;zero_shot;161;Activity;Activity;VERO;1.0;False;3;3;{'Activity': np.int64(3)};1.0;accendere le lucine con il computer
+legacy;gpt-5.6-luna;zero_shot;179;Tool;Tool;VERO;1.0;False;3;3;{'Tool': np.int64(3)};1.0;usare il computer e comandare il robot
+legacy;gpt-5.6-luna;zero_shot;216;Social;Social;VERO;1.0;False;3;3;{'Social': np.int64(3)};1.0;lavoro a gruppi
+legacy;gpt-5.6-luna;zero_shot;224;Tool;Tool;VERO;1.0;False;3;3;{'Tool': np.int64(3)};1.0;scratch
+legacy;gpt-5.6-luna;zero_shot;459;Activity;Activity;VERO;0.6666666666666666;False;3;3;{'Activity': np.int64(2), 'Tool': np.int64(1)};1.0;l'astronave
+legacy;gpt-5.6-luna;zero_shot;471;Activity;Tool;FALSO;1.0;False;3;3;{'Tool': np.int64(3)};1.0;il rover
+legacy;gpt-5.6-luna;zero_shot;535;Making;Making;VERO;1.0;False;3;3;{'Making': np.int64(3)};1.0;costruire il robot 
+legacy;gpt-5.6-luna;zero_shot;547;Making;Creativity;FALSO;1.0;False;3;3;{'Creativity': np.int64(3)};1.0;creare immagini 
+legacy;gpt-5.6-luna;zero_shot;55;Freedom;Freedom;VERO;1.0;False;3;3;{'Freedom': np.int64(3)};1.0;FARE UNA STORIA COME VOLEVAMO NOI
+legacy;gpt-5.6-luna;zero_shot;603;Activity;Creativity;FALSO;0.6666666666666666;False;3;3;{'Creativity': np.int64(2), 'Activity': np.int64(1)};1.0;Creare la presentazione.
+legacy;gpt-5.6-luna;zero_shot;646;Activity;Making;FALSO;1.0;False;3;3;{'Making': np.int64(3)};1.0;Quando ho finito e ho rivisto tutto il lavoro
+legacy;gpt-5.6-luna;zero_shot;648;Activity;Creativity;FALSO;1.0;False;3;3;{'Creativity': np.int64(3)};1.0;il poter creare un sito mio
+legacy;gpt-5.6-luna;zero_shot;750;Activity;Activity;VERO;1.0;False;3;3;{'Activity': np.int64(3)};1.0;il modo in cui si è svolta l'attività e le attività stesse fatte
+legacy;gpt-5.6-luna;zero_shot;755;Teacher;Teacher;VERO;1.0;False;3;3;{'Teacher': np.int64(3)};1.0;Le spiegazioni del docente
+legacy;gpt-5.6-luna;zero_shot;789;Activity;Activity;VERO;1.0;False;3;3;{'Activity': np.int64(3)};1.0;FARE I GIOCHI
+legacy;gpt-5.6-luna;zero_shot;805;Activity;Making;FALSO;1.0;False;3;3;{'Making': np.int64(3)};1.0;cercare di far funzionare il tutto
+legacy;gpt-5.6-luna;zero_shot;825;Love;Love;VERO;0.6666666666666666;False;3;3;{'Love': np.int64(2), 'Activity': np.int64(1)};0.3333333333333333;min è piaciuto tutto soprattutto quando abbiamo fatto i percorsi ad esempio slalom tra i banchi
+legacy;gpt-5.6-luna;zero_shot;93;Activity;Activity;VERO;1.0;False;3;3;{'Activity': np.int64(3)};1.0;travestire i thymio

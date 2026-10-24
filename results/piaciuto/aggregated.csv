@@ -1,0 +1,701 @@
+﻿esperimento_id,modello,strategia,id,umano,etichetta_modale,quota_modale,gruppo_stabilita,pareggio,da_revisionare,n_run,n_run_attese,run_mancanti,n_valide,distribuzione,quota_risposte_con_tutte_le_citazioni_verificate,testo
+baseline_01,claude-opus-5,zero_shot,1020,Activity,Activity,1.0,stabile,False,False,3,3,False,3,{'Activity': np.int64(3)},1.0,Ricercare le informazioni.
+baseline_01,claude-opus-5,zero_shot,1171,Activity,Activity,1.0,stabile,False,False,3,3,False,3,{'Activity': np.int64(3)},1.0,programmare la centralina
+baseline_01,claude-opus-5,zero_shot,161,Activity,Activity,1.0,stabile,False,False,3,3,False,3,{'Activity': np.int64(3)},1.0,accendere le lucine con il computer
+baseline_01,claude-opus-5,zero_shot,179,Tool,Tool,1.0,stabile,False,False,3,3,False,3,{'Tool': np.int64(3)},1.0,usare il computer e comandare il robot
+baseline_01,claude-opus-5,zero_shot,216,Social,Social,1.0,stabile,False,False,3,3,False,3,{'Social': np.int64(3)},1.0,lavoro a gruppi
+baseline_01,claude-opus-5,zero_shot,224,Tool,Tool,1.0,stabile,False,False,3,3,False,3,{'Tool': np.int64(3)},1.0,scratch
+baseline_01,claude-opus-5,zero_shot,459,Activity,Activity,1.0,stabile,False,False,3,3,False,3,{'Activity': np.int64(3)},1.0,l'astronave
+baseline_01,claude-opus-5,zero_shot,471,Activity,Tool,1.0,stabile,False,False,3,3,False,3,{'Tool': np.int64(3)},1.0,il rover
+baseline_01,claude-opus-5,zero_shot,535,Making,Making,1.0,stabile,False,False,3,3,False,3,{'Making': np.int64(3)},1.0,costruire il robot 
+baseline_01,claude-opus-5,zero_shot,547,Making,Creativity,1.0,stabile,False,False,3,3,False,3,{'Creativity': np.int64(3)},1.0,creare immagini 
+baseline_01,claude-opus-5,zero_shot,55,Freedom,Freedom,1.0,stabile,False,False,3,3,False,3,{'Freedom': np.int64(3)},1.0,FARE UNA STORIA COME VOLEVAMO NOI
+baseline_01,claude-opus-5,zero_shot,603,Activity,Creativity,0.6666666666666666,instabile,False,False,3,3,False,3,"{'Creativity': np.int64(2), 'Activity': np.int64(1)}",1.0,Creare la presentazione.
+baseline_01,claude-opus-5,zero_shot,646,Activity,Making,1.0,stabile,False,False,3,3,False,3,{'Making': np.int64(3)},1.0,Quando ho finito e ho rivisto tutto il lavoro
+baseline_01,claude-opus-5,zero_shot,648,Activity,Creativity,1.0,stabile,False,False,3,3,False,3,{'Creativity': np.int64(3)},1.0,il poter creare un sito mio
+baseline_01,claude-opus-5,zero_shot,750,Activity,Flow,1.0,stabile,False,False,3,3,False,3,{'Flow': np.int64(3)},1.0,il modo in cui si è svolta l'attività e le attività stesse fatte
+baseline_01,claude-opus-5,zero_shot,755,Teacher,Teacher,1.0,stabile,False,False,3,3,False,3,{'Teacher': np.int64(3)},1.0,Le spiegazioni del docente
+baseline_01,claude-opus-5,zero_shot,789,Activity,Making,0.6666666666666666,instabile,False,False,3,3,False,3,"{'Making': np.int64(2), 'Activity': np.int64(1)}",1.0,FARE I GIOCHI
+baseline_01,claude-opus-5,zero_shot,805,Activity,Making,1.0,stabile,False,False,3,3,False,3,{'Making': np.int64(3)},1.0,cercare di far funzionare il tutto
+baseline_01,claude-opus-5,zero_shot,825,Love,Activity,1.0,stabile,False,False,3,3,False,3,{'Activity': np.int64(3)},1.0,min è piaciuto tutto soprattutto quando abbiamo fatto i percorsi ad esempio slalom tra i banchi
+baseline_01,claude-opus-5,zero_shot,93,Activity,Activity,1.0,stabile,False,False,3,3,False,3,{'Activity': np.int64(3)},1.0,travestire i thymio
+baseline_01,gpt-5.6-luna,zero_shot,1020,Activity,Activity,1.0,stabile,False,False,3,3,False,3,{'Activity': np.int64(3)},1.0,Ricercare le informazioni.
+baseline_01,gpt-5.6-luna,zero_shot,1171,Activity,Activity,1.0,stabile,False,False,3,3,False,3,{'Activity': np.int64(3)},1.0,programmare la centralina
+baseline_01,gpt-5.6-luna,zero_shot,161,Activity,Activity,1.0,stabile,False,False,3,3,False,3,{'Activity': np.int64(3)},1.0,accendere le lucine con il computer
+baseline_01,gpt-5.6-luna,zero_shot,179,Tool,Tool,1.0,stabile,False,False,3,3,False,3,{'Tool': np.int64(3)},1.0,usare il computer e comandare il robot
+baseline_01,gpt-5.6-luna,zero_shot,216,Social,Social,1.0,stabile,False,False,3,3,False,3,{'Social': np.int64(3)},1.0,lavoro a gruppi
+baseline_01,gpt-5.6-luna,zero_shot,224,Tool,Tool,1.0,stabile,False,False,3,3,False,3,{'Tool': np.int64(3)},1.0,scratch
+baseline_01,gpt-5.6-luna,zero_shot,459,Activity,Tool,0.6666666666666666,instabile,False,False,3,3,False,3,"{'Tool': np.int64(2), 'Activity': np.int64(1)}",1.0,l'astronave
+baseline_01,gpt-5.6-luna,zero_shot,471,Activity,Tool,1.0,stabile,False,False,3,3,False,3,{'Tool': np.int64(3)},1.0,il rover
+baseline_01,gpt-5.6-luna,zero_shot,535,Making,Making,1.0,stabile,False,False,3,3,False,3,{'Making': np.int64(3)},1.0,costruire il robot 
+baseline_01,gpt-5.6-luna,zero_shot,547,Making,Activity,1.0,stabile,False,False,3,3,False,3,{'Activity': np.int64(3)},1.0,creare immagini 
+baseline_01,gpt-5.6-luna,zero_shot,55,Freedom,Freedom,1.0,stabile,False,False,3,3,False,3,{'Freedom': np.int64(3)},1.0,FARE UNA STORIA COME VOLEVAMO NOI
+baseline_01,gpt-5.6-luna,zero_shot,603,Activity,Making,0.6666666666666666,instabile,False,False,3,3,False,3,"{'Making': np.int64(2), 'Activity': np.int64(1)}",1.0,Creare la presentazione.
+baseline_01,gpt-5.6-luna,zero_shot,646,Activity,Activity,0.6666666666666666,instabile,False,False,3,3,False,3,"{'Activity': np.int64(2), 'Making': np.int64(1)}",1.0,Quando ho finito e ho rivisto tutto il lavoro
+baseline_01,gpt-5.6-luna,zero_shot,648,Activity,Creativity,1.0,stabile,False,False,3,3,False,3,{'Creativity': np.int64(3)},1.0,il poter creare un sito mio
+baseline_01,gpt-5.6-luna,zero_shot,750,Activity,Activity,1.0,stabile,False,False,3,3,False,3,{'Activity': np.int64(3)},1.0,il modo in cui si è svolta l'attività e le attività stesse fatte
+baseline_01,gpt-5.6-luna,zero_shot,755,Teacher,Teacher,1.0,stabile,False,False,3,3,False,3,{'Teacher': np.int64(3)},1.0,Le spiegazioni del docente
+baseline_01,gpt-5.6-luna,zero_shot,789,Activity,Activity,1.0,stabile,False,False,3,3,False,3,{'Activity': np.int64(3)},1.0,FARE I GIOCHI
+baseline_01,gpt-5.6-luna,zero_shot,805,Activity,Making,1.0,stabile,False,False,3,3,False,3,{'Making': np.int64(3)},1.0,cercare di far funzionare il tutto
+baseline_01,gpt-5.6-luna,zero_shot,825,Love,Love,1.0,stabile,False,False,3,3,False,3,{'Love': np.int64(3)},1.0,min è piaciuto tutto soprattutto quando abbiamo fatto i percorsi ad esempio slalom tra i banchi
+baseline_01,gpt-5.6-luna,zero_shot,93,Activity,Activity,1.0,stabile,False,False,3,3,False,3,{'Activity': np.int64(3)},1.0,travestire i thymio
+baseline_02_citazione_singola,claude-opus-5,zero_shot,1020,Activity,Activity,1.0,stabile,False,False,3,3,False,3,{'Activity': np.int64(3)},1.0,Ricercare le informazioni.
+baseline_02_citazione_singola,claude-opus-5,zero_shot,1171,Activity,Activity,1.0,stabile,False,False,3,3,False,3,{'Activity': np.int64(3)},1.0,programmare la centralina
+baseline_02_citazione_singola,claude-opus-5,zero_shot,161,Activity,Activity,1.0,stabile,False,False,3,3,False,3,{'Activity': np.int64(3)},1.0,accendere le lucine con il computer
+baseline_02_citazione_singola,claude-opus-5,zero_shot,179,Tool,Tool,1.0,stabile,False,False,3,3,False,3,{'Tool': np.int64(3)},1.0,usare il computer e comandare il robot
+baseline_02_citazione_singola,claude-opus-5,zero_shot,216,Social,Social,1.0,stabile,False,False,3,3,False,3,{'Social': np.int64(3)},1.0,lavoro a gruppi
+baseline_02_citazione_singola,claude-opus-5,zero_shot,224,Tool,Tool,1.0,stabile,False,False,3,3,False,3,{'Tool': np.int64(3)},1.0,scratch
+baseline_02_citazione_singola,claude-opus-5,zero_shot,459,Activity,Activity,1.0,stabile,False,False,3,3,False,3,{'Activity': np.int64(3)},1.0,l'astronave
+baseline_02_citazione_singola,claude-opus-5,zero_shot,471,Activity,Tool,1.0,stabile,False,False,3,3,False,3,{'Tool': np.int64(3)},1.0,il rover
+baseline_02_citazione_singola,claude-opus-5,zero_shot,535,Making,Making,1.0,stabile,False,False,3,3,False,3,{'Making': np.int64(3)},1.0,costruire il robot 
+baseline_02_citazione_singola,claude-opus-5,zero_shot,547,Making,Creativity,1.0,stabile,False,False,3,3,False,3,{'Creativity': np.int64(3)},1.0,creare immagini 
+baseline_02_citazione_singola,claude-opus-5,zero_shot,55,Freedom,Freedom,1.0,stabile,False,False,3,3,False,3,{'Freedom': np.int64(3)},1.0,FARE UNA STORIA COME VOLEVAMO NOI
+baseline_02_citazione_singola,claude-opus-5,zero_shot,603,Activity,Creativity,0.6666666666666666,instabile,False,False,3,3,False,3,"{'Creativity': np.int64(2), 'Activity': np.int64(1)}",1.0,Creare la presentazione.
+baseline_02_citazione_singola,claude-opus-5,zero_shot,646,Activity,Making,1.0,stabile,False,False,3,3,False,3,{'Making': np.int64(3)},1.0,Quando ho finito e ho rivisto tutto il lavoro
+baseline_02_citazione_singola,claude-opus-5,zero_shot,648,Activity,Creativity,1.0,stabile,False,False,3,3,False,3,{'Creativity': np.int64(3)},1.0,il poter creare un sito mio
+baseline_02_citazione_singola,claude-opus-5,zero_shot,750,Activity,Flow,1.0,stabile,False,False,3,3,False,3,{'Flow': np.int64(3)},1.0,il modo in cui si è svolta l'attività e le attività stesse fatte
+baseline_02_citazione_singola,claude-opus-5,zero_shot,755,Teacher,Teacher,1.0,stabile,False,False,3,3,False,3,{'Teacher': np.int64(3)},1.0,Le spiegazioni del docente
+baseline_02_citazione_singola,claude-opus-5,zero_shot,789,Activity,Activity,1.0,stabile,False,False,3,3,False,3,{'Activity': np.int64(3)},1.0,FARE I GIOCHI
+baseline_02_citazione_singola,claude-opus-5,zero_shot,805,Activity,Making,1.0,stabile,False,False,3,3,False,3,{'Making': np.int64(3)},1.0,cercare di far funzionare il tutto
+baseline_02_citazione_singola,claude-opus-5,zero_shot,825,Love,Activity,1.0,stabile,False,False,3,3,False,3,{'Activity': np.int64(3)},1.0,min è piaciuto tutto soprattutto quando abbiamo fatto i percorsi ad esempio slalom tra i banchi
+baseline_02_citazione_singola,claude-opus-5,zero_shot,93,Activity,Activity,1.0,stabile,False,False,3,3,False,3,{'Activity': np.int64(3)},1.0,travestire i thymio
+baseline_02_citazione_singola,gpt-5.6-luna,zero_shot,1020,Activity,Activity,1.0,stabile,False,False,3,3,False,3,{'Activity': np.int64(3)},1.0,Ricercare le informazioni.
+baseline_02_citazione_singola,gpt-5.6-luna,zero_shot,1171,Activity,Activity,1.0,stabile,False,False,3,3,False,3,{'Activity': np.int64(3)},1.0,programmare la centralina
+baseline_02_citazione_singola,gpt-5.6-luna,zero_shot,161,Activity,Activity,1.0,stabile,False,False,3,3,False,3,{'Activity': np.int64(3)},1.0,accendere le lucine con il computer
+baseline_02_citazione_singola,gpt-5.6-luna,zero_shot,179,Tool,Tool,1.0,stabile,False,False,3,3,False,3,{'Tool': np.int64(3)},1.0,usare il computer e comandare il robot
+baseline_02_citazione_singola,gpt-5.6-luna,zero_shot,216,Social,Social,1.0,stabile,False,False,3,3,False,3,{'Social': np.int64(3)},1.0,lavoro a gruppi
+baseline_02_citazione_singola,gpt-5.6-luna,zero_shot,224,Tool,Tool,1.0,stabile,False,False,3,3,False,3,{'Tool': np.int64(3)},1.0,scratch
+baseline_02_citazione_singola,gpt-5.6-luna,zero_shot,459,Activity,Tool,0.6666666666666666,instabile,False,False,3,3,False,3,"{'Tool': np.int64(2), 'Activity': np.int64(1)}",1.0,l'astronave
+baseline_02_citazione_singola,gpt-5.6-luna,zero_shot,471,Activity,Tool,1.0,stabile,False,False,3,3,False,3,{'Tool': np.int64(3)},1.0,il rover
+baseline_02_citazione_singola,gpt-5.6-luna,zero_shot,535,Making,Making,1.0,stabile,False,False,3,3,False,3,{'Making': np.int64(3)},1.0,costruire il robot 
+baseline_02_citazione_singola,gpt-5.6-luna,zero_shot,547,Making,Creativity,1.0,stabile,False,False,3,3,False,3,{'Creativity': np.int64(3)},1.0,creare immagini 
+baseline_02_citazione_singola,gpt-5.6-luna,zero_shot,55,Freedom,Creativity,1.0,stabile,False,False,3,3,False,3,{'Creativity': np.int64(3)},1.0,FARE UNA STORIA COME VOLEVAMO NOI
+baseline_02_citazione_singola,gpt-5.6-luna,zero_shot,603,Activity,Activity,1.0,stabile,False,False,3,3,False,3,{'Activity': np.int64(3)},1.0,Creare la presentazione.
+baseline_02_citazione_singola,gpt-5.6-luna,zero_shot,646,Activity,Making,1.0,stabile,False,False,3,3,False,3,{'Making': np.int64(3)},1.0,Quando ho finito e ho rivisto tutto il lavoro
+baseline_02_citazione_singola,gpt-5.6-luna,zero_shot,648,Activity,Creativity,1.0,stabile,False,False,3,3,False,3,{'Creativity': np.int64(3)},1.0,il poter creare un sito mio
+baseline_02_citazione_singola,gpt-5.6-luna,zero_shot,750,Activity,Activity,0.6666666666666666,instabile,False,False,3,3,False,3,"{'Activity': np.int64(2), 'Love': np.int64(1)}",1.0,il modo in cui si è svolta l'attività e le attività stesse fatte
+baseline_02_citazione_singola,gpt-5.6-luna,zero_shot,755,Teacher,Teacher,1.0,stabile,False,False,3,3,False,3,{'Teacher': np.int64(3)},1.0,Le spiegazioni del docente
+baseline_02_citazione_singola,gpt-5.6-luna,zero_shot,789,Activity,Activity,1.0,stabile,False,False,3,3,False,3,{'Activity': np.int64(3)},1.0,FARE I GIOCHI
+baseline_02_citazione_singola,gpt-5.6-luna,zero_shot,805,Activity,Making,1.0,stabile,False,False,3,3,False,3,{'Making': np.int64(3)},1.0,cercare di far funzionare il tutto
+baseline_02_citazione_singola,gpt-5.6-luna,zero_shot,825,Love,Love,1.0,stabile,False,False,3,3,False,3,{'Love': np.int64(3)},1.0,min è piaciuto tutto soprattutto quando abbiamo fatto i percorsi ad esempio slalom tra i banchi
+baseline_02_citazione_singola,gpt-5.6-luna,zero_shot,93,Activity,,0.3333333333333333,instabile,True,True,3,3,False,3,"{'Creativity': np.int64(1), 'Making': np.int64(1), 'Activity': np.int64(1)}",1.0,travestire i thymio
+exp03_zeroshot,claude-opus-5,zero_shot,101,Activity,Activity,1.0,stabile,False,False,10,10,False,10,{'Activity': np.int64(10)},1.0,Fare i loghi
+exp03_zeroshot,claude-opus-5,zero_shot,1012,Social,Social,1.0,stabile,False,False,10,10,False,10,{'Social': np.int64(10)},1.0,Lavorare di gruppo
+exp03_zeroshot,claude-opus-5,zero_shot,1020,Activity,Activity,1.0,stabile,False,False,10,10,False,10,{'Activity': np.int64(10)},1.0,Ricercare le informazioni.
+exp03_zeroshot,claude-opus-5,zero_shot,1023,Activity,Activity,0.9,abbastanza_stabile,False,False,10,10,False,10,"{'Activity': np.int64(9), 'Creativity': np.int64(1)}",1.0,Creare il sito 
+exp03_zeroshot,claude-opus-5,zero_shot,1027,Creativity,,0.5,instabile,True,True,10,10,False,10,"{'Freedom': np.int64(5), 'Creativity': np.int64(5)}",1.0,che ci ha dato modo di creare qualcosa da soli
+exp03_zeroshot,claude-opus-5,zero_shot,1028,Creativity,Activity,0.6,instabile,False,False,10,10,False,10,"{'Activity': np.int64(6), 'Creativity': np.int64(4)}",1.0,creare immagine con l'ai
+exp03_zeroshot,claude-opus-5,zero_shot,1032,Activity,Activity,0.9,abbastanza_stabile,False,False,10,10,False,10,"{'Activity': np.int64(9), 'Creativity': np.int64(1)}",1.0,La creazione di un sito
+exp03_zeroshot,claude-opus-5,zero_shot,1039,Activity,Activity,0.6,instabile,False,False,10,10,False,10,"{'Activity': np.int64(6), 'Creativity': np.int64(4)}",1.0,Creare il sito
+exp03_zeroshot,claude-opus-5,zero_shot,1043,Activity,Activity,0.8,abbastanza_stabile,False,False,10,10,False,10,"{'Activity': np.int64(8), 'Creativity': np.int64(2)}",1.0,creare il sito
+exp03_zeroshot,claude-opus-5,zero_shot,1048,Social,Creativity,0.9,abbastanza_stabile,False,False,10,10,False,10,"{'Creativity': np.int64(9), 'Social': np.int64(1)}",1.0,creare il sito con i miei compagni
+exp03_zeroshot,claude-opus-5,zero_shot,105,Activity,Activity,1.0,stabile,False,False,10,10,False,10,{'Activity': np.int64(10)},1.0,COMANDARE I ROBOT
+exp03_zeroshot,claude-opus-5,zero_shot,1050,Tool,Activity,0.6,instabile,False,False,10,10,False,10,"{'Activity': np.int64(6), 'Creativity': np.int64(4)}",1.0,Creare il sito
+exp03_zeroshot,claude-opus-5,zero_shot,1059,Activity,Activity,0.6,instabile,False,False,10,10,False,10,"{'Activity': np.int64(6), 'Making': np.int64(4)}",1.0,La realizzazione del sito
+exp03_zeroshot,claude-opus-5,zero_shot,106,Activity,Freedom,1.0,stabile,False,False,10,10,False,10,{'Freedom': np.int64(10)},1.0,fare un simbolo che volevamo
+exp03_zeroshot,claude-opus-5,zero_shot,1060,Activity,Tool,1.0,stabile,False,False,10,10,False,10,{'Tool': np.int64(10)},1.0,Il sito 
+exp03_zeroshot,claude-opus-5,zero_shot,1061,Social,Social,1.0,stabile,False,False,10,10,False,10,{'Social': np.int64(10)},1.0,Lavorare in gruppo 
+exp03_zeroshot,claude-opus-5,zero_shot,1068,Tool,Tool,1.0,stabile,False,False,10,10,False,10,{'Tool': np.int64(10)},1.0,usare il pc
+exp03_zeroshot,claude-opus-5,zero_shot,1072,Activity,Tool,1.0,stabile,False,False,10,10,False,10,{'Tool': np.int64(10)},1.0,Lavorare con il sito
+exp03_zeroshot,claude-opus-5,zero_shot,1073,Making,Making,1.0,stabile,False,False,10,10,False,10,{'Making': np.int64(10)},1.0,le attività che abbiamo fatto noi da studenti 
+exp03_zeroshot,claude-opus-5,zero_shot,1077,Activity,Activity,1.0,stabile,False,False,10,10,False,10,{'Activity': np.int64(10)},1.0,Fare il sito
+exp03_zeroshot,claude-opus-5,zero_shot,1078,Creativity,Creativity,1.0,stabile,False,False,10,10,False,10,{'Creativity': np.int64(10)},1.0,la creazione delle immagini
+exp03_zeroshot,claude-opus-5,zero_shot,1083,Social,Social,1.0,stabile,False,False,10,10,False,10,{'Social': np.int64(10)},1.0,lo spirito di gruppo
+exp03_zeroshot,claude-opus-5,zero_shot,1084,Social,Social,1.0,stabile,False,False,10,10,False,10,{'Social': np.int64(10)},1.0,il lavorare in gruppo
+exp03_zeroshot,claude-opus-5,zero_shot,1089,Tool,Tool,1.0,stabile,False,False,10,10,False,10,{'Tool': np.int64(10)},1.0,arduino 
+exp03_zeroshot,claude-opus-5,zero_shot,1091,Tool,Tool,1.0,stabile,False,False,10,10,False,10,{'Tool': np.int64(10)},1.0,arduino
+exp03_zeroshot,claude-opus-5,zero_shot,1093,Hate,Hate,1.0,stabile,False,False,10,10,False,10,{'Hate': np.int64(10)},1.0,Niente
+exp03_zeroshot,claude-opus-5,zero_shot,1104,Teacher,Teacher,1.0,stabile,False,False,10,10,False,10,{'Teacher': np.int64(10)},1.0,La passiene dei docenti 
+exp03_zeroshot,claude-opus-5,zero_shot,1107,Tool,Tool,1.0,stabile,False,False,10,10,False,10,{'Tool': np.int64(10)},1.0,bothpress
+exp03_zeroshot,claude-opus-5,zero_shot,111,Activity,Tool,1.0,stabile,False,False,10,10,False,10,{'Tool': np.int64(10)},1.0,il sito
+exp03_zeroshot,claude-opus-5,zero_shot,1110,Tool,Tool,1.0,stabile,False,False,10,10,False,10,{'Tool': np.int64(10)},1.0,uso del AI
+exp03_zeroshot,claude-opus-5,zero_shot,1111,Teacher,Freedom,1.0,stabile,False,False,10,10,False,10,{'Freedom': np.int64(10)},1.0,Come insegNAo ( la libertà)
+exp03_zeroshot,claude-opus-5,zero_shot,1117,Flow,Activity,1.0,stabile,False,False,10,10,False,10,{'Activity': np.int64(10)},1.0,La parte delle presentazioni
+exp03_zeroshot,claude-opus-5,zero_shot,1119,Social,Social,1.0,stabile,False,False,10,10,False,10,{'Social': np.int64(10)},1.0,lavorare in gruppo 
+exp03_zeroshot,claude-opus-5,zero_shot,112,Activity,Activity,1.0,stabile,False,False,10,10,False,10,{'Activity': np.int64(10)},1.0,ascoltare la musica e ricrearla
+exp03_zeroshot,claude-opus-5,zero_shot,1123,Flow,Activity,1.0,stabile,False,False,10,10,False,10,{'Activity': np.int64(10)},1.0,esposizoone
+exp03_zeroshot,claude-opus-5,zero_shot,1128,Social,Social,1.0,stabile,False,False,10,10,False,10,{'Social': np.int64(10)},1.0,Parlare con gli altri 
+exp03_zeroshot,claude-opus-5,zero_shot,1136,Learning,Learning,1.0,stabile,False,False,10,10,False,10,{'Learning': np.int64(10)},1.0,conoscere programmi utili che non conoscevo 
+exp03_zeroshot,claude-opus-5,zero_shot,1137,Social,Social,1.0,stabile,False,False,10,10,False,10,{'Social': np.int64(10)},1.0,la collaborazione 
+exp03_zeroshot,claude-opus-5,zero_shot,1140,Activity,Activity,1.0,stabile,False,False,10,10,False,10,{'Activity': np.int64(10)},1.0,Usare l’ia per fare il bot di cicciogamer89
+exp03_zeroshot,claude-opus-5,zero_shot,1141,Activity,Activity,1.0,stabile,False,False,10,10,False,10,{'Activity': np.int64(10)},1.0,il gioco con le carte 
+exp03_zeroshot,claude-opus-5,zero_shot,1148,Tool,Activity,1.0,stabile,False,False,10,10,False,10,{'Activity': np.int64(10)},1.0,Scrivere sull’OLED
+exp03_zeroshot,claude-opus-5,zero_shot,115,Creativity,Creativity,0.6,instabile,False,False,10,10,False,10,"{'Creativity': np.int64(6), 'Activity': np.int64(4)}",1.0,creare suoni
+exp03_zeroshot,claude-opus-5,zero_shot,1150,Tool,Tool,1.0,stabile,False,False,10,10,False,10,{'Tool': np.int64(10)},1.0,Arduino 
+exp03_zeroshot,claude-opus-5,zero_shot,1157,Tool,Activity,0.8,abbastanza_stabile,False,False,10,10,False,10,"{'Activity': np.int64(8), 'Tool': np.int64(2)}",1.0,scrivere le cose sullo schermo OLED 
+exp03_zeroshot,claude-opus-5,zero_shot,1166,Making,Activity,1.0,stabile,False,False,10,10,False,10,{'Activity': np.int64(10)},1.0,la programmazione 
+exp03_zeroshot,claude-opus-5,zero_shot,1168,non classificabile,non classificabile,1.0,stabile,False,False,10,10,False,10,{'non classificabile': np.int64(10)},,.
+exp03_zeroshot,claude-opus-5,zero_shot,1171,Activity,Activity,1.0,stabile,False,False,10,10,False,10,{'Activity': np.int64(10)},1.0,programmare la centralina
+exp03_zeroshot,claude-opus-5,zero_shot,1177,Love,Love,1.0,stabile,False,False,10,10,False,10,{'Love': np.int64(10)},1.0,tutto
+exp03_zeroshot,claude-opus-5,zero_shot,1187,Activity,Activity,0.9,abbastanza_stabile,False,False,10,10,False,10,"{'Activity': np.int64(9), 'Tool': np.int64(1)}",1.0,parlare al microfono 
+exp03_zeroshot,claude-opus-5,zero_shot,1188,Making,Activity,0.6,instabile,False,False,10,10,False,10,"{'Activity': np.int64(6), 'Making': np.int64(4)}",1.0,editare 
+exp03_zeroshot,claude-opus-5,zero_shot,1189,Making,Activity,1.0,stabile,False,False,10,10,False,10,{'Activity': np.int64(10)},1.0,editing 
+exp03_zeroshot,claude-opus-5,zero_shot,1195,Making,Making,0.6,instabile,False,False,10,10,False,10,"{'Making': np.int64(6), 'Activity': np.int64(4)}",1.0,Editare 
+exp03_zeroshot,claude-opus-5,zero_shot,1198,Making,Activity,1.0,stabile,False,False,10,10,False,10,{'Activity': np.int64(10)},1.0,Fare le modifiche al audio
+exp03_zeroshot,claude-opus-5,zero_shot,12,Tool,Tool,1.0,stabile,False,False,10,10,False,10,{'Tool': np.int64(10)},1.0,la radio
+exp03_zeroshot,claude-opus-5,zero_shot,1200,Making,Activity,1.0,stabile,False,False,10,10,False,10,{'Activity': np.int64(10)},1.0,realizzare la copertina 
+exp03_zeroshot,claude-opus-5,zero_shot,125,Tool,Tool,1.0,stabile,False,False,10,10,False,10,{'Tool': np.int64(10)},1.0,il cicalino 
+exp03_zeroshot,claude-opus-5,zero_shot,133,Activity,Activity,1.0,stabile,False,False,10,10,False,10,{'Activity': np.int64(10)},1.0,quando abbiamo creato un interruttore  con il sensore di luminosità e il led
+exp03_zeroshot,claude-opus-5,zero_shot,14,Activity,Activity,1.0,stabile,False,False,10,10,False,10,{'Activity': np.int64(10)},1.0,programmare i microbit
+exp03_zeroshot,claude-opus-5,zero_shot,141,Creativity,Creativity,1.0,stabile,False,False,10,10,False,10,{'Creativity': np.int64(10)},1.0,creare delle basi musicali
+exp03_zeroshot,claude-opus-5,zero_shot,142,Tool,Tool,1.0,stabile,False,False,10,10,False,10,{'Tool': np.int64(10)},1.0,quando abbiamo usatto i sensori
+exp03_zeroshot,claude-opus-5,zero_shot,143,Creativity,Creativity,1.0,stabile,False,False,10,10,False,10,{'Creativity': np.int64(10)},1.0,creare delle basi musicali
+exp03_zeroshot,claude-opus-5,zero_shot,144,Creativity,Creativity,1.0,stabile,False,False,10,10,False,10,{'Creativity': np.int64(10)},1.0,creare la mia musica personale 
+exp03_zeroshot,claude-opus-5,zero_shot,146,Social,Making,0.6,instabile,False,False,10,10,False,10,"{'Making': np.int64(6), 'Freedom': np.int64(4)}",1.0,Sperimentare per conto nostro e con le amiche fare il lavoro con le lucine
+exp03_zeroshot,claude-opus-5,zero_shot,161,Activity,Activity,1.0,stabile,False,False,10,10,False,10,{'Activity': np.int64(10)},1.0,accendere le lucine con il computer
+exp03_zeroshot,claude-opus-5,zero_shot,163,Creativity,Creativity,1.0,stabile,False,False,10,10,False,10,{'Creativity': np.int64(10)},1.0,creare una propria canzone
+exp03_zeroshot,claude-opus-5,zero_shot,170,Activity,Activity,1.0,stabile,False,False,10,10,False,10,{'Activity': np.int64(10)},1.0,Escape room 
+exp03_zeroshot,claude-opus-5,zero_shot,173,Activity,Activity,1.0,stabile,False,False,10,10,False,10,{'Activity': np.int64(10)},1.0,mi è piaciuta l'idea di programmare thymio da cane da caccia
+exp03_zeroshot,claude-opus-5,zero_shot,179,Tool,Tool,1.0,stabile,False,False,10,10,False,10,{'Tool': np.int64(10)},1.0,usare il computer e comandare il robot
+exp03_zeroshot,claude-opus-5,zero_shot,187,Social,Social,1.0,stabile,False,False,10,10,False,10,{'Social': np.int64(10)},1.0,Lavorare con i miei amici.
+exp03_zeroshot,claude-opus-5,zero_shot,189,Tool,Tool,0.6,instabile,False,False,10,10,False,10,"{'Tool': np.int64(6), 'non classificabile': np.int64(4)}",1.0,root
+exp03_zeroshot,claude-opus-5,zero_shot,203,Activity,Activity,0.6,instabile,False,False,10,10,False,10,"{'Activity': np.int64(6), 'Tool': np.int64(4)}",1.0,usare l'intelligenza artificiale per creare immagini
+exp03_zeroshot,claude-opus-5,zero_shot,204,Social,Social,1.0,stabile,False,False,10,10,False,10,{'Social': np.int64(10)},1.0,lavorare in gruppo
+exp03_zeroshot,claude-opus-5,zero_shot,214,Activity,Activity,1.0,stabile,False,False,10,10,False,10,{'Activity': np.int64(10)},1.0,Addestrare l'AI
+exp03_zeroshot,claude-opus-5,zero_shot,215,Activity,Activity,1.0,stabile,False,False,10,10,False,10,{'Activity': np.int64(10)},1.0,Caricare le foto dalla webcame
+exp03_zeroshot,claude-opus-5,zero_shot,216,Social,Social,1.0,stabile,False,False,10,10,False,10,{'Social': np.int64(10)},1.0,lavoro a gruppi
+exp03_zeroshot,claude-opus-5,zero_shot,219,Learning,Learning,1.0,stabile,False,False,10,10,False,10,{'Learning': np.int64(10)},1.0,vedere come un programma può fare cosi tatte cose
+exp03_zeroshot,claude-opus-5,zero_shot,221,Activity,Activity,1.0,stabile,False,False,10,10,False,10,{'Activity': np.int64(10)},1.0,Programmare con scratch
+exp03_zeroshot,claude-opus-5,zero_shot,224,Tool,Tool,1.0,stabile,False,False,10,10,False,10,{'Tool': np.int64(10)},1.0,scratch
+exp03_zeroshot,claude-opus-5,zero_shot,226,Hate,Hate,1.0,stabile,False,False,10,10,False,10,{'Hate': np.int64(10)},1.0,niente 
+exp03_zeroshot,claude-opus-5,zero_shot,237,Teacher,Flow,1.0,stabile,False,False,10,10,False,10,{'Flow': np.int64(10)},1.0,La spiegazione sull'ai
+exp03_zeroshot,claude-opus-5,zero_shot,243,Activity,Activity,1.0,stabile,False,False,10,10,False,10,{'Activity': np.int64(10)},1.0,"La parte di ""programmazione"" "
+exp03_zeroshot,claude-opus-5,zero_shot,249,Creativity,Creativity,1.0,stabile,False,False,10,10,False,10,{'Creativity': np.int64(10)},1.0,CREATIVITA
+exp03_zeroshot,claude-opus-5,zero_shot,250,Activity,Activity,1.0,stabile,False,False,10,10,False,10,{'Activity': np.int64(10)},1.0,la prima sfida con le macchine 
+exp03_zeroshot,claude-opus-5,zero_shot,253,Making,Making,1.0,stabile,False,False,10,10,False,10,{'Making': np.int64(10)},1.0,Costruire
+exp03_zeroshot,claude-opus-5,zero_shot,254,Freedom,Freedom,1.0,stabile,False,False,10,10,False,10,{'Freedom': np.int64(10)},1.0,Mi è piaciuto di più quando ci hanno fatto fare il progetto che volevamo
+exp03_zeroshot,claude-opus-5,zero_shot,26,Activity,Activity,1.0,stabile,False,False,10,10,False,10,{'Activity': np.int64(10)},1.0,"misurare temperatura, luce e livello sonoro"
+exp03_zeroshot,claude-opus-5,zero_shot,260,Creativity,Creativity,1.0,stabile,False,False,10,10,False,10,{'Creativity': np.int64(10)},1.0,creativita che permette
+exp03_zeroshot,claude-opus-5,zero_shot,262,Activity,Activity,1.0,stabile,False,False,10,10,False,10,{'Activity': np.int64(10)},1.0,la lezione con la base motrice e il percorso
+exp03_zeroshot,claude-opus-5,zero_shot,266,Activity,Activity,1.0,stabile,False,False,10,10,False,10,{'Activity': np.int64(10)},1.0,programmare
+exp03_zeroshot,claude-opus-5,zero_shot,267,Making,Making,1.0,stabile,False,False,10,10,False,10,{'Making': np.int64(10)},1.0,costruire
+exp03_zeroshot,claude-opus-5,zero_shot,271,Activity,Activity,1.0,stabile,False,False,10,10,False,10,{'Activity': np.int64(10)},1.0,La partita di calcio alla fine della attivita
+exp03_zeroshot,claude-opus-5,zero_shot,276,non classificabile,Activity,0.7,instabile,False,False,10,10,False,10,"{'Activity': np.int64(7), 'non classificabile': np.int64(3)}",1.0,il calcio
+exp03_zeroshot,claude-opus-5,zero_shot,279,Activity,Activity,1.0,stabile,False,False,10,10,False,10,{'Activity': np.int64(10)},1.0,programmare i robottini
+exp03_zeroshot,claude-opus-5,zero_shot,28,Activity,Activity,1.0,stabile,False,False,10,10,False,10,{'Activity': np.int64(10)},1.0,programmare il microbit
+exp03_zeroshot,claude-opus-5,zero_shot,280,Activity,Making,1.0,stabile,False,False,10,10,False,10,{'Making': np.int64(10)},1.0,costruire i robot in gruppi
+exp03_zeroshot,claude-opus-5,zero_shot,281,Activity,Activity,1.0,stabile,False,False,10,10,False,10,{'Activity': np.int64(10)},1.0,LA CAVALLETTA
+exp03_zeroshot,claude-opus-5,zero_shot,283,Making,Making,1.0,stabile,False,False,10,10,False,10,{'Making': np.int64(10)},1.0,quando abbiamo costruito
+exp03_zeroshot,claude-opus-5,zero_shot,286,Activity,Activity,1.0,stabile,False,False,10,10,False,10,{'Activity': np.int64(10)},1.0,fare i combattimenti
+exp03_zeroshot,claude-opus-5,zero_shot,292,Activity,Activity,1.0,stabile,False,False,10,10,False,10,{'Activity': np.int64(10)},1.0,fare i combattimenti
+exp03_zeroshot,claude-opus-5,zero_shot,295,Activity,,0.5,instabile,True,True,10,10,False,10,"{'Activity': np.int64(5), 'Creativity': np.int64(5)}",1.0,CREARE LA CAVALLETTA
+exp03_zeroshot,claude-opus-5,zero_shot,296,Activity,Making,1.0,stabile,False,False,10,10,False,10,{'Making': np.int64(10)},1.0,fare gli comandi e montare il leggo
+exp03_zeroshot,claude-opus-5,zero_shot,298,Love,Love,1.0,stabile,False,False,10,10,False,10,{'Love': np.int64(10)},1.0,TUTTO
+exp03_zeroshot,claude-opus-5,zero_shot,300,Love,Love,1.0,stabile,False,False,10,10,False,10,{'Love': np.int64(10)},1.0,nn c'è una cosa che mi è piaciuta di più. mi è piaciuto un pò tutto 😂😂😂 
+exp03_zeroshot,claude-opus-5,zero_shot,302,Activity,Making,1.0,stabile,False,False,10,10,False,10,{'Making': np.int64(10)},1.0,la riproduzione dei vari progetti 
+exp03_zeroshot,claude-opus-5,zero_shot,304,Making,Making,1.0,stabile,False,False,10,10,False,10,{'Making': np.int64(10)},1.0,Costruire
+exp03_zeroshot,claude-opus-5,zero_shot,312,Activity,,0.5,instabile,True,True,10,10,False,10,"{'Creativity': np.int64(5), 'Activity': np.int64(5)}",1.0,Creare io gioco con playground raise
+exp03_zeroshot,claude-opus-5,zero_shot,313,Activity,Activity,1.0,stabile,False,False,10,10,False,10,{'Activity': np.int64(10)},1.0,Fare il gioco con playground raise
+exp03_zeroshot,claude-opus-5,zero_shot,314,Activity,Activity,1.0,stabile,False,False,10,10,False,10,{'Activity': np.int64(10)},1.0,Fare il videogioco 
+exp03_zeroshot,claude-opus-5,zero_shot,315,Activity,Activity,1.0,stabile,False,False,10,10,False,10,{'Activity': np.int64(10)},1.0,programmare il gioco
+exp03_zeroshot,claude-opus-5,zero_shot,318,Activity,,0.5,instabile,True,True,10,10,False,10,"{'Activity': np.int64(5), 'Creativity': np.int64(5)}",1.0,Creare il videogioco con Playground 
+exp03_zeroshot,claude-opus-5,zero_shot,324,Tool,Activity,0.7,instabile,False,False,10,10,False,10,"{'Activity': np.int64(7), 'non classificabile': np.int64(2), 'Tool': np.int64(1)}",1.0,Playground raise
+exp03_zeroshot,claude-opus-5,zero_shot,327,Social,Social,1.0,stabile,False,False,10,10,False,10,{'Social': np.int64(10)},1.0,Lavorare in gruppo
+exp03_zeroshot,claude-opus-5,zero_shot,329,Activity,Activity,1.0,stabile,False,False,10,10,False,10,{'Activity': np.int64(10)},1.0,la parte della presentazione (che non ho ancora fatto)
+exp03_zeroshot,claude-opus-5,zero_shot,33,Activity,Activity,1.0,stabile,False,False,10,10,False,10,{'Activity': np.int64(10)},1.0,MANDARE MASAGGI
+exp03_zeroshot,claude-opus-5,zero_shot,333,Tool,Tool,1.0,stabile,False,False,10,10,False,10,{'Tool': np.int64(10)},1.0,L' uso di teachble machine
+exp03_zeroshot,claude-opus-5,zero_shot,334,Creativity,Creativity,1.0,stabile,False,False,10,10,False,10,{'Creativity': np.int64(10)},1.0,il fatto di creare il bot dalle proprie idee
+exp03_zeroshot,claude-opus-5,zero_shot,337,Tool,Tool,1.0,stabile,False,False,10,10,False,10,{'Tool': np.int64(10)},1.0,teachable machine
+exp03_zeroshot,claude-opus-5,zero_shot,34,Activity,Activity,1.0,stabile,False,False,10,10,False,10,{'Activity': np.int64(10)},1.0,"misurare  la temperatura, la luce e il suono in varie stanze della scuola e infine fare la media"
+exp03_zeroshot,claude-opus-5,zero_shot,340,Tool,Tool,1.0,stabile,False,False,10,10,False,10,{'Tool': np.int64(10)},1.0,lavorare con i computer
+exp03_zeroshot,claude-opus-5,zero_shot,342,Tool,Learning,1.0,stabile,False,False,10,10,False,10,{'Learning': np.int64(10)},1.0,Imparera a utilizzare alcuni siti 
+exp03_zeroshot,claude-opus-5,zero_shot,348,Creativity,Creativity,1.0,stabile,False,False,10,10,False,10,{'Creativity': np.int64(10)},1.0,la creazione della canzone inerente al nostro lavoro
+exp03_zeroshot,claude-opus-5,zero_shot,35,Activity,Activity,1.0,stabile,False,False,10,10,False,10,{'Activity': np.int64(10)},1.0,realizzare il sistema del dado e mandarci dei messaggi
+exp03_zeroshot,claude-opus-5,zero_shot,350,Tool,Tool,1.0,stabile,False,False,10,10,False,10,{'Tool': np.int64(10)},1.0,usare botpress 
+exp03_zeroshot,claude-opus-5,zero_shot,352,Activity,Tool,1.0,stabile,False,False,10,10,False,10,{'Tool': np.int64(10)},1.0,il lavoro con la webcam
+exp03_zeroshot,claude-opus-5,zero_shot,357,Learning,Learning,1.0,stabile,False,False,10,10,False,10,{'Learning': np.int64(10)},1.0,Che ho imparato tante cose sulle quali avevo dei dubbi
+exp03_zeroshot,claude-opus-5,zero_shot,360,Activity,Tool,1.0,stabile,False,False,10,10,False,10,{'Tool': np.int64(10)},1.0, Il lavoro su scratch
+exp03_zeroshot,claude-opus-5,zero_shot,361,Learning,Learning,1.0,stabile,False,False,10,10,False,10,{'Learning': np.int64(10)},1.0,Imparate a usare l’intelligenza artificiale 
+exp03_zeroshot,claude-opus-5,zero_shot,365,Activity,Activity,1.0,stabile,False,False,10,10,False,10,{'Activity': np.int64(10)},1.0,Le attività 
+exp03_zeroshot,claude-opus-5,zero_shot,367,Activity,Tool,1.0,stabile,False,False,10,10,False,10,{'Tool': np.int64(10)},1.0,il lavoro su scratch 
+exp03_zeroshot,claude-opus-5,zero_shot,368,Activity,Activity,0.9,abbastanza_stabile,False,False,10,10,False,10,"{'Activity': np.int64(9), 'Creativity': np.int64(1)}",1.0,Il lavoro sulla creazione del gioco 
+exp03_zeroshot,claude-opus-5,zero_shot,369,Social,Social,1.0,stabile,False,False,10,10,False,10,{'Social': np.int64(10)},1.0,fare progetti di gruppo
+exp03_zeroshot,claude-opus-5,zero_shot,373,Activity,,0.5,instabile,True,True,10,10,False,10,"{'Activity': np.int64(5), 'Creativity': np.int64(5)}",1.0,la creazione dei videogiochi 
+exp03_zeroshot,claude-opus-5,zero_shot,377,Activity,Tool,1.0,stabile,False,False,10,10,False,10,{'Tool': np.int64(10)},1.0,TUTTE LE VOLTE CHE ABBIAMO USATO I LED
+exp03_zeroshot,claude-opus-5,zero_shot,394,Learning,Learning,1.0,stabile,False,False,10,10,False,10,{'Learning': np.int64(10)},1.0,imparare cose su canva che non sapevo
+exp03_zeroshot,claude-opus-5,zero_shot,396,Social,Social,1.0,stabile,False,False,10,10,False,10,{'Social': np.int64(10)},1.0,"lavorare insieme, tutto"
+exp03_zeroshot,claude-opus-5,zero_shot,4,Activity,Making,0.9,abbastanza_stabile,False,False,10,10,False,10,"{'Making': np.int64(9), 'Activity': np.int64(1)}",1.0,fare le macchine
+exp03_zeroshot,claude-opus-5,zero_shot,400,Activity,Feeling+,1.0,stabile,False,False,10,10,False,10,{'Feeling+': np.int64(10)},1.0,mi è piaciuto molto le attività che ci coinvolgevano 
+exp03_zeroshot,claude-opus-5,zero_shot,404,Activity,Activity,1.0,stabile,False,False,10,10,False,10,{'Activity': np.int64(10)},1.0,Quando abbiamo parlato del razzo
+exp03_zeroshot,claude-opus-5,zero_shot,410,Activity,Activity,1.0,stabile,False,False,10,10,False,10,{'Activity': np.int64(10)},1.0,Il razzo bottiglia
+exp03_zeroshot,claude-opus-5,zero_shot,411,Social,Social,0.8,abbastanza_stabile,False,False,10,10,False,10,"{'Social': np.int64(8), 'Making': np.int64(2)}",1.0,"Mi è piaciuto di più sono stati gli esperimenti di gruppo e sono stati molto divertenti, lo vorrei rifare"
+exp03_zeroshot,claude-opus-5,zero_shot,415,Activity,Tool,1.0,stabile,False,False,10,10,False,10,{'Tool': np.int64(10)},1.0,Usare scratch (fare l'ultimo progetto)
+exp03_zeroshot,claude-opus-5,zero_shot,417,Activity,Creativity,1.0,stabile,False,False,10,10,False,10,{'Creativity': np.int64(10)},1.0,creare le storie 
+exp03_zeroshot,claude-opus-5,zero_shot,429,Love,Love,1.0,stabile,False,False,10,10,False,10,{'Love': np.int64(10)},1.0,tutto
+exp03_zeroshot,claude-opus-5,zero_shot,43,Social,Social,1.0,stabile,False,False,10,10,False,10,{'Social': np.int64(10)},1.0,stare con i miei amici
+exp03_zeroshot,claude-opus-5,zero_shot,430,Activity,Activity,1.0,stabile,False,False,10,10,False,10,{'Activity': np.int64(10)},1.0,L'ATTIVITà FINALE
+exp03_zeroshot,claude-opus-5,zero_shot,431,Creativity,Freedom,1.0,stabile,False,False,10,10,False,10,{'Freedom': np.int64(10)},1.0,QUANDO CI HANNO LASCIATI LIBERI DI CREARE UN GIOCO
+exp03_zeroshot,claude-opus-5,zero_shot,433,Learning,Learning,1.0,stabile,False,False,10,10,False,10,{'Learning': np.int64(10)},1.0,imparare nuove cose
+exp03_zeroshot,claude-opus-5,zero_shot,434,Tool,Learning,1.0,stabile,False,False,10,10,False,10,{'Learning': np.int64(10)},1.0,Che sono riuscita ad imparare meglio come si usa scratch
+exp03_zeroshot,claude-opus-5,zero_shot,435,Freedom,Freedom,1.0,stabile,False,False,10,10,False,10,{'Freedom': np.int64(10)},1.0,"Il fatto che potevamo scegliere noi cosa fare (quali personaggi usare, quali sfondi ecc.)"
+exp03_zeroshot,claude-opus-5,zero_shot,436,Freedom,Creativity,1.0,stabile,False,False,10,10,False,10,{'Creativity': np.int64(10)},1.0,Quando abbiamo creato la nostra storia.
+exp03_zeroshot,claude-opus-5,zero_shot,439,Activity,Making,0.8,abbastanza_stabile,False,False,10,10,False,10,"{'Making': np.int64(8), 'Activity': np.int64(2)}",1.0,"la cosa che mi è piaciuta di più è creare i rover e ""guidarli"""
+exp03_zeroshot,claude-opus-5,zero_shot,441,Activity,Activity,1.0,stabile,False,False,10,10,False,10,{'Activity': np.int64(10)},1.0,il razzo bottiglia
+exp03_zeroshot,claude-opus-5,zero_shot,445,Activity,Activity,1.0,stabile,False,False,10,10,False,10,{'Activity': np.int64(10)},1.0,i laboratori
+exp03_zeroshot,claude-opus-5,zero_shot,448,Activity,Making,1.0,stabile,False,False,10,10,False,10,{'Making': np.int64(10)},1.0,la cosa che mi è piaciuta di più è stata quando abbiamo creato il rover
+exp03_zeroshot,claude-opus-5,zero_shot,453,Activity,Tool,0.6,instabile,False,False,10,10,False,10,"{'Tool': np.int64(6), 'Activity': np.int64(4)}",1.0, la parte dei rover
+exp03_zeroshot,claude-opus-5,zero_shot,454,Love,Love,1.0,stabile,False,False,10,10,False,10,{'Love': np.int64(10)},1.0,un po tutto
+exp03_zeroshot,claude-opus-5,zero_shot,455,Activity,Activity,1.0,stabile,False,False,10,10,False,10,{'Activity': np.int64(10)},1.0,la biologia e il DNA
+exp03_zeroshot,claude-opus-5,zero_shot,457,Activity,Creativity,0.7,instabile,False,False,10,10,False,10,"{'Creativity': np.int64(7), 'Making': np.int64(2), 'Activity': np.int64(1)}",1.0,Il rover che abbiamo creato
+exp03_zeroshot,claude-opus-5,zero_shot,459,Activity,Activity,1.0,stabile,False,False,10,10,False,10,{'Activity': np.int64(10)},1.0,l'astronave
+exp03_zeroshot,claude-opus-5,zero_shot,463,non classificabile,Hate,0.7,instabile,False,False,10,10,False,10,"{'Hate': np.int64(7), 'non classificabile': np.int64(3)}",1.0,la ricreazione
+exp03_zeroshot,claude-opus-5,zero_shot,470,Activity,Activity,1.0,stabile,False,False,10,10,False,10,{'Activity': np.int64(10)},1.0,"l' ultima attivita, quella con il DNA"
+exp03_zeroshot,claude-opus-5,zero_shot,471,Activity,Tool,1.0,stabile,False,False,10,10,False,10,{'Tool': np.int64(10)},1.0,il rover
+exp03_zeroshot,claude-opus-5,zero_shot,473,Activity,Activity,1.0,stabile,False,False,10,10,False,10,{'Activity': np.int64(10)},1.0,Il razzo bottiglia 
+exp03_zeroshot,claude-opus-5,zero_shot,484,Making,Activity,1.0,stabile,False,False,10,10,False,10,{'Activity': np.int64(10)},1.0,creare i video giochi
+exp03_zeroshot,claude-opus-5,zero_shot,486,Making,Learning,1.0,stabile,False,False,10,10,False,10,{'Learning': np.int64(10)},1.0,Imparare a fare videogiochi 
+exp03_zeroshot,claude-opus-5,zero_shot,494,Making,Activity,1.0,stabile,False,False,10,10,False,10,{'Activity': np.int64(10)},1.0,fare videogiochi
+exp03_zeroshot,claude-opus-5,zero_shot,498,Making,Creativity,1.0,stabile,False,False,10,10,False,10,{'Creativity': np.int64(10)},1.0,Mi è piaciuto molto progettare il mio videogioco personale anche se è stata la parte più difficile e stancante dal punto di vista intellettivo perchè  tutto quello che avevamo imparato dovevamo applicarlo lì 
+exp03_zeroshot,claude-opus-5,zero_shot,5,Activity,Activity,0.6,instabile,False,False,10,10,False,10,"{'Activity': np.int64(6), 'Creativity': np.int64(2), 'Making': np.int64(2)}",1.0,creare le macchinine facendo anche la gara
+exp03_zeroshot,claude-opus-5,zero_shot,505,Tool,Tool,0.9,abbastanza_stabile,False,False,10,10,False,10,"{'Tool': np.int64(9), 'Activity': np.int64(1)}",1.0,LA BANAA
+exp03_zeroshot,claude-opus-5,zero_shot,509,Activity,Activity,1.0,stabile,False,False,10,10,False,10,{'Activity': np.int64(10)},1.0,trovare il DNA
+exp03_zeroshot,claude-opus-5,zero_shot,51,Activity,Creativity,1.0,stabile,False,False,10,10,False,10,{'Creativity': np.int64(10)},1.0,il fatto che puoi esprimerti attraverso un piccolo giochino
+exp03_zeroshot,claude-opus-5,zero_shot,512,Activity,Tool,0.7,instabile,False,False,10,10,False,10,"{'Tool': np.int64(7), 'Activity': np.int64(3)}",1.0,il razzo
+exp03_zeroshot,claude-opus-5,zero_shot,515,Activity,Activity,1.0,stabile,False,False,10,10,False,10,{'Activity': np.int64(10)},1.0,il razzo bottiglia
+exp03_zeroshot,claude-opus-5,zero_shot,53,Activity,Activity,1.0,stabile,False,False,10,10,False,10,{'Activity': np.int64(10)},1.0,Creare la gara di corsa su scratch
+exp03_zeroshot,claude-opus-5,zero_shot,533,Making,Making,1.0,stabile,False,False,10,10,False,10,{'Making': np.int64(10)},1.0,Costruire il robot
+exp03_zeroshot,claude-opus-5,zero_shot,535,Making,Making,1.0,stabile,False,False,10,10,False,10,{'Making': np.int64(10)},1.0,costruire il robot 
+exp03_zeroshot,claude-opus-5,zero_shot,543,Making,Activity,1.0,stabile,False,False,10,10,False,10,{'Activity': np.int64(10)},1.0,fare un sito
+exp03_zeroshot,claude-opus-5,zero_shot,547,Making,Creativity,1.0,stabile,False,False,10,10,False,10,{'Creativity': np.int64(10)},1.0,creare immagini 
+exp03_zeroshot,claude-opus-5,zero_shot,55,Freedom,Freedom,1.0,stabile,False,False,10,10,False,10,{'Freedom': np.int64(10)},1.0,FARE UNA STORIA COME VOLEVAMO NOI
+exp03_zeroshot,claude-opus-5,zero_shot,550,Making,Creativity,0.6,instabile,False,False,10,10,False,10,"{'Creativity': np.int64(6), 'Activity': np.int64(4)}",1.0,creare immagini tramite intelligenza artificiale 
+exp03_zeroshot,claude-opus-5,zero_shot,551,Social,Social,1.0,stabile,False,False,10,10,False,10,{'Social': np.int64(10)},1.0,lo spirito di gruppo
+exp03_zeroshot,claude-opus-5,zero_shot,553,Social,Social,1.0,stabile,False,False,10,10,False,10,{'Social': np.int64(10)},1.0,la compagnia e il computer 
+exp03_zeroshot,claude-opus-5,zero_shot,554,Social,Social,1.0,stabile,False,False,10,10,False,10,{'Social': np.int64(10)},1.0,La collaborazione e l’entusiasmo del gruppo nel lavorare insieme per raggiungere un obiettivo comune.
+exp03_zeroshot,claude-opus-5,zero_shot,555,Social,Social,1.0,stabile,False,False,10,10,False,10,{'Social': np.int64(10)},1.0,Lavorare in gruppo
+exp03_zeroshot,claude-opus-5,zero_shot,560,Creativity,Creativity,1.0,stabile,False,False,10,10,False,10,{'Creativity': np.int64(10)},1.0,creare un proprio tema
+exp03_zeroshot,claude-opus-5,zero_shot,561,Social,Social,1.0,stabile,False,False,10,10,False,10,{'Social': np.int64(10)},1.0,Lavorare in gruppo
+exp03_zeroshot,claude-opus-5,zero_shot,563,Social,Social,1.0,stabile,False,False,10,10,False,10,{'Social': np.int64(10)},1.0,Confrontarmi con i docenti e i compagni
+exp03_zeroshot,claude-opus-5,zero_shot,566,Social,Social,1.0,stabile,False,False,10,10,False,10,{'Social': np.int64(10)},1.0,Lo spirito di collaborazione
+exp03_zeroshot,claude-opus-5,zero_shot,569,Freedom,Activity,1.0,stabile,False,False,10,10,False,10,{'Activity': np.int64(10)},1.0,L’argomento scelto
+exp03_zeroshot,claude-opus-5,zero_shot,572,Social,Social,1.0,stabile,False,False,10,10,False,10,{'Social': np.int64(10)},1.0,Lavorare a gruppi insieme
+exp03_zeroshot,claude-opus-5,zero_shot,578,Learning,Activity,1.0,stabile,False,False,10,10,False,10,{'Activity': np.int64(10)},1.0,Gli argomenti trattati
+exp03_zeroshot,claude-opus-5,zero_shot,58,Activity,Activity,1.0,stabile,False,False,10,10,False,10,{'Activity': np.int64(10)},1.0,fare i giochi
+exp03_zeroshot,claude-opus-5,zero_shot,580,Learning,Activity,1.0,stabile,False,False,10,10,False,10,{'Activity': np.int64(10)},1.0,Gli argomenti trattati
+exp03_zeroshot,claude-opus-5,zero_shot,582,Activity,Activity,1.0,stabile,False,False,10,10,False,10,{'Activity': np.int64(10)},1.0,Le esposizioni dei siti
+exp03_zeroshot,claude-opus-5,zero_shot,59,Activity,Activity,1.0,stabile,False,False,10,10,False,10,{'Activity': np.int64(10)},1.0,fare i giochi
+exp03_zeroshot,claude-opus-5,zero_shot,594,Social,Social,1.0,stabile,False,False,10,10,False,10,{'Social': np.int64(10)},1.0,Lavorare in compagnia
+exp03_zeroshot,claude-opus-5,zero_shot,595,Tool,Tool,1.0,stabile,False,False,10,10,False,10,{'Tool': np.int64(10)},1.0,lavorare con il computer
+exp03_zeroshot,claude-opus-5,zero_shot,597,Social,Social,1.0,stabile,False,False,10,10,False,10,{'Social': np.int64(10)},1.0,La collaborazione
+exp03_zeroshot,claude-opus-5,zero_shot,600,Social,Social,1.0,stabile,False,False,10,10,False,10,{'Social': np.int64(10)},1.0,dividersi i compiti durante l’attività
+exp03_zeroshot,claude-opus-5,zero_shot,603,Activity,Creativity,0.6,instabile,False,False,10,10,False,10,"{'Creativity': np.int64(6), 'Activity': np.int64(4)}",1.0,Creare la presentazione.
+exp03_zeroshot,claude-opus-5,zero_shot,606,Social,Social,1.0,stabile,False,False,10,10,False,10,{'Social': np.int64(10)},1.0,Fare un lavoro di gruppo
+exp03_zeroshot,claude-opus-5,zero_shot,607,Activity,Activity,0.6,instabile,False,False,10,10,False,10,"{'Activity': np.int64(6), 'Creativity': np.int64(4)}",1.0,Creare il sito
+exp03_zeroshot,claude-opus-5,zero_shot,608,Tool,Tool,1.0,stabile,False,False,10,10,False,10,{'Tool': np.int64(10)},1.0,l'uso di Al
+exp03_zeroshot,claude-opus-5,zero_shot,609,Learning,Learning,1.0,stabile,False,False,10,10,False,10,{'Learning': np.int64(10)},1.0,Imparare cose nuove.
+exp03_zeroshot,claude-opus-5,zero_shot,610,Activity,Activity,1.0,stabile,False,False,10,10,False,10,{'Activity': np.int64(10)},1.0,il faro e il sito
+exp03_zeroshot,claude-opus-5,zero_shot,62,Love,Love,1.0,stabile,False,False,10,10,False,10,{'Love': np.int64(10)},1.0,tutto
+exp03_zeroshot,claude-opus-5,zero_shot,625,Activity,Tool,1.0,stabile,False,False,10,10,False,10,{'Tool': np.int64(10)},1.0,Il sito
+exp03_zeroshot,claude-opus-5,zero_shot,628,Activity,Activity,0.9,abbastanza_stabile,False,False,10,10,False,10,"{'Activity': np.int64(9), 'Creativity': np.int64(1)}",1.0,creare il sito
+exp03_zeroshot,claude-opus-5,zero_shot,63,Activity,Creativity,1.0,stabile,False,False,10,10,False,10,{'Creativity': np.int64(10)},1.0,inventare giochi
+exp03_zeroshot,claude-opus-5,zero_shot,630,Learning,Learning,1.0,stabile,False,False,10,10,False,10,{'Learning': np.int64(10)},1.0,imparare come si crea un sito
+exp03_zeroshot,claude-opus-5,zero_shot,638,Creativity,Creativity,1.0,stabile,False,False,10,10,False,10,{'Creativity': np.int64(10)},1.0,Il fatto di creare immagini inventare da noi
+exp03_zeroshot,claude-opus-5,zero_shot,64,Learning,Learning,1.0,stabile,False,False,10,10,False,10,{'Learning': np.int64(10)},1.0,imparare qualcosa di nuovo
+exp03_zeroshot,claude-opus-5,zero_shot,641,Tool,Tool,1.0,stabile,False,False,10,10,False,10,{'Tool': np.int64(10)},1.0,I programmi di intelligenza artificiale utilizzati per la creazione del sito
+exp03_zeroshot,claude-opus-5,zero_shot,642,Activity,Activity,1.0,stabile,False,False,10,10,False,10,{'Activity': np.int64(10)},1.0,Fare il sito
+exp03_zeroshot,claude-opus-5,zero_shot,643,Social,Social,1.0,stabile,False,False,10,10,False,10,{'Social': np.int64(10)},1.0,creare il sito insieme in gruppo
+exp03_zeroshot,claude-opus-5,zero_shot,646,Activity,Making,1.0,stabile,False,False,10,10,False,10,{'Making': np.int64(10)},1.0,Quando ho finito e ho rivisto tutto il lavoro
+exp03_zeroshot,claude-opus-5,zero_shot,648,Activity,Creativity,1.0,stabile,False,False,10,10,False,10,{'Creativity': np.int64(10)},1.0,il poter creare un sito mio
+exp03_zeroshot,claude-opus-5,zero_shot,661,Social,Social,1.0,stabile,False,False,10,10,False,10,{'Social': np.int64(10)},1.0,La collaborazione con il mio gruppo
+exp03_zeroshot,claude-opus-5,zero_shot,662,Activity,Activity,1.0,stabile,False,False,10,10,False,10,{'Activity': np.int64(10)},1.0,fare il sito
+exp03_zeroshot,claude-opus-5,zero_shot,67,Tool,Creativity,1.0,stabile,False,False,10,10,False,10,{'Creativity': np.int64(10)},1.0,CREARE UNA STORIA SU SCRATCH
+exp03_zeroshot,claude-opus-5,zero_shot,678,Activity,Activity,1.0,stabile,False,False,10,10,False,10,{'Activity': np.int64(10)},1.0,Creare un sito web
+exp03_zeroshot,claude-opus-5,zero_shot,680,Social,Social,1.0,stabile,False,False,10,10,False,10,{'Social': np.int64(10)},1.0,Lavorare in gruppo
+exp03_zeroshot,claude-opus-5,zero_shot,682,Activity,Activity,1.0,stabile,False,False,10,10,False,10,{'Activity': np.int64(10)},1.0,fare il sito
+exp03_zeroshot,claude-opus-5,zero_shot,69,non classificabile,non classificabile,1.0,stabile,False,False,10,10,False,10,{'non classificabile': np.int64(10)},,Sì
+exp03_zeroshot,claude-opus-5,zero_shot,70,Love,Love,1.0,stabile,False,False,10,10,False,10,{'Love': np.int64(10)},1.0,tutto
+exp03_zeroshot,claude-opus-5,zero_shot,700,Creativity,Creativity,1.0,stabile,False,False,10,10,False,10,{'Creativity': np.int64(10)},1.0,creare la grafica del sito
+exp03_zeroshot,claude-opus-5,zero_shot,704,Learning,Learning,1.0,stabile,False,False,10,10,False,10,{'Learning': np.int64(10)},1.0,Imparare a creare un sito
+exp03_zeroshot,claude-opus-5,zero_shot,705,Feeling-,Hate,1.0,stabile,False,False,10,10,False,10,{'Hate': np.int64(10)},1.0,Niente di speciale
+exp03_zeroshot,claude-opus-5,zero_shot,708,Activity,Making,1.0,stabile,False,False,10,10,False,10,{'Making': np.int64(10)},1.0,Costruire il sito dall’inizio
+exp03_zeroshot,claude-opus-5,zero_shot,71,Love,Love,1.0,stabile,False,False,10,10,False,10,{'Love': np.int64(10)},1.0,tutto
+exp03_zeroshot,claude-opus-5,zero_shot,713,Activity,Creativity,0.8,abbastanza_stabile,False,False,10,10,False,10,"{'Creativity': np.int64(8), 'Activity': np.int64(2)}",1.0,L’idea di creare un sito
+exp03_zeroshot,claude-opus-5,zero_shot,715,Social,Social,1.0,stabile,False,False,10,10,False,10,{'Social': np.int64(10)},1.0,L'inclusività nella creazione del sito
+exp03_zeroshot,claude-opus-5,zero_shot,720,Activity,Activity,1.0,stabile,False,False,10,10,False,10,{'Activity': np.int64(10)},1.0,Creazione del sito
+exp03_zeroshot,claude-opus-5,zero_shot,723,Creativity,Creativity,0.7,instabile,False,False,10,10,False,10,"{'Creativity': np.int64(7), 'Activity': np.int64(3)}",1.0,Creare la musica con IA
+exp03_zeroshot,claude-opus-5,zero_shot,724,Activity,Activity,0.9,abbastanza_stabile,False,False,10,10,False,10,"{'Activity': np.int64(9), 'Making': np.int64(1)}",1.0,il progettp eseguito
+exp03_zeroshot,claude-opus-5,zero_shot,725,Activity,Activity,1.0,stabile,False,False,10,10,False,10,{'Activity': np.int64(10)},1.0,La parte delle canzoni
+exp03_zeroshot,claude-opus-5,zero_shot,728,Activity,Activity,1.0,stabile,False,False,10,10,False,10,{'Activity': np.int64(10)},1.0,Programmare utilizzando scratch + teachable.
+exp03_zeroshot,claude-opus-5,zero_shot,732,Activity,Activity,1.0,stabile,False,False,10,10,False,10,{'Activity': np.int64(10)},1.0,creare un giochino con chat gpt
+exp03_zeroshot,claude-opus-5,zero_shot,733,Activity,Activity,1.0,stabile,False,False,10,10,False,10,{'Activity': np.int64(10)},1.0,il gioco finale
+exp03_zeroshot,claude-opus-5,zero_shot,735,Activity,Activity,0.8,abbastanza_stabile,False,False,10,10,False,10,"{'Activity': np.int64(8), 'Creativity': np.int64(2)}",1.0,creare i giochi
+exp03_zeroshot,claude-opus-5,zero_shot,736,Creativity,Creativity,1.0,stabile,False,False,10,10,False,10,{'Creativity': np.int64(10)},1.0,creare il logo
+exp03_zeroshot,claude-opus-5,zero_shot,738,Activity,Making,1.0,stabile,False,False,10,10,False,10,{'Making': np.int64(10)},1.0,la parte pratica
+exp03_zeroshot,claude-opus-5,zero_shot,739,Tool,non classificabile,0.9,abbastanza_stabile,False,False,10,10,False,10,"{'non classificabile': np.int64(9), 'Activity': np.int64(1)}",1.0,gamma
+exp03_zeroshot,claude-opus-5,zero_shot,742,Teacher,Teacher,0.7,instabile,False,False,10,10,False,10,"{'Teacher': np.int64(7), 'Feeling+': np.int64(3)}",1.0,la simpaticita
+exp03_zeroshot,claude-opus-5,zero_shot,748,Activity,Flow,1.0,stabile,False,False,10,10,False,10,{'Flow': np.int64(10)},1.0,il modo in cui si è svolta l'attività e le attività stesse fatte
+exp03_zeroshot,claude-opus-5,zero_shot,750,Activity,Flow,1.0,stabile,False,False,10,10,False,10,{'Flow': np.int64(10)},1.0,il modo in cui si è svolta l'attività e le attività stesse fatte
+exp03_zeroshot,claude-opus-5,zero_shot,753,Tool,Tool,1.0,stabile,False,False,10,10,False,10,{'Tool': np.int64(10)},1.0,La parte di gamma.ai e quella di notebook.lm
+exp03_zeroshot,claude-opus-5,zero_shot,755,Teacher,Teacher,1.0,stabile,False,False,10,10,False,10,{'Teacher': np.int64(10)},1.0,Le spiegazioni del docente
+exp03_zeroshot,claude-opus-5,zero_shot,757,Love,Learning,0.9,abbastanza_stabile,False,False,10,10,False,10,"{'Learning': np.int64(9), 'hard fun': np.int64(1)}",1.0,in realtà mi è piaciuto tutto perché ho scoperto cose che non sapevo e ho capito che sono molto interessanti
+exp03_zeroshot,claude-opus-5,zero_shot,76,Love,Love,1.0,stabile,False,False,10,10,False,10,{'Love': np.int64(10)},1.0,Tutto
+exp03_zeroshot,claude-opus-5,zero_shot,766,Activity,Activity,1.0,stabile,False,False,10,10,False,10,{'Activity': np.int64(10)},1.0,La creazione del bot
+exp03_zeroshot,claude-opus-5,zero_shot,767,Tool,Tool,1.0,stabile,False,False,10,10,False,10,{'Tool': np.int64(10)},1.0,Suno e Botpress
+exp03_zeroshot,claude-opus-5,zero_shot,773,Activity,Activity,1.0,stabile,False,False,10,10,False,10,{'Activity': np.int64(10)},1.0,fare il sito
+exp03_zeroshot,claude-opus-5,zero_shot,777,Teacher,Teacher,0.9,abbastanza_stabile,False,False,10,10,False,10,"{'Teacher': np.int64(9), 'non classificabile': np.int64(1)}",1.0,il butel pelato
+exp03_zeroshot,claude-opus-5,zero_shot,783,Making,Freedom,1.0,stabile,False,False,10,10,False,10,{'Freedom': np.int64(10)},1.0,costurire quello che volevamo
+exp03_zeroshot,claude-opus-5,zero_shot,789,Activity,Activity,1.0,stabile,False,False,10,10,False,10,{'Activity': np.int64(10)},1.0,FARE I GIOCHI
+exp03_zeroshot,claude-opus-5,zero_shot,792,Creativity,Creativity,1.0,stabile,False,False,10,10,False,10,{'Creativity': np.int64(10)},1.0,Creare la storia
+exp03_zeroshot,claude-opus-5,zero_shot,794,Creativity,Creativity,1.0,stabile,False,False,10,10,False,10,{'Creativity': np.int64(10)},1.0,fare storie inventate da me
+exp03_zeroshot,claude-opus-5,zero_shot,796,Creativity,Creativity,1.0,stabile,False,False,10,10,False,10,{'Creativity': np.int64(10)},1.0,fare storie inventate da me
+exp03_zeroshot,claude-opus-5,zero_shot,8,Social,Activity,1.0,stabile,False,False,10,10,False,10,{'Activity': np.int64(10)},1.0,le gare
+exp03_zeroshot,claude-opus-5,zero_shot,801,Tool,Tool,1.0,stabile,False,False,10,10,False,10,{'Tool': np.int64(10)},1.0,USARE SCRATCH
+exp03_zeroshot,claude-opus-5,zero_shot,804,Activity,Creativity,0.6,instabile,False,False,10,10,False,10,"{'Creativity': np.int64(6), 'Activity': np.int64(4)}",1.0,CREARE UN MINIGIOCO
+exp03_zeroshot,claude-opus-5,zero_shot,805,Activity,Making,1.0,stabile,False,False,10,10,False,10,{'Making': np.int64(10)},1.0,cercare di far funzionare il tutto
+exp03_zeroshot,claude-opus-5,zero_shot,808,Tool,Tool,1.0,stabile,False,False,10,10,False,10,{'Tool': np.int64(10)},1.0,scratch
+exp03_zeroshot,claude-opus-5,zero_shot,81,Learning,Learning,1.0,stabile,False,False,10,10,False,10,{'Learning': np.int64(10)},1.0,mi e piaciuto imparare cose nuove
+exp03_zeroshot,claude-opus-5,zero_shot,815,Tool,Tool,1.0,stabile,False,False,10,10,False,10,{'Tool': np.int64(10)},1.0,Mi è piaciuto il programma che è stato utilizzato.
+exp03_zeroshot,claude-opus-5,zero_shot,820,Activity,Activity,1.0,stabile,False,False,10,10,False,10,{'Activity': np.int64(10)},1.0,Fare il gioco della palla🥎🥎🥎🥎🥎
+exp03_zeroshot,claude-opus-5,zero_shot,821,Activity,Activity,1.0,stabile,False,False,10,10,False,10,{'Activity': np.int64(10)},1.0,il gioco
+exp03_zeroshot,claude-opus-5,zero_shot,823,Tool,Tool,1.0,stabile,False,False,10,10,False,10,{'Tool': np.int64(10)},1.0,usare il computer
+exp03_zeroshot,claude-opus-5,zero_shot,825,Love,Activity,1.0,stabile,False,False,10,10,False,10,{'Activity': np.int64(10)},1.0,min è piaciuto tutto soprattutto quando abbiamo fatto i percorsi ad esempio slalom tra i banchi
+exp03_zeroshot,claude-opus-5,zero_shot,826,Activity,Learning,0.8,abbastanza_stabile,False,False,10,10,False,10,"{'Learning': np.int64(8), 'Activity': np.int64(2)}",1.0,Programmare il codeyrocky e imparare cose nuove
+exp03_zeroshot,claude-opus-5,zero_shot,83,Tool,Tool,1.0,stabile,False,False,10,10,False,10,{'Tool': np.int64(10)},1.0,Computer
+exp03_zeroshot,claude-opus-5,zero_shot,836,Activity,Activity,1.0,stabile,False,False,10,10,False,10,{'Activity': np.int64(10)},1.0,Programmare
+exp03_zeroshot,claude-opus-5,zero_shot,837,Activity,Making,1.0,stabile,False,False,10,10,False,10,{'Making': np.int64(10)},1.0,quando abbiamo provato i roboti
+exp03_zeroshot,claude-opus-5,zero_shot,842,Social,Social,1.0,stabile,False,False,10,10,False,10,{'Social': np.int64(10)},1.0,il gioco con cui si poteva giocare in tre
+exp03_zeroshot,claude-opus-5,zero_shot,849,Teacher,Teacher,1.0,stabile,False,False,10,10,False,10,{'Teacher': np.int64(10)},1.0,Le spiegazioni di Antonio
+exp03_zeroshot,claude-opus-5,zero_shot,851,Activity,Activity,0.9,abbastanza_stabile,False,False,10,10,False,10,"{'Activity': np.int64(9), 'Creativity': np.int64(1)}",1.0,CREARE I VIDEO GIOCHI CON IL CODING
+exp03_zeroshot,claude-opus-5,zero_shot,855,Activity,Activity,1.0,stabile,False,False,10,10,False,10,{'Activity': np.int64(10)},1.0,La gara
+exp03_zeroshot,claude-opus-5,zero_shot,856,Tool,Tool,1.0,stabile,False,False,10,10,False,10,{'Tool': np.int64(10)},1.0,scratch
+exp03_zeroshot,claude-opus-5,zero_shot,857,Tool,Tool,1.0,stabile,False,False,10,10,False,10,{'Tool': np.int64(10)},1.0,scratch
+exp03_zeroshot,claude-opus-5,zero_shot,858,Activity,Activity,0.8,abbastanza_stabile,False,False,10,10,False,10,"{'Activity': np.int64(8), 'Creativity': np.int64(2)}",1.0,Creare i video giochi
+exp03_zeroshot,claude-opus-5,zero_shot,867,Activity,Making,1.0,stabile,False,False,10,10,False,10,{'Making': np.int64(10)},1.0,la pratica
+exp03_zeroshot,claude-opus-5,zero_shot,876,Making,Making,1.0,stabile,False,False,10,10,False,10,{'Making': np.int64(10)},1.0,costruire e sperimentare: il razzo e il Rover.
+exp03_zeroshot,claude-opus-5,zero_shot,88,Tool,Tool,1.0,stabile,False,False,10,10,False,10,{'Tool': np.int64(10)},1.0,usare i robot
+exp03_zeroshot,claude-opus-5,zero_shot,93,Activity,Activity,1.0,stabile,False,False,10,10,False,10,{'Activity': np.int64(10)},1.0,travestire i thymio
+exp03_zeroshot,claude-opus-5,zero_shot,944,Activity,Activity,1.0,stabile,False,False,10,10,False,10,{'Activity': np.int64(10)},1.0,Fare il sito
+exp03_zeroshot,claude-opus-5,zero_shot,945,Creativity,Creativity,1.0,stabile,False,False,10,10,False,10,{'Creativity': np.int64(10)},1.0,Ideare il sito a mio piacimento
+exp03_zeroshot,claude-opus-5,zero_shot,952,Activity,Activity,0.8,abbastanza_stabile,False,False,10,10,False,10,"{'Activity': np.int64(8), 'Creativity': np.int64(2)}",1.0,creare il sito
+exp03_zeroshot,claude-opus-5,zero_shot,954,Activity,Activity,0.6,instabile,False,False,10,10,False,10,"{'Activity': np.int64(6), 'Creativity': np.int64(4)}",1.0,la creazione del sito 
+exp03_zeroshot,claude-opus-5,zero_shot,958,Learning,Learning,1.0,stabile,False,False,10,10,False,10,{'Learning': np.int64(10)},1.0,Imparare cose nuove
+exp03_zeroshot,claude-opus-5,zero_shot,960,Activity,Activity,0.7,instabile,False,False,10,10,False,10,"{'Activity': np.int64(7), 'Creativity': np.int64(3)}",1.0,Creare il sito
+exp03_zeroshot,claude-opus-5,zero_shot,97,Tool,Tool,1.0,stabile,False,False,10,10,False,10,{'Tool': np.int64(10)},1.0,i robot
+exp03_zeroshot,claude-opus-5,zero_shot,971,Learning,Learning,1.0,stabile,False,False,10,10,False,10,{'Learning': np.int64(10)},1.0,l’aver imparato cose nuove e aver approfondito il tema dell’intelligenza artificiale 
+exp03_zeroshot,claude-opus-5,zero_shot,975,Activity,Activity,1.0,stabile,False,False,10,10,False,10,{'Activity': np.int64(10)},1.0,cercare le foto 
+exp03_zeroshot,claude-opus-5,zero_shot,980,Making,Making,1.0,stabile,False,False,10,10,False,10,{'Making': np.int64(10)},1.0,Lavorare al progetto
+exp03_zeroshot,claude-opus-5,zero_shot,984,Activity,,0.5,instabile,True,True,10,10,False,10,"{'Making': np.int64(5), 'Activity': np.int64(5)}",1.0,realizzare il sito
+exp03_zeroshot,claude-opus-5,zero_shot,986,Freedom,Freedom,1.0,stabile,False,False,10,10,False,10,{'Freedom': np.int64(10)},1.0,Il lavoro autonomo sul sito
+exp03_zeroshot,claude-opus-5,zero_shot,990,Social,Social,1.0,stabile,False,False,10,10,False,10,{'Social': np.int64(10)},1.0,Lavoro di gruppo 
+exp03_zeroshot,claude-opus-5,zero_shot,998,hard fun,Feeling+,1.0,stabile,False,False,10,10,False,10,{'Feeling+': np.int64(10)},1.0,il coinvolgimento
+exp03_zeroshot,claude-opus-5,zero_shot,999,Social,Social,1.0,stabile,False,False,10,10,False,10,{'Social': np.int64(10)},1.0,Lavorare con i compagni
+exp03_zeroshot,gpt-5.6-luna,zero_shot,101,Activity,Activity,1.0,stabile,False,False,10,10,False,10,{'Activity': np.int64(10)},1.0,Fare i loghi
+exp03_zeroshot,gpt-5.6-luna,zero_shot,1012,Social,Social,1.0,stabile,False,False,10,10,False,10,{'Social': np.int64(10)},1.0,Lavorare di gruppo
+exp03_zeroshot,gpt-5.6-luna,zero_shot,1020,Activity,Activity,1.0,stabile,False,False,10,10,False,10,{'Activity': np.int64(10)},1.0,Ricercare le informazioni.
+exp03_zeroshot,gpt-5.6-luna,zero_shot,1023,Activity,Activity,0.8,abbastanza_stabile,False,False,10,10,False,10,"{'Activity': np.int64(8), 'Creativity': np.int64(2)}",1.0,Creare il sito 
+exp03_zeroshot,gpt-5.6-luna,zero_shot,1027,Creativity,Freedom,0.6,instabile,False,False,10,10,False,10,"{'Freedom': np.int64(6), 'Creativity': np.int64(4)}",1.0,che ci ha dato modo di creare qualcosa da soli
+exp03_zeroshot,gpt-5.6-luna,zero_shot,1028,Creativity,Activity,0.9,abbastanza_stabile,False,False,10,10,False,10,"{'Activity': np.int64(9), 'Creativity': np.int64(1)}",1.0,creare immagine con l'ai
+exp03_zeroshot,gpt-5.6-luna,zero_shot,1032,Activity,Activity,0.6,instabile,False,False,10,10,False,10,"{'Activity': np.int64(6), 'Creativity': np.int64(4)}",1.0,La creazione di un sito
+exp03_zeroshot,gpt-5.6-luna,zero_shot,1039,Activity,Activity,1.0,stabile,False,False,10,10,False,10,{'Activity': np.int64(10)},1.0,Creare il sito
+exp03_zeroshot,gpt-5.6-luna,zero_shot,1043,Activity,Activity,1.0,stabile,False,False,10,10,False,10,{'Activity': np.int64(10)},1.0,creare il sito
+exp03_zeroshot,gpt-5.6-luna,zero_shot,1048,Social,Social,1.0,stabile,False,False,10,10,False,10,{'Social': np.int64(10)},1.0,creare il sito con i miei compagni
+exp03_zeroshot,gpt-5.6-luna,zero_shot,105,Activity,Activity,1.0,stabile,False,False,10,10,False,10,{'Activity': np.int64(10)},1.0,COMANDARE I ROBOT
+exp03_zeroshot,gpt-5.6-luna,zero_shot,1050,Tool,Activity,1.0,stabile,False,False,10,10,False,10,{'Activity': np.int64(10)},1.0,Creare il sito
+exp03_zeroshot,gpt-5.6-luna,zero_shot,1059,Activity,Activity,1.0,stabile,False,False,10,10,False,10,{'Activity': np.int64(10)},1.0,La realizzazione del sito
+exp03_zeroshot,gpt-5.6-luna,zero_shot,106,Activity,Freedom,0.9,abbastanza_stabile,False,False,10,10,False,10,"{'Freedom': np.int64(9), 'Creativity': np.int64(1)}",1.0,fare un simbolo che volevamo
+exp03_zeroshot,gpt-5.6-luna,zero_shot,1060,Activity,Tool,1.0,stabile,False,False,10,10,False,10,{'Tool': np.int64(10)},1.0,Il sito 
+exp03_zeroshot,gpt-5.6-luna,zero_shot,1061,Social,Social,1.0,stabile,False,False,10,10,False,10,{'Social': np.int64(10)},1.0,Lavorare in gruppo 
+exp03_zeroshot,gpt-5.6-luna,zero_shot,1068,Tool,Tool,1.0,stabile,False,False,10,10,False,10,{'Tool': np.int64(10)},1.0,usare il pc
+exp03_zeroshot,gpt-5.6-luna,zero_shot,1072,Activity,Tool,1.0,stabile,False,False,10,10,False,10,{'Tool': np.int64(10)},1.0,Lavorare con il sito
+exp03_zeroshot,gpt-5.6-luna,zero_shot,1073,Making,Making,0.9,abbastanza_stabile,False,False,10,10,False,10,"{'Making': np.int64(9), 'Activity': np.int64(1)}",1.0,le attività che abbiamo fatto noi da studenti 
+exp03_zeroshot,gpt-5.6-luna,zero_shot,1077,Activity,Activity,0.7,instabile,False,False,10,10,False,10,"{'Activity': np.int64(7), 'Making': np.int64(3)}",1.0,Fare il sito
+exp03_zeroshot,gpt-5.6-luna,zero_shot,1078,Creativity,Creativity,0.9,abbastanza_stabile,False,False,10,10,False,10,"{'Creativity': np.int64(9), 'Making': np.int64(1)}",1.0,la creazione delle immagini
+exp03_zeroshot,gpt-5.6-luna,zero_shot,1083,Social,Social,1.0,stabile,False,False,10,10,False,10,{'Social': np.int64(10)},1.0,lo spirito di gruppo
+exp03_zeroshot,gpt-5.6-luna,zero_shot,1084,Social,Social,1.0,stabile,False,False,10,10,False,10,{'Social': np.int64(10)},1.0,il lavorare in gruppo
+exp03_zeroshot,gpt-5.6-luna,zero_shot,1089,Tool,Tool,1.0,stabile,False,False,10,10,False,10,{'Tool': np.int64(10)},1.0,arduino 
+exp03_zeroshot,gpt-5.6-luna,zero_shot,1091,Tool,Tool,1.0,stabile,False,False,10,10,False,10,{'Tool': np.int64(10)},1.0,arduino
+exp03_zeroshot,gpt-5.6-luna,zero_shot,1093,Hate,Hate,1.0,stabile,False,False,10,10,False,10,{'Hate': np.int64(10)},1.0,Niente
+exp03_zeroshot,gpt-5.6-luna,zero_shot,1104,Teacher,Teacher,1.0,stabile,False,False,10,10,False,10,{'Teacher': np.int64(10)},1.0,La passiene dei docenti 
+exp03_zeroshot,gpt-5.6-luna,zero_shot,1107,Tool,non classificabile,1.0,stabile,False,False,10,10,False,10,{'non classificabile': np.int64(10)},,bothpress
+exp03_zeroshot,gpt-5.6-luna,zero_shot,111,Activity,Tool,1.0,stabile,False,False,10,10,False,10,{'Tool': np.int64(10)},1.0,il sito
+exp03_zeroshot,gpt-5.6-luna,zero_shot,1110,Tool,Tool,1.0,stabile,False,False,10,10,False,10,{'Tool': np.int64(10)},1.0,uso del AI
+exp03_zeroshot,gpt-5.6-luna,zero_shot,1111,Teacher,Freedom,1.0,stabile,False,False,10,10,False,10,{'Freedom': np.int64(10)},1.0,Come insegNAo ( la libertà)
+exp03_zeroshot,gpt-5.6-luna,zero_shot,1117,Flow,Activity,0.7,instabile,False,False,10,10,False,10,"{'Activity': np.int64(7), 'Flow': np.int64(3)}",1.0,La parte delle presentazioni
+exp03_zeroshot,gpt-5.6-luna,zero_shot,1119,Social,Social,1.0,stabile,False,False,10,10,False,10,{'Social': np.int64(10)},1.0,lavorare in gruppo 
+exp03_zeroshot,gpt-5.6-luna,zero_shot,112,Activity,Making,1.0,stabile,False,False,10,10,False,10,{'Making': np.int64(10)},1.0,ascoltare la musica e ricrearla
+exp03_zeroshot,gpt-5.6-luna,zero_shot,1123,Flow,Flow,0.6,instabile,False,False,10,10,False,10,"{'Flow': np.int64(6), 'non classificabile': np.int64(4)}",1.0,esposizoone
+exp03_zeroshot,gpt-5.6-luna,zero_shot,1128,Social,Social,1.0,stabile,False,False,10,10,False,10,{'Social': np.int64(10)},1.0,Parlare con gli altri 
+exp03_zeroshot,gpt-5.6-luna,zero_shot,1136,Learning,Learning,1.0,stabile,False,False,10,10,False,10,{'Learning': np.int64(10)},1.0,conoscere programmi utili che non conoscevo 
+exp03_zeroshot,gpt-5.6-luna,zero_shot,1137,Social,Social,1.0,stabile,False,False,10,10,False,10,{'Social': np.int64(10)},1.0,la collaborazione 
+exp03_zeroshot,gpt-5.6-luna,zero_shot,1140,Activity,Tool,0.7,instabile,False,False,10,10,False,10,"{'Tool': np.int64(7), 'Activity': np.int64(3)}",1.0,Usare l’ia per fare il bot di cicciogamer89
+exp03_zeroshot,gpt-5.6-luna,zero_shot,1141,Activity,Activity,1.0,stabile,False,False,10,10,False,10,{'Activity': np.int64(10)},1.0,il gioco con le carte 
+exp03_zeroshot,gpt-5.6-luna,zero_shot,1148,Tool,Activity,0.8,abbastanza_stabile,False,False,10,10,False,10,"{'Activity': np.int64(8), 'Tool': np.int64(2)}",1.0,Scrivere sull’OLED
+exp03_zeroshot,gpt-5.6-luna,zero_shot,115,Creativity,Activity,1.0,stabile,False,False,10,10,False,10,{'Activity': np.int64(10)},1.0,creare suoni
+exp03_zeroshot,gpt-5.6-luna,zero_shot,1150,Tool,Tool,1.0,stabile,False,False,10,10,False,10,{'Tool': np.int64(10)},1.0,Arduino 
+exp03_zeroshot,gpt-5.6-luna,zero_shot,1157,Tool,,0.5,instabile,False,True,10,10,False,10,"{'Activity': np.int64(5), 'Making': np.int64(4), 'Tool': np.int64(1)}",1.0,scrivere le cose sullo schermo OLED 
+exp03_zeroshot,gpt-5.6-luna,zero_shot,1166,Making,Activity,1.0,stabile,False,False,10,10,False,10,{'Activity': np.int64(10)},1.0,la programmazione 
+exp03_zeroshot,gpt-5.6-luna,zero_shot,1168,non classificabile,non classificabile,1.0,stabile,False,False,10,10,False,10,{'non classificabile': np.int64(10)},,.
+exp03_zeroshot,gpt-5.6-luna,zero_shot,1171,Activity,Activity,1.0,stabile,False,False,10,10,False,10,{'Activity': np.int64(10)},1.0,programmare la centralina
+exp03_zeroshot,gpt-5.6-luna,zero_shot,1177,Love,Love,1.0,stabile,False,False,10,10,False,10,{'Love': np.int64(10)},1.0,tutto
+exp03_zeroshot,gpt-5.6-luna,zero_shot,1187,Activity,Tool,1.0,stabile,False,False,10,10,False,10,{'Tool': np.int64(10)},1.0,parlare al microfono 
+exp03_zeroshot,gpt-5.6-luna,zero_shot,1188,Making,Activity,1.0,stabile,False,False,10,10,False,10,{'Activity': np.int64(10)},1.0,editare 
+exp03_zeroshot,gpt-5.6-luna,zero_shot,1189,Making,Activity,0.9,abbastanza_stabile,False,False,10,10,False,10,"{'Activity': np.int64(9), 'Tool': np.int64(1)}",1.0,editing 
+exp03_zeroshot,gpt-5.6-luna,zero_shot,1195,Making,Activity,0.9,abbastanza_stabile,False,False,10,10,False,10,"{'Activity': np.int64(9), 'Making': np.int64(1)}",1.0,Editare 
+exp03_zeroshot,gpt-5.6-luna,zero_shot,1198,Making,Making,1.0,stabile,False,False,10,10,False,10,{'Making': np.int64(10)},1.0,Fare le modifiche al audio
+exp03_zeroshot,gpt-5.6-luna,zero_shot,12,Tool,Tool,1.0,stabile,False,False,10,10,False,10,{'Tool': np.int64(10)},1.0,la radio
+exp03_zeroshot,gpt-5.6-luna,zero_shot,1200,Making,Making,0.9,abbastanza_stabile,False,False,10,10,False,10,"{'Making': np.int64(9), 'Activity': np.int64(1)}",1.0,realizzare la copertina 
+exp03_zeroshot,gpt-5.6-luna,zero_shot,125,Tool,Tool,1.0,stabile,False,False,10,10,False,10,{'Tool': np.int64(10)},1.0,il cicalino 
+exp03_zeroshot,gpt-5.6-luna,zero_shot,133,Activity,Making,1.0,stabile,False,False,10,10,False,10,{'Making': np.int64(10)},1.0,quando abbiamo creato un interruttore  con il sensore di luminosità e il led
+exp03_zeroshot,gpt-5.6-luna,zero_shot,14,Activity,Activity,1.0,stabile,False,False,10,10,False,10,{'Activity': np.int64(10)},1.0,programmare i microbit
+exp03_zeroshot,gpt-5.6-luna,zero_shot,141,Creativity,Activity,0.9,abbastanza_stabile,False,False,10,10,False,10,"{'Activity': np.int64(9), 'Creativity': np.int64(1)}",1.0,creare delle basi musicali
+exp03_zeroshot,gpt-5.6-luna,zero_shot,142,Tool,Tool,0.9,abbastanza_stabile,False,False,10,10,False,10,"{'Tool': np.int64(9), 'Activity': np.int64(1)}",1.0,quando abbiamo usatto i sensori
+exp03_zeroshot,gpt-5.6-luna,zero_shot,143,Creativity,Activity,0.9,abbastanza_stabile,False,False,10,10,False,10,"{'Activity': np.int64(9), 'Creativity': np.int64(1)}",1.0,creare delle basi musicali
+exp03_zeroshot,gpt-5.6-luna,zero_shot,144,Creativity,Creativity,1.0,stabile,False,False,10,10,False,10,{'Creativity': np.int64(10)},1.0,creare la mia musica personale 
+exp03_zeroshot,gpt-5.6-luna,zero_shot,146,Social,Making,0.8,abbastanza_stabile,False,False,10,10,False,10,"{'Making': np.int64(8), 'Freedom': np.int64(1), 'Social': np.int64(1)}",1.0,Sperimentare per conto nostro e con le amiche fare il lavoro con le lucine
+exp03_zeroshot,gpt-5.6-luna,zero_shot,161,Activity,Activity,1.0,stabile,False,False,10,10,False,10,{'Activity': np.int64(10)},1.0,accendere le lucine con il computer
+exp03_zeroshot,gpt-5.6-luna,zero_shot,163,Creativity,Creativity,1.0,stabile,False,False,10,10,False,10,{'Creativity': np.int64(10)},1.0,creare una propria canzone
+exp03_zeroshot,gpt-5.6-luna,zero_shot,170,Activity,Activity,1.0,stabile,False,False,10,10,False,10,{'Activity': np.int64(10)},1.0,Escape room 
+exp03_zeroshot,gpt-5.6-luna,zero_shot,173,Activity,Activity,1.0,stabile,False,False,10,10,False,10,{'Activity': np.int64(10)},1.0,mi è piaciuta l'idea di programmare thymio da cane da caccia
+exp03_zeroshot,gpt-5.6-luna,zero_shot,179,Tool,Tool,1.0,stabile,False,False,10,10,False,10,{'Tool': np.int64(10)},1.0,usare il computer e comandare il robot
+exp03_zeroshot,gpt-5.6-luna,zero_shot,187,Social,Social,1.0,stabile,False,False,10,10,False,10,{'Social': np.int64(10)},1.0,Lavorare con i miei amici.
+exp03_zeroshot,gpt-5.6-luna,zero_shot,189,Tool,non classificabile,1.0,stabile,False,False,10,10,False,10,{'non classificabile': np.int64(10)},,root
+exp03_zeroshot,gpt-5.6-luna,zero_shot,203,Activity,Tool,1.0,stabile,False,False,10,10,False,10,{'Tool': np.int64(10)},1.0,usare l'intelligenza artificiale per creare immagini
+exp03_zeroshot,gpt-5.6-luna,zero_shot,204,Social,Social,1.0,stabile,False,False,10,10,False,10,{'Social': np.int64(10)},1.0,lavorare in gruppo
+exp03_zeroshot,gpt-5.6-luna,zero_shot,214,Activity,Activity,1.0,stabile,False,False,10,10,False,10,{'Activity': np.int64(10)},1.0,Addestrare l'AI
+exp03_zeroshot,gpt-5.6-luna,zero_shot,215,Activity,Tool,0.9,abbastanza_stabile,False,False,10,10,False,10,"{'Tool': np.int64(9), 'Activity': np.int64(1)}",1.0,Caricare le foto dalla webcame
+exp03_zeroshot,gpt-5.6-luna,zero_shot,216,Social,Social,1.0,stabile,False,False,10,10,False,10,{'Social': np.int64(10)},1.0,lavoro a gruppi
+exp03_zeroshot,gpt-5.6-luna,zero_shot,219,Learning,Tool,0.7,instabile,False,False,10,10,False,10,"{'Tool': np.int64(7), 'Activity': np.int64(3)}",1.0,vedere come un programma può fare cosi tatte cose
+exp03_zeroshot,gpt-5.6-luna,zero_shot,221,Activity,Activity,1.0,stabile,False,False,10,10,False,10,{'Activity': np.int64(10)},1.0,Programmare con scratch
+exp03_zeroshot,gpt-5.6-luna,zero_shot,224,Tool,Tool,1.0,stabile,False,False,10,10,False,10,{'Tool': np.int64(10)},1.0,scratch
+exp03_zeroshot,gpt-5.6-luna,zero_shot,226,Hate,Hate,1.0,stabile,False,False,10,10,False,10,{'Hate': np.int64(10)},1.0,niente 
+exp03_zeroshot,gpt-5.6-luna,zero_shot,237,Teacher,Flow,1.0,stabile,False,False,10,10,False,10,{'Flow': np.int64(10)},1.0,La spiegazione sull'ai
+exp03_zeroshot,gpt-5.6-luna,zero_shot,243,Activity,Activity,1.0,stabile,False,False,10,10,False,10,{'Activity': np.int64(10)},1.0,"La parte di ""programmazione"" "
+exp03_zeroshot,gpt-5.6-luna,zero_shot,249,Creativity,Creativity,1.0,stabile,False,False,10,10,False,10,{'Creativity': np.int64(10)},1.0,CREATIVITA
+exp03_zeroshot,gpt-5.6-luna,zero_shot,250,Activity,Activity,1.0,stabile,False,False,10,10,False,10,{'Activity': np.int64(10)},1.0,la prima sfida con le macchine 
+exp03_zeroshot,gpt-5.6-luna,zero_shot,253,Making,Making,1.0,stabile,False,False,10,10,False,10,{'Making': np.int64(10)},1.0,Costruire
+exp03_zeroshot,gpt-5.6-luna,zero_shot,254,Freedom,Freedom,1.0,stabile,False,False,10,10,False,10,{'Freedom': np.int64(10)},1.0,Mi è piaciuto di più quando ci hanno fatto fare il progetto che volevamo
+exp03_zeroshot,gpt-5.6-luna,zero_shot,26,Activity,Activity,1.0,stabile,False,False,10,10,False,10,{'Activity': np.int64(10)},1.0,"misurare temperatura, luce e livello sonoro"
+exp03_zeroshot,gpt-5.6-luna,zero_shot,260,Creativity,Creativity,1.0,stabile,False,False,10,10,False,10,{'Creativity': np.int64(10)},1.0,creativita che permette
+exp03_zeroshot,gpt-5.6-luna,zero_shot,262,Activity,Activity,1.0,stabile,False,False,10,10,False,10,{'Activity': np.int64(10)},1.0,la lezione con la base motrice e il percorso
+exp03_zeroshot,gpt-5.6-luna,zero_shot,266,Activity,Activity,1.0,stabile,False,False,10,10,False,10,{'Activity': np.int64(10)},1.0,programmare
+exp03_zeroshot,gpt-5.6-luna,zero_shot,267,Making,Making,1.0,stabile,False,False,10,10,False,10,{'Making': np.int64(10)},1.0,costruire
+exp03_zeroshot,gpt-5.6-luna,zero_shot,271,Activity,Activity,1.0,stabile,False,False,10,10,False,10,{'Activity': np.int64(10)},1.0,La partita di calcio alla fine della attivita
+exp03_zeroshot,gpt-5.6-luna,zero_shot,276,non classificabile,Activity,1.0,stabile,False,False,10,10,False,10,{'Activity': np.int64(10)},1.0,il calcio
+exp03_zeroshot,gpt-5.6-luna,zero_shot,279,Activity,Activity,1.0,stabile,False,False,10,10,False,10,{'Activity': np.int64(10)},1.0,programmare i robottini
+exp03_zeroshot,gpt-5.6-luna,zero_shot,28,Activity,Activity,1.0,stabile,False,False,10,10,False,10,{'Activity': np.int64(10)},1.0,programmare il microbit
+exp03_zeroshot,gpt-5.6-luna,zero_shot,280,Activity,Social,0.6,instabile,False,False,10,10,False,10,"{'Social': np.int64(6), 'Making': np.int64(4)}",1.0,costruire i robot in gruppi
+exp03_zeroshot,gpt-5.6-luna,zero_shot,281,Activity,,0.5,instabile,True,True,10,10,False,10,"{'Activity': np.int64(5), 'Tool': np.int64(5)}",1.0,LA CAVALLETTA
+exp03_zeroshot,gpt-5.6-luna,zero_shot,283,Making,Making,1.0,stabile,False,False,10,10,False,10,{'Making': np.int64(10)},1.0,quando abbiamo costruito
+exp03_zeroshot,gpt-5.6-luna,zero_shot,286,Activity,Activity,1.0,stabile,False,False,10,10,False,10,{'Activity': np.int64(10)},1.0,fare i combattimenti
+exp03_zeroshot,gpt-5.6-luna,zero_shot,292,Activity,Activity,1.0,stabile,False,False,10,10,False,10,{'Activity': np.int64(10)},1.0,fare i combattimenti
+exp03_zeroshot,gpt-5.6-luna,zero_shot,295,Activity,Activity,0.8,abbastanza_stabile,False,False,10,10,False,10,"{'Activity': np.int64(8), 'Making': np.int64(2)}",1.0,CREARE LA CAVALLETTA
+exp03_zeroshot,gpt-5.6-luna,zero_shot,296,Activity,Making,0.8,abbastanza_stabile,False,False,10,10,False,10,"{'Making': np.int64(8), 'Activity': np.int64(2)}",1.0,fare gli comandi e montare il leggo
+exp03_zeroshot,gpt-5.6-luna,zero_shot,298,Love,Love,1.0,stabile,False,False,10,10,False,10,{'Love': np.int64(10)},1.0,TUTTO
+exp03_zeroshot,gpt-5.6-luna,zero_shot,300,Love,Love,1.0,stabile,False,False,10,10,False,10,{'Love': np.int64(10)},1.0,nn c'è una cosa che mi è piaciuta di più. mi è piaciuto un pò tutto 😂😂😂 
+exp03_zeroshot,gpt-5.6-luna,zero_shot,302,Activity,Activity,1.0,stabile,False,False,10,10,False,10,{'Activity': np.int64(10)},1.0,la riproduzione dei vari progetti 
+exp03_zeroshot,gpt-5.6-luna,zero_shot,304,Making,Making,1.0,stabile,False,False,10,10,False,10,{'Making': np.int64(10)},1.0,Costruire
+exp03_zeroshot,gpt-5.6-luna,zero_shot,312,Activity,Creativity,1.0,stabile,False,False,10,10,False,10,{'Creativity': np.int64(10)},1.0,Creare io gioco con playground raise
+exp03_zeroshot,gpt-5.6-luna,zero_shot,313,Activity,Activity,1.0,stabile,False,False,10,10,False,10,{'Activity': np.int64(10)},1.0,Fare il gioco con playground raise
+exp03_zeroshot,gpt-5.6-luna,zero_shot,314,Activity,Activity,1.0,stabile,False,False,10,10,False,10,{'Activity': np.int64(10)},1.0,Fare il videogioco 
+exp03_zeroshot,gpt-5.6-luna,zero_shot,315,Activity,Activity,1.0,stabile,False,False,10,10,False,10,{'Activity': np.int64(10)},1.0,programmare il gioco
+exp03_zeroshot,gpt-5.6-luna,zero_shot,318,Activity,Activity,0.9,abbastanza_stabile,False,False,10,10,False,10,"{'Activity': np.int64(9), 'Making': np.int64(1)}",1.0,Creare il videogioco con Playground 
+exp03_zeroshot,gpt-5.6-luna,zero_shot,324,Tool,non classificabile,1.0,stabile,False,False,10,10,False,10,{'non classificabile': np.int64(10)},,Playground raise
+exp03_zeroshot,gpt-5.6-luna,zero_shot,327,Social,Social,1.0,stabile,False,False,10,10,False,10,{'Social': np.int64(10)},1.0,Lavorare in gruppo
+exp03_zeroshot,gpt-5.6-luna,zero_shot,329,Activity,Activity,1.0,stabile,False,False,10,10,False,10,{'Activity': np.int64(10)},1.0,la parte della presentazione (che non ho ancora fatto)
+exp03_zeroshot,gpt-5.6-luna,zero_shot,33,Activity,Activity,1.0,stabile,False,False,10,10,False,10,{'Activity': np.int64(10)},1.0,MANDARE MASAGGI
+exp03_zeroshot,gpt-5.6-luna,zero_shot,333,Tool,Tool,1.0,stabile,False,False,10,10,False,10,{'Tool': np.int64(10)},1.0,L' uso di teachble machine
+exp03_zeroshot,gpt-5.6-luna,zero_shot,334,Creativity,Creativity,1.0,stabile,False,False,10,10,False,10,{'Creativity': np.int64(10)},1.0,il fatto di creare il bot dalle proprie idee
+exp03_zeroshot,gpt-5.6-luna,zero_shot,337,Tool,Tool,1.0,stabile,False,False,10,10,False,10,{'Tool': np.int64(10)},1.0,teachable machine
+exp03_zeroshot,gpt-5.6-luna,zero_shot,34,Activity,Activity,1.0,stabile,False,False,10,10,False,10,{'Activity': np.int64(10)},1.0,"misurare  la temperatura, la luce e il suono in varie stanze della scuola e infine fare la media"
+exp03_zeroshot,gpt-5.6-luna,zero_shot,340,Tool,Tool,1.0,stabile,False,False,10,10,False,10,{'Tool': np.int64(10)},1.0,lavorare con i computer
+exp03_zeroshot,gpt-5.6-luna,zero_shot,342,Tool,Learning,1.0,stabile,False,False,10,10,False,10,{'Learning': np.int64(10)},1.0,Imparera a utilizzare alcuni siti 
+exp03_zeroshot,gpt-5.6-luna,zero_shot,348,Creativity,Creativity,1.0,stabile,False,False,10,10,False,10,{'Creativity': np.int64(10)},1.0,la creazione della canzone inerente al nostro lavoro
+exp03_zeroshot,gpt-5.6-luna,zero_shot,35,Activity,Activity,0.6,instabile,False,False,10,10,False,10,"{'Activity': np.int64(6), 'Making': np.int64(4)}",1.0,realizzare il sistema del dado e mandarci dei messaggi
+exp03_zeroshot,gpt-5.6-luna,zero_shot,350,Tool,Tool,1.0,stabile,False,False,10,10,False,10,{'Tool': np.int64(10)},1.0,usare botpress 
+exp03_zeroshot,gpt-5.6-luna,zero_shot,352,Activity,Tool,1.0,stabile,False,False,10,10,False,10,{'Tool': np.int64(10)},1.0,il lavoro con la webcam
+exp03_zeroshot,gpt-5.6-luna,zero_shot,357,Learning,Learning,1.0,stabile,False,False,10,10,False,10,{'Learning': np.int64(10)},1.0,Che ho imparato tante cose sulle quali avevo dei dubbi
+exp03_zeroshot,gpt-5.6-luna,zero_shot,360,Activity,Tool,0.7,instabile,False,False,10,10,False,10,"{'Tool': np.int64(7), 'Activity': np.int64(3)}",1.0, Il lavoro su scratch
+exp03_zeroshot,gpt-5.6-luna,zero_shot,361,Learning,Learning,1.0,stabile,False,False,10,10,False,10,{'Learning': np.int64(10)},1.0,Imparate a usare l’intelligenza artificiale 
+exp03_zeroshot,gpt-5.6-luna,zero_shot,365,Activity,,0.5,instabile,True,True,10,10,False,10,"{'Love': np.int64(5), 'Activity': np.int64(5)}",1.0,Le attività 
+exp03_zeroshot,gpt-5.6-luna,zero_shot,367,Activity,Activity,0.6,instabile,False,False,10,10,False,10,"{'Activity': np.int64(6), 'Tool': np.int64(4)}",1.0,il lavoro su scratch 
+exp03_zeroshot,gpt-5.6-luna,zero_shot,368,Activity,Activity,0.6,instabile,False,False,10,10,False,10,"{'Activity': np.int64(6), 'Making': np.int64(4)}",1.0,Il lavoro sulla creazione del gioco 
+exp03_zeroshot,gpt-5.6-luna,zero_shot,369,Social,Social,1.0,stabile,False,False,10,10,False,10,{'Social': np.int64(10)},1.0,fare progetti di gruppo
+exp03_zeroshot,gpt-5.6-luna,zero_shot,373,Activity,Creativity,0.8,abbastanza_stabile,False,False,10,10,False,10,"{'Creativity': np.int64(8), 'Activity': np.int64(2)}",1.0,la creazione dei videogiochi 
+exp03_zeroshot,gpt-5.6-luna,zero_shot,377,Activity,Tool,1.0,stabile,False,False,10,10,False,10,{'Tool': np.int64(10)},1.0,TUTTE LE VOLTE CHE ABBIAMO USATO I LED
+exp03_zeroshot,gpt-5.6-luna,zero_shot,394,Learning,Learning,1.0,stabile,False,False,10,10,False,10,{'Learning': np.int64(10)},1.0,imparare cose su canva che non sapevo
+exp03_zeroshot,gpt-5.6-luna,zero_shot,396,Social,Social,1.0,stabile,False,False,10,10,False,10,{'Social': np.int64(10)},1.0,"lavorare insieme, tutto"
+exp03_zeroshot,gpt-5.6-luna,zero_shot,4,Activity,Making,1.0,stabile,False,False,10,10,False,10,{'Making': np.int64(10)},1.0,fare le macchine
+exp03_zeroshot,gpt-5.6-luna,zero_shot,400,Activity,Feeling+,1.0,stabile,False,False,10,10,False,10,{'Feeling+': np.int64(10)},1.0,mi è piaciuto molto le attività che ci coinvolgevano 
+exp03_zeroshot,gpt-5.6-luna,zero_shot,404,Activity,Activity,1.0,stabile,False,False,10,10,False,10,{'Activity': np.int64(10)},1.0,Quando abbiamo parlato del razzo
+exp03_zeroshot,gpt-5.6-luna,zero_shot,410,Activity,Activity,0.8,abbastanza_stabile,False,False,10,10,False,10,"{'Activity': np.int64(8), 'Tool': np.int64(2)}",1.0,Il razzo bottiglia
+exp03_zeroshot,gpt-5.6-luna,zero_shot,411,Social,Social,1.0,stabile,False,False,10,10,False,10,{'Social': np.int64(10)},1.0,"Mi è piaciuto di più sono stati gli esperimenti di gruppo e sono stati molto divertenti, lo vorrei rifare"
+exp03_zeroshot,gpt-5.6-luna,zero_shot,415,Activity,Tool,0.7,instabile,False,False,10,10,False,10,"{'Tool': np.int64(7), 'Activity': np.int64(3)}",1.0,Usare scratch (fare l'ultimo progetto)
+exp03_zeroshot,gpt-5.6-luna,zero_shot,417,Activity,Creativity,0.7,instabile,False,False,10,10,False,10,"{'Creativity': np.int64(7), 'Activity': np.int64(3)}",1.0,creare le storie 
+exp03_zeroshot,gpt-5.6-luna,zero_shot,429,Love,Love,1.0,stabile,False,False,10,10,False,10,{'Love': np.int64(10)},1.0,tutto
+exp03_zeroshot,gpt-5.6-luna,zero_shot,43,Social,Social,1.0,stabile,False,False,10,10,False,10,{'Social': np.int64(10)},1.0,stare con i miei amici
+exp03_zeroshot,gpt-5.6-luna,zero_shot,430,Activity,Activity,1.0,stabile,False,False,10,10,False,10,{'Activity': np.int64(10)},1.0,L'ATTIVITà FINALE
+exp03_zeroshot,gpt-5.6-luna,zero_shot,431,Creativity,Freedom,1.0,stabile,False,False,10,10,False,10,{'Freedom': np.int64(10)},1.0,QUANDO CI HANNO LASCIATI LIBERI DI CREARE UN GIOCO
+exp03_zeroshot,gpt-5.6-luna,zero_shot,433,Learning,Learning,1.0,stabile,False,False,10,10,False,10,{'Learning': np.int64(10)},1.0,imparare nuove cose
+exp03_zeroshot,gpt-5.6-luna,zero_shot,434,Tool,Learning,1.0,stabile,False,False,10,10,False,10,{'Learning': np.int64(10)},1.0,Che sono riuscita ad imparare meglio come si usa scratch
+exp03_zeroshot,gpt-5.6-luna,zero_shot,435,Freedom,Freedom,1.0,stabile,False,False,10,10,False,10,{'Freedom': np.int64(10)},1.0,"Il fatto che potevamo scegliere noi cosa fare (quali personaggi usare, quali sfondi ecc.)"
+exp03_zeroshot,gpt-5.6-luna,zero_shot,436,Freedom,Creativity,0.9,abbastanza_stabile,False,False,10,10,False,10,"{'Creativity': np.int64(9), 'Making': np.int64(1)}",1.0,Quando abbiamo creato la nostra storia.
+exp03_zeroshot,gpt-5.6-luna,zero_shot,439,Activity,Activity,0.7,instabile,False,False,10,10,False,10,"{'Activity': np.int64(7), 'Making': np.int64(3)}",1.0,"la cosa che mi è piaciuta di più è creare i rover e ""guidarli"""
+exp03_zeroshot,gpt-5.6-luna,zero_shot,441,Activity,Tool,0.9,abbastanza_stabile,False,False,10,10,False,10,"{'Tool': np.int64(9), 'Activity': np.int64(1)}",1.0,il razzo bottiglia
+exp03_zeroshot,gpt-5.6-luna,zero_shot,445,Activity,Love,1.0,stabile,False,False,10,10,False,10,{'Love': np.int64(10)},1.0,i laboratori
+exp03_zeroshot,gpt-5.6-luna,zero_shot,448,Activity,Making,0.8,abbastanza_stabile,False,False,10,10,False,10,"{'Making': np.int64(8), 'Activity': np.int64(2)}",1.0,la cosa che mi è piaciuta di più è stata quando abbiamo creato il rover
+exp03_zeroshot,gpt-5.6-luna,zero_shot,453,Activity,Activity,1.0,stabile,False,False,10,10,False,10,{'Activity': np.int64(10)},1.0, la parte dei rover
+exp03_zeroshot,gpt-5.6-luna,zero_shot,454,Love,Love,1.0,stabile,False,False,10,10,False,10,{'Love': np.int64(10)},1.0,un po tutto
+exp03_zeroshot,gpt-5.6-luna,zero_shot,455,Activity,Activity,1.0,stabile,False,False,10,10,False,10,{'Activity': np.int64(10)},1.0,la biologia e il DNA
+exp03_zeroshot,gpt-5.6-luna,zero_shot,457,Activity,Tool,0.9,abbastanza_stabile,False,False,10,10,False,10,"{'Tool': np.int64(9), 'Activity': np.int64(1)}",1.0,Il rover che abbiamo creato
+exp03_zeroshot,gpt-5.6-luna,zero_shot,459,Activity,Activity,0.6,instabile,False,False,10,10,False,10,"{'Activity': np.int64(6), 'Tool': np.int64(4)}",1.0,l'astronave
+exp03_zeroshot,gpt-5.6-luna,zero_shot,463,non classificabile,Activity,1.0,stabile,False,False,10,10,False,10,{'Activity': np.int64(10)},1.0,la ricreazione
+exp03_zeroshot,gpt-5.6-luna,zero_shot,470,Activity,Activity,1.0,stabile,False,False,10,10,False,10,{'Activity': np.int64(10)},1.0,"l' ultima attivita, quella con il DNA"
+exp03_zeroshot,gpt-5.6-luna,zero_shot,471,Activity,Tool,1.0,stabile,False,False,10,10,False,10,{'Tool': np.int64(10)},1.0,il rover
+exp03_zeroshot,gpt-5.6-luna,zero_shot,473,Activity,Activity,1.0,stabile,False,False,10,10,False,10,{'Activity': np.int64(10)},1.0,Il razzo bottiglia 
+exp03_zeroshot,gpt-5.6-luna,zero_shot,484,Making,Activity,0.8,abbastanza_stabile,False,False,10,10,False,10,"{'Activity': np.int64(8), 'Making': np.int64(2)}",1.0,creare i video giochi
+exp03_zeroshot,gpt-5.6-luna,zero_shot,486,Making,Learning,1.0,stabile,False,False,10,10,False,10,{'Learning': np.int64(10)},1.0,Imparare a fare videogiochi 
+exp03_zeroshot,gpt-5.6-luna,zero_shot,494,Making,Activity,1.0,stabile,False,False,10,10,False,10,{'Activity': np.int64(10)},1.0,fare videogiochi
+exp03_zeroshot,gpt-5.6-luna,zero_shot,498,Making,,0.5,instabile,True,True,10,10,False,10,"{'Creativity': np.int64(5), 'hard fun': np.int64(5)}",1.0,Mi è piaciuto molto progettare il mio videogioco personale anche se è stata la parte più difficile e stancante dal punto di vista intellettivo perchè  tutto quello che avevamo imparato dovevamo applicarlo lì 
+exp03_zeroshot,gpt-5.6-luna,zero_shot,5,Activity,,0.5,instabile,True,True,10,10,False,10,"{'Activity': np.int64(5), 'Making': np.int64(5)}",1.0,creare le macchinine facendo anche la gara
+exp03_zeroshot,gpt-5.6-luna,zero_shot,505,Tool,non classificabile,1.0,stabile,False,False,10,10,False,10,{'non classificabile': np.int64(10)},,LA BANAA
+exp03_zeroshot,gpt-5.6-luna,zero_shot,509,Activity,Activity,1.0,stabile,False,False,10,10,False,10,{'Activity': np.int64(10)},1.0,trovare il DNA
+exp03_zeroshot,gpt-5.6-luna,zero_shot,51,Activity,Creativity,1.0,stabile,False,False,10,10,False,10,{'Creativity': np.int64(10)},1.0,il fatto che puoi esprimerti attraverso un piccolo giochino
+exp03_zeroshot,gpt-5.6-luna,zero_shot,512,Activity,Tool,1.0,stabile,False,False,10,10,False,10,{'Tool': np.int64(10)},1.0,il razzo
+exp03_zeroshot,gpt-5.6-luna,zero_shot,515,Activity,Tool,0.9,abbastanza_stabile,False,False,10,10,False,10,"{'Tool': np.int64(9), 'Activity': np.int64(1)}",1.0,il razzo bottiglia
+exp03_zeroshot,gpt-5.6-luna,zero_shot,53,Activity,Activity,0.7,instabile,False,False,10,10,False,10,"{'Activity': np.int64(7), 'Making': np.int64(3)}",1.0,Creare la gara di corsa su scratch
+exp03_zeroshot,gpt-5.6-luna,zero_shot,533,Making,Making,1.0,stabile,False,False,10,10,False,10,{'Making': np.int64(10)},1.0,Costruire il robot
+exp03_zeroshot,gpt-5.6-luna,zero_shot,535,Making,Making,1.0,stabile,False,False,10,10,False,10,{'Making': np.int64(10)},1.0,costruire il robot 
+exp03_zeroshot,gpt-5.6-luna,zero_shot,543,Making,Activity,1.0,stabile,False,False,10,10,False,10,{'Activity': np.int64(10)},1.0,fare un sito
+exp03_zeroshot,gpt-5.6-luna,zero_shot,547,Making,Creativity,0.8,abbastanza_stabile,False,False,10,10,False,10,"{'Creativity': np.int64(8), 'Activity': np.int64(2)}",1.0,creare immagini 
+exp03_zeroshot,gpt-5.6-luna,zero_shot,55,Freedom,,0.5,instabile,True,True,10,10,False,10,"{'Creativity': np.int64(5), 'Freedom': np.int64(5)}",1.0,FARE UNA STORIA COME VOLEVAMO NOI
+exp03_zeroshot,gpt-5.6-luna,zero_shot,550,Making,Activity,0.8,abbastanza_stabile,False,False,10,10,False,10,"{'Activity': np.int64(8), 'Creativity': np.int64(2)}",1.0,creare immagini tramite intelligenza artificiale 
+exp03_zeroshot,gpt-5.6-luna,zero_shot,551,Social,Social,1.0,stabile,False,False,10,10,False,10,{'Social': np.int64(10)},1.0,lo spirito di gruppo
+exp03_zeroshot,gpt-5.6-luna,zero_shot,553,Social,Social,1.0,stabile,False,False,10,10,False,10,{'Social': np.int64(10)},1.0,la compagnia e il computer 
+exp03_zeroshot,gpt-5.6-luna,zero_shot,554,Social,Social,1.0,stabile,False,False,10,10,False,10,{'Social': np.int64(10)},1.0,La collaborazione e l’entusiasmo del gruppo nel lavorare insieme per raggiungere un obiettivo comune.
+exp03_zeroshot,gpt-5.6-luna,zero_shot,555,Social,Social,1.0,stabile,False,False,10,10,False,10,{'Social': np.int64(10)},1.0,Lavorare in gruppo
+exp03_zeroshot,gpt-5.6-luna,zero_shot,560,Creativity,Creativity,1.0,stabile,False,False,10,10,False,10,{'Creativity': np.int64(10)},1.0,creare un proprio tema
+exp03_zeroshot,gpt-5.6-luna,zero_shot,561,Social,Social,1.0,stabile,False,False,10,10,False,10,{'Social': np.int64(10)},1.0,Lavorare in gruppo
+exp03_zeroshot,gpt-5.6-luna,zero_shot,563,Social,Social,1.0,stabile,False,False,10,10,False,10,{'Social': np.int64(10)},1.0,Confrontarmi con i docenti e i compagni
+exp03_zeroshot,gpt-5.6-luna,zero_shot,566,Social,Social,1.0,stabile,False,False,10,10,False,10,{'Social': np.int64(10)},1.0,Lo spirito di collaborazione
+exp03_zeroshot,gpt-5.6-luna,zero_shot,569,Freedom,Activity,1.0,stabile,False,False,10,10,False,10,{'Activity': np.int64(10)},1.0,L’argomento scelto
+exp03_zeroshot,gpt-5.6-luna,zero_shot,572,Social,Social,1.0,stabile,False,False,10,10,False,10,{'Social': np.int64(10)},1.0,Lavorare a gruppi insieme
+exp03_zeroshot,gpt-5.6-luna,zero_shot,578,Learning,Activity,1.0,stabile,False,False,10,10,False,10,{'Activity': np.int64(10)},1.0,Gli argomenti trattati
+exp03_zeroshot,gpt-5.6-luna,zero_shot,58,Activity,Activity,0.9,abbastanza_stabile,False,False,10,10,False,10,"{'Activity': np.int64(9), 'Making': np.int64(1)}",1.0,fare i giochi
+exp03_zeroshot,gpt-5.6-luna,zero_shot,580,Learning,Activity,1.0,stabile,False,False,10,10,False,10,{'Activity': np.int64(10)},1.0,Gli argomenti trattati
+exp03_zeroshot,gpt-5.6-luna,zero_shot,582,Activity,Activity,1.0,stabile,False,False,10,10,False,10,{'Activity': np.int64(10)},1.0,Le esposizioni dei siti
+exp03_zeroshot,gpt-5.6-luna,zero_shot,59,Activity,Activity,0.8,abbastanza_stabile,False,False,10,10,False,10,"{'Activity': np.int64(8), 'Making': np.int64(2)}",1.0,fare i giochi
+exp03_zeroshot,gpt-5.6-luna,zero_shot,594,Social,Social,1.0,stabile,False,False,10,10,False,10,{'Social': np.int64(10)},1.0,Lavorare in compagnia
+exp03_zeroshot,gpt-5.6-luna,zero_shot,595,Tool,Tool,1.0,stabile,False,False,10,10,False,10,{'Tool': np.int64(10)},1.0,lavorare con il computer
+exp03_zeroshot,gpt-5.6-luna,zero_shot,597,Social,Social,1.0,stabile,False,False,10,10,False,10,{'Social': np.int64(10)},1.0,La collaborazione
+exp03_zeroshot,gpt-5.6-luna,zero_shot,600,Social,Social,1.0,stabile,False,False,10,10,False,10,{'Social': np.int64(10)},1.0,dividersi i compiti durante l’attività
+exp03_zeroshot,gpt-5.6-luna,zero_shot,603,Activity,Making,0.7,instabile,False,False,10,10,False,10,"{'Making': np.int64(7), 'Creativity': np.int64(2), 'Activity': np.int64(1)}",1.0,Creare la presentazione.
+exp03_zeroshot,gpt-5.6-luna,zero_shot,606,Social,Social,1.0,stabile,False,False,10,10,False,10,{'Social': np.int64(10)},1.0,Fare un lavoro di gruppo
+exp03_zeroshot,gpt-5.6-luna,zero_shot,607,Activity,Activity,1.0,stabile,False,False,10,10,False,10,{'Activity': np.int64(10)},1.0,Creare il sito
+exp03_zeroshot,gpt-5.6-luna,zero_shot,608,Tool,Tool,1.0,stabile,False,False,10,10,False,10,{'Tool': np.int64(10)},1.0,l'uso di Al
+exp03_zeroshot,gpt-5.6-luna,zero_shot,609,Learning,Learning,1.0,stabile,False,False,10,10,False,10,{'Learning': np.int64(10)},1.0,Imparare cose nuove.
+exp03_zeroshot,gpt-5.6-luna,zero_shot,610,Activity,Activity,0.9,abbastanza_stabile,False,False,10,10,False,10,"{'Activity': np.int64(9), 'Tool': np.int64(1)}",1.0,il faro e il sito
+exp03_zeroshot,gpt-5.6-luna,zero_shot,62,Love,Love,1.0,stabile,False,False,10,10,False,10,{'Love': np.int64(10)},1.0,tutto
+exp03_zeroshot,gpt-5.6-luna,zero_shot,625,Activity,Tool,1.0,stabile,False,False,10,10,False,10,{'Tool': np.int64(10)},1.0,Il sito
+exp03_zeroshot,gpt-5.6-luna,zero_shot,628,Activity,Activity,1.0,stabile,False,False,10,10,False,10,{'Activity': np.int64(10)},1.0,creare il sito
+exp03_zeroshot,gpt-5.6-luna,zero_shot,63,Activity,Creativity,1.0,stabile,False,False,10,10,False,10,{'Creativity': np.int64(10)},1.0,inventare giochi
+exp03_zeroshot,gpt-5.6-luna,zero_shot,630,Learning,Learning,1.0,stabile,False,False,10,10,False,10,{'Learning': np.int64(10)},1.0,imparare come si crea un sito
+exp03_zeroshot,gpt-5.6-luna,zero_shot,638,Creativity,Creativity,1.0,stabile,False,False,10,10,False,10,{'Creativity': np.int64(10)},1.0,Il fatto di creare immagini inventare da noi
+exp03_zeroshot,gpt-5.6-luna,zero_shot,64,Learning,Learning,1.0,stabile,False,False,10,10,False,10,{'Learning': np.int64(10)},1.0,imparare qualcosa di nuovo
+exp03_zeroshot,gpt-5.6-luna,zero_shot,641,Tool,Tool,1.0,stabile,False,False,10,10,False,10,{'Tool': np.int64(10)},1.0,I programmi di intelligenza artificiale utilizzati per la creazione del sito
+exp03_zeroshot,gpt-5.6-luna,zero_shot,642,Activity,Activity,1.0,stabile,False,False,10,10,False,10,{'Activity': np.int64(10)},1.0,Fare il sito
+exp03_zeroshot,gpt-5.6-luna,zero_shot,643,Social,Social,1.0,stabile,False,False,10,10,False,10,{'Social': np.int64(10)},1.0,creare il sito insieme in gruppo
+exp03_zeroshot,gpt-5.6-luna,zero_shot,646,Activity,Making,1.0,stabile,False,False,10,10,False,10,{'Making': np.int64(10)},1.0,Quando ho finito e ho rivisto tutto il lavoro
+exp03_zeroshot,gpt-5.6-luna,zero_shot,648,Activity,Creativity,1.0,stabile,False,False,10,10,False,10,{'Creativity': np.int64(10)},1.0,il poter creare un sito mio
+exp03_zeroshot,gpt-5.6-luna,zero_shot,661,Social,Social,1.0,stabile,False,False,10,10,False,10,{'Social': np.int64(10)},1.0,La collaborazione con il mio gruppo
+exp03_zeroshot,gpt-5.6-luna,zero_shot,662,Activity,Activity,0.8,abbastanza_stabile,False,False,10,10,False,10,"{'Activity': np.int64(8), 'Making': np.int64(2)}",1.0,fare il sito
+exp03_zeroshot,gpt-5.6-luna,zero_shot,67,Tool,Activity,1.0,stabile,False,False,10,10,False,10,{'Activity': np.int64(10)},1.0,CREARE UNA STORIA SU SCRATCH
+exp03_zeroshot,gpt-5.6-luna,zero_shot,678,Activity,Activity,1.0,stabile,False,False,10,10,False,10,{'Activity': np.int64(10)},1.0,Creare un sito web
+exp03_zeroshot,gpt-5.6-luna,zero_shot,680,Social,Social,1.0,stabile,False,False,10,10,False,10,{'Social': np.int64(10)},1.0,Lavorare in gruppo
+exp03_zeroshot,gpt-5.6-luna,zero_shot,682,Activity,Activity,0.9,abbastanza_stabile,False,False,10,10,False,10,"{'Activity': np.int64(9), 'Making': np.int64(1)}",1.0,fare il sito
+exp03_zeroshot,gpt-5.6-luna,zero_shot,69,non classificabile,non classificabile,1.0,stabile,False,False,10,10,False,10,{'non classificabile': np.int64(10)},,Sì
+exp03_zeroshot,gpt-5.6-luna,zero_shot,70,Love,Love,1.0,stabile,False,False,10,10,False,10,{'Love': np.int64(10)},1.0,tutto
+exp03_zeroshot,gpt-5.6-luna,zero_shot,700,Creativity,Activity,0.7,instabile,False,False,10,10,False,10,"{'Activity': np.int64(7), 'Creativity': np.int64(3)}",1.0,creare la grafica del sito
+exp03_zeroshot,gpt-5.6-luna,zero_shot,704,Learning,Learning,1.0,stabile,False,False,10,10,False,10,{'Learning': np.int64(10)},1.0,Imparare a creare un sito
+exp03_zeroshot,gpt-5.6-luna,zero_shot,705,Feeling-,Hate,1.0,stabile,False,False,10,10,False,10,{'Hate': np.int64(10)},1.0,Niente di speciale
+exp03_zeroshot,gpt-5.6-luna,zero_shot,708,Activity,Making,1.0,stabile,False,False,10,10,False,10,{'Making': np.int64(10)},1.0,Costruire il sito dall’inizio
+exp03_zeroshot,gpt-5.6-luna,zero_shot,71,Love,Love,1.0,stabile,False,False,10,10,False,10,{'Love': np.int64(10)},1.0,tutto
+exp03_zeroshot,gpt-5.6-luna,zero_shot,713,Activity,Creativity,1.0,stabile,False,False,10,10,False,10,{'Creativity': np.int64(10)},1.0,L’idea di creare un sito
+exp03_zeroshot,gpt-5.6-luna,zero_shot,715,Social,,0.5,instabile,False,True,10,10,False,10,"{'Creativity': np.int64(5), 'Making': np.int64(3), 'Activity': np.int64(2)}",1.0,L'inclusività nella creazione del sito
+exp03_zeroshot,gpt-5.6-luna,zero_shot,720,Activity,Activity,1.0,stabile,False,False,10,10,False,10,{'Activity': np.int64(10)},1.0,Creazione del sito
+exp03_zeroshot,gpt-5.6-luna,zero_shot,723,Creativity,Activity,0.7,instabile,False,False,10,10,False,10,"{'Activity': np.int64(7), 'Creativity': np.int64(3)}",1.0,Creare la musica con IA
+exp03_zeroshot,gpt-5.6-luna,zero_shot,724,Activity,Activity,1.0,stabile,False,False,10,10,False,10,{'Activity': np.int64(10)},1.0,il progettp eseguito
+exp03_zeroshot,gpt-5.6-luna,zero_shot,725,Activity,Activity,1.0,stabile,False,False,10,10,False,10,{'Activity': np.int64(10)},1.0,La parte delle canzoni
+exp03_zeroshot,gpt-5.6-luna,zero_shot,728,Activity,Activity,0.8,abbastanza_stabile,False,False,10,10,False,10,"{'Activity': np.int64(8), 'Tool': np.int64(2)}",1.0,Programmare utilizzando scratch + teachable.
+exp03_zeroshot,gpt-5.6-luna,zero_shot,732,Activity,Activity,0.6,instabile,False,False,10,10,False,10,"{'Activity': np.int64(6), 'Creativity': np.int64(3), 'Making': np.int64(1)}",1.0,creare un giochino con chat gpt
+exp03_zeroshot,gpt-5.6-luna,zero_shot,733,Activity,Activity,1.0,stabile,False,False,10,10,False,10,{'Activity': np.int64(10)},1.0,il gioco finale
+exp03_zeroshot,gpt-5.6-luna,zero_shot,735,Activity,Creativity,0.8,abbastanza_stabile,False,False,10,10,False,10,"{'Creativity': np.int64(8), 'Activity': np.int64(2)}",1.0,creare i giochi
+exp03_zeroshot,gpt-5.6-luna,zero_shot,736,Creativity,Activity,0.6,instabile,False,False,10,10,False,10,"{'Activity': np.int64(6), 'Creativity': np.int64(4)}",1.0,creare il logo
+exp03_zeroshot,gpt-5.6-luna,zero_shot,738,Activity,Making,1.0,stabile,False,False,10,10,False,10,{'Making': np.int64(10)},1.0,la parte pratica
+exp03_zeroshot,gpt-5.6-luna,zero_shot,739,Tool,non classificabile,1.0,stabile,False,False,10,10,False,10,{'non classificabile': np.int64(10)},,gamma
+exp03_zeroshot,gpt-5.6-luna,zero_shot,742,Teacher,Feeling+,1.0,stabile,False,False,10,10,False,10,{'Feeling+': np.int64(10)},1.0,la simpaticita
+exp03_zeroshot,gpt-5.6-luna,zero_shot,748,Activity,Activity,0.6,instabile,False,False,10,10,False,10,"{'Activity': np.int64(6), 'Love': np.int64(2), 'Flow': np.int64(2)}",1.0,il modo in cui si è svolta l'attività e le attività stesse fatte
+exp03_zeroshot,gpt-5.6-luna,zero_shot,750,Activity,,0.5,instabile,True,True,10,10,False,10,"{'Activity': np.int64(5), 'Flow': np.int64(5)}",1.0,il modo in cui si è svolta l'attività e le attività stesse fatte
+exp03_zeroshot,gpt-5.6-luna,zero_shot,753,Tool,Tool,1.0,stabile,False,False,10,10,False,10,{'Tool': np.int64(10)},1.0,La parte di gamma.ai e quella di notebook.lm
+exp03_zeroshot,gpt-5.6-luna,zero_shot,755,Teacher,Teacher,1.0,stabile,False,False,10,10,False,10,{'Teacher': np.int64(10)},1.0,Le spiegazioni del docente
+exp03_zeroshot,gpt-5.6-luna,zero_shot,757,Love,Learning,0.9,abbastanza_stabile,False,False,10,10,False,10,"{'Learning': np.int64(9), 'Love': np.int64(1)}",1.0,in realtà mi è piaciuto tutto perché ho scoperto cose che non sapevo e ho capito che sono molto interessanti
+exp03_zeroshot,gpt-5.6-luna,zero_shot,76,Love,Love,1.0,stabile,False,False,10,10,False,10,{'Love': np.int64(10)},1.0,Tutto
+exp03_zeroshot,gpt-5.6-luna,zero_shot,766,Activity,Activity,0.9,abbastanza_stabile,False,False,10,10,False,10,"{'Activity': np.int64(9), 'Creativity': np.int64(1)}",1.0,La creazione del bot
+exp03_zeroshot,gpt-5.6-luna,zero_shot,767,Tool,Tool,1.0,stabile,False,False,10,10,False,10,{'Tool': np.int64(10)},1.0,Suno e Botpress
+exp03_zeroshot,gpt-5.6-luna,zero_shot,773,Activity,Activity,0.6,instabile,False,False,10,10,False,10,"{'Activity': np.int64(6), 'Making': np.int64(4)}",1.0,fare il sito
+exp03_zeroshot,gpt-5.6-luna,zero_shot,777,Teacher,non classificabile,0.9,abbastanza_stabile,False,False,10,10,False,10,"{'non classificabile': np.int64(9), 'Social': np.int64(1)}",1.0,il butel pelato
+exp03_zeroshot,gpt-5.6-luna,zero_shot,783,Making,Making,0.9,abbastanza_stabile,False,False,10,10,False,10,"{'Making': np.int64(9), 'Freedom': np.int64(1)}",1.0,costurire quello che volevamo
+exp03_zeroshot,gpt-5.6-luna,zero_shot,789,Activity,Activity,0.9,abbastanza_stabile,False,False,10,10,False,10,"{'Activity': np.int64(9), 'Making': np.int64(1)}",1.0,FARE I GIOCHI
+exp03_zeroshot,gpt-5.6-luna,zero_shot,792,Creativity,Creativity,0.8,abbastanza_stabile,False,False,10,10,False,10,"{'Creativity': np.int64(8), 'Activity': np.int64(2)}",1.0,Creare la storia
+exp03_zeroshot,gpt-5.6-luna,zero_shot,794,Creativity,Creativity,1.0,stabile,False,False,10,10,False,10,{'Creativity': np.int64(10)},1.0,fare storie inventate da me
+exp03_zeroshot,gpt-5.6-luna,zero_shot,796,Creativity,Creativity,1.0,stabile,False,False,10,10,False,10,{'Creativity': np.int64(10)},1.0,fare storie inventate da me
+exp03_zeroshot,gpt-5.6-luna,zero_shot,8,Social,Activity,1.0,stabile,False,False,10,10,False,10,{'Activity': np.int64(10)},1.0,le gare
+exp03_zeroshot,gpt-5.6-luna,zero_shot,801,Tool,Tool,1.0,stabile,False,False,10,10,False,10,{'Tool': np.int64(10)},1.0,USARE SCRATCH
+exp03_zeroshot,gpt-5.6-luna,zero_shot,804,Activity,Activity,1.0,stabile,False,False,10,10,False,10,{'Activity': np.int64(10)},1.0,CREARE UN MINIGIOCO
+exp03_zeroshot,gpt-5.6-luna,zero_shot,805,Activity,Making,1.0,stabile,False,False,10,10,False,10,{'Making': np.int64(10)},1.0,cercare di far funzionare il tutto
+exp03_zeroshot,gpt-5.6-luna,zero_shot,808,Tool,Tool,1.0,stabile,False,False,10,10,False,10,{'Tool': np.int64(10)},1.0,scratch
+exp03_zeroshot,gpt-5.6-luna,zero_shot,81,Learning,Learning,1.0,stabile,False,False,10,10,False,10,{'Learning': np.int64(10)},1.0,mi e piaciuto imparare cose nuove
+exp03_zeroshot,gpt-5.6-luna,zero_shot,815,Tool,Tool,1.0,stabile,False,False,10,10,False,10,{'Tool': np.int64(10)},1.0,Mi è piaciuto il programma che è stato utilizzato.
+exp03_zeroshot,gpt-5.6-luna,zero_shot,820,Activity,Activity,1.0,stabile,False,False,10,10,False,10,{'Activity': np.int64(10)},1.0,Fare il gioco della palla🥎🥎🥎🥎🥎
+exp03_zeroshot,gpt-5.6-luna,zero_shot,821,Activity,Activity,1.0,stabile,False,False,10,10,False,10,{'Activity': np.int64(10)},1.0,il gioco
+exp03_zeroshot,gpt-5.6-luna,zero_shot,823,Tool,Tool,1.0,stabile,False,False,10,10,False,10,{'Tool': np.int64(10)},1.0,usare il computer
+exp03_zeroshot,gpt-5.6-luna,zero_shot,825,Love,Love,0.9,abbastanza_stabile,False,False,10,10,False,10,"{'Love': np.int64(9), 'Activity': np.int64(1)}",1.0,min è piaciuto tutto soprattutto quando abbiamo fatto i percorsi ad esempio slalom tra i banchi
+exp03_zeroshot,gpt-5.6-luna,zero_shot,826,Activity,Learning,0.7,instabile,False,False,10,10,False,10,"{'Learning': np.int64(7), 'hard fun': np.int64(3)}",1.0,Programmare il codeyrocky e imparare cose nuove
+exp03_zeroshot,gpt-5.6-luna,zero_shot,83,Tool,Tool,1.0,stabile,False,False,10,10,False,10,{'Tool': np.int64(10)},1.0,Computer
+exp03_zeroshot,gpt-5.6-luna,zero_shot,836,Activity,Activity,1.0,stabile,False,False,10,10,False,10,{'Activity': np.int64(10)},1.0,Programmare
+exp03_zeroshot,gpt-5.6-luna,zero_shot,837,Activity,Making,1.0,stabile,False,False,10,10,False,10,{'Making': np.int64(10)},1.0,quando abbiamo provato i roboti
+exp03_zeroshot,gpt-5.6-luna,zero_shot,842,Social,Social,0.9,abbastanza_stabile,False,False,10,10,False,10,"{'Social': np.int64(9), 'Activity': np.int64(1)}",1.0,il gioco con cui si poteva giocare in tre
+exp03_zeroshot,gpt-5.6-luna,zero_shot,849,Teacher,Teacher,1.0,stabile,False,False,10,10,False,10,{'Teacher': np.int64(10)},1.0,Le spiegazioni di Antonio
+exp03_zeroshot,gpt-5.6-luna,zero_shot,851,Activity,Activity,0.8,abbastanza_stabile,False,False,10,10,False,10,"{'Activity': np.int64(8), 'Creativity': np.int64(2)}",1.0,CREARE I VIDEO GIOCHI CON IL CODING
+exp03_zeroshot,gpt-5.6-luna,zero_shot,855,Activity,Activity,1.0,stabile,False,False,10,10,False,10,{'Activity': np.int64(10)},1.0,La gara
+exp03_zeroshot,gpt-5.6-luna,zero_shot,856,Tool,Tool,1.0,stabile,False,False,10,10,False,10,{'Tool': np.int64(10)},1.0,scratch
+exp03_zeroshot,gpt-5.6-luna,zero_shot,857,Tool,Tool,1.0,stabile,False,False,10,10,False,10,{'Tool': np.int64(10)},1.0,scratch
+exp03_zeroshot,gpt-5.6-luna,zero_shot,858,Activity,Activity,0.9,abbastanza_stabile,False,False,10,10,False,10,"{'Activity': np.int64(9), 'Creativity': np.int64(1)}",1.0,Creare i video giochi
+exp03_zeroshot,gpt-5.6-luna,zero_shot,867,Activity,Making,1.0,stabile,False,False,10,10,False,10,{'Making': np.int64(10)},1.0,la pratica
+exp03_zeroshot,gpt-5.6-luna,zero_shot,876,Making,Making,1.0,stabile,False,False,10,10,False,10,{'Making': np.int64(10)},1.0,costruire e sperimentare: il razzo e il Rover.
+exp03_zeroshot,gpt-5.6-luna,zero_shot,88,Tool,Tool,1.0,stabile,False,False,10,10,False,10,{'Tool': np.int64(10)},1.0,usare i robot
+exp03_zeroshot,gpt-5.6-luna,zero_shot,93,Activity,Activity,1.0,stabile,False,False,10,10,False,10,{'Activity': np.int64(10)},1.0,travestire i thymio
+exp03_zeroshot,gpt-5.6-luna,zero_shot,944,Activity,Activity,1.0,stabile,False,False,10,10,False,10,{'Activity': np.int64(10)},1.0,Fare il sito
+exp03_zeroshot,gpt-5.6-luna,zero_shot,945,Creativity,Freedom,0.6,instabile,False,False,10,10,False,10,"{'Freedom': np.int64(6), 'Creativity': np.int64(4)}",1.0,Ideare il sito a mio piacimento
+exp03_zeroshot,gpt-5.6-luna,zero_shot,952,Activity,Activity,1.0,stabile,False,False,10,10,False,10,{'Activity': np.int64(10)},1.0,creare il sito
+exp03_zeroshot,gpt-5.6-luna,zero_shot,954,Activity,,0.5,instabile,False,True,10,10,False,10,"{'Creativity': np.int64(5), 'Activity': np.int64(4), 'Making': np.int64(1)}",1.0,la creazione del sito 
+exp03_zeroshot,gpt-5.6-luna,zero_shot,958,Learning,Learning,1.0,stabile,False,False,10,10,False,10,{'Learning': np.int64(10)},1.0,Imparare cose nuove
+exp03_zeroshot,gpt-5.6-luna,zero_shot,960,Activity,Activity,1.0,stabile,False,False,10,10,False,10,{'Activity': np.int64(10)},1.0,Creare il sito
+exp03_zeroshot,gpt-5.6-luna,zero_shot,97,Tool,Tool,1.0,stabile,False,False,10,10,False,10,{'Tool': np.int64(10)},1.0,i robot
+exp03_zeroshot,gpt-5.6-luna,zero_shot,971,Learning,Learning,1.0,stabile,False,False,10,10,False,10,{'Learning': np.int64(10)},1.0,l’aver imparato cose nuove e aver approfondito il tema dell’intelligenza artificiale 
+exp03_zeroshot,gpt-5.6-luna,zero_shot,975,Activity,Activity,0.6,instabile,False,False,10,10,False,10,"{'Activity': np.int64(6), 'Making': np.int64(4)}",1.0,cercare le foto 
+exp03_zeroshot,gpt-5.6-luna,zero_shot,980,Making,Making,1.0,stabile,False,False,10,10,False,10,{'Making': np.int64(10)},1.0,Lavorare al progetto
+exp03_zeroshot,gpt-5.6-luna,zero_shot,984,Activity,,0.5,instabile,True,True,10,10,False,10,"{'Activity': np.int64(5), 'Making': np.int64(5)}",1.0,realizzare il sito
+exp03_zeroshot,gpt-5.6-luna,zero_shot,986,Freedom,Freedom,1.0,stabile,False,False,10,10,False,10,{'Freedom': np.int64(10)},1.0,Il lavoro autonomo sul sito
+exp03_zeroshot,gpt-5.6-luna,zero_shot,990,Social,Social,1.0,stabile,False,False,10,10,False,10,{'Social': np.int64(10)},1.0,Lavoro di gruppo 
+exp03_zeroshot,gpt-5.6-luna,zero_shot,998,hard fun,Feeling+,1.0,stabile,False,False,10,10,False,10,{'Feeling+': np.int64(10)},1.0,il coinvolgimento
+exp03_zeroshot,gpt-5.6-luna,zero_shot,999,Social,Social,1.0,stabile,False,False,10,10,False,10,{'Social': np.int64(10)},1.0,Lavorare con i compagni
+legacy,gpt-5.6-luna,zero_shot,1020,Activity,Activity,1.0,stabile,False,False,3,3,False,3,{'Activity': np.int64(3)},1.0,Ricercare le informazioni.
+legacy,gpt-5.6-luna,zero_shot,1171,Activity,Activity,1.0,stabile,False,False,3,3,False,3,{'Activity': np.int64(3)},1.0,programmare la centralina
+legacy,gpt-5.6-luna,zero_shot,161,Activity,Activity,1.0,stabile,False,False,3,3,False,3,{'Activity': np.int64(3)},1.0,accendere le lucine con il computer
+legacy,gpt-5.6-luna,zero_shot,179,Tool,Tool,1.0,stabile,False,False,3,3,False,3,{'Tool': np.int64(3)},1.0,usare il computer e comandare il robot
+legacy,gpt-5.6-luna,zero_shot,216,Social,Social,1.0,stabile,False,False,3,3,False,3,{'Social': np.int64(3)},1.0,lavoro a gruppi
+legacy,gpt-5.6-luna,zero_shot,224,Tool,Tool,1.0,stabile,False,False,3,3,False,3,{'Tool': np.int64(3)},1.0,scratch
+legacy,gpt-5.6-luna,zero_shot,459,Activity,Activity,0.6666666666666666,instabile,False,False,3,3,False,3,"{'Activity': np.int64(2), 'Tool': np.int64(1)}",1.0,l'astronave
+legacy,gpt-5.6-luna,zero_shot,471,Activity,Tool,1.0,stabile,False,False,3,3,False,3,{'Tool': np.int64(3)},1.0,il rover
+legacy,gpt-5.6-luna,zero_shot,535,Making,Making,1.0,stabile,False,False,3,3,False,3,{'Making': np.int64(3)},1.0,costruire il robot 
+legacy,gpt-5.6-luna,zero_shot,547,Making,Creativity,1.0,stabile,False,False,3,3,False,3,{'Creativity': np.int64(3)},1.0,creare immagini 
+legacy,gpt-5.6-luna,zero_shot,55,Freedom,Freedom,1.0,stabile,False,False,3,3,False,3,{'Freedom': np.int64(3)},1.0,FARE UNA STORIA COME VOLEVAMO NOI
+legacy,gpt-5.6-luna,zero_shot,603,Activity,Creativity,0.6666666666666666,instabile,False,False,3,3,False,3,"{'Creativity': np.int64(2), 'Activity': np.int64(1)}",1.0,Creare la presentazione.
+legacy,gpt-5.6-luna,zero_shot,646,Activity,Making,1.0,stabile,False,False,3,3,False,3,{'Making': np.int64(3)},1.0,Quando ho finito e ho rivisto tutto il lavoro
+legacy,gpt-5.6-luna,zero_shot,648,Activity,Creativity,1.0,stabile,False,False,3,3,False,3,{'Creativity': np.int64(3)},1.0,il poter creare un sito mio
+legacy,gpt-5.6-luna,zero_shot,750,Activity,Activity,1.0,stabile,False,False,3,3,False,3,{'Activity': np.int64(3)},1.0,il modo in cui si è svolta l'attività e le attività stesse fatte
+legacy,gpt-5.6-luna,zero_shot,755,Teacher,Teacher,1.0,stabile,False,False,3,3,False,3,{'Teacher': np.int64(3)},1.0,Le spiegazioni del docente
+legacy,gpt-5.6-luna,zero_shot,789,Activity,Activity,1.0,stabile,False,False,3,3,False,3,{'Activity': np.int64(3)},1.0,FARE I GIOCHI
+legacy,gpt-5.6-luna,zero_shot,805,Activity,Making,1.0,stabile,False,False,3,3,False,3,{'Making': np.int64(3)},1.0,cercare di far funzionare il tutto
+legacy,gpt-5.6-luna,zero_shot,825,Love,Love,0.6666666666666666,instabile,False,False,3,3,False,3,"{'Love': np.int64(2), 'Activity': np.int64(1)}",1.0,min è piaciuto tutto soprattutto quando abbiamo fatto i percorsi ad esempio slalom tra i banchi
+legacy,gpt-5.6-luna,zero_shot,93,Activity,Activity,1.0,stabile,False,False,3,3,False,3,{'Activity': np.int64(3)},1.0,travestire i thymio

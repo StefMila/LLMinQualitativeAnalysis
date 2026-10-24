@@ -1,0 +1,87 @@
+
+================================================================================
+anthropic/claude-opus-5 | zero_shot | risposta 603
+TESTO:  Creare la presentazione.
+UMANO:  Activity
+
+  RUN 1: Creativity
+  MOTIVAZIONE: La risposta evidenzia il processo creativo di produrre qualcosa di proprio ('creare') riferito a un prodotto concreto dell'attività, la presentazione; rientra quindi in Creativity.
+  QUOTE:       ['Creare la presentazione.']
+
+  RUN 2: Activity
+  MOTIVAZIONE: La risposta indica l'obiettivo specifico dell'attività svolta (realizzare la presentazione), analogamente agli esempi 'creare un bot'/'programmare il gioco' che il codebook assegna ad Activity.
+  QUOTE:       ['Creare la presentazione.']
+
+  RUN 3: Creativity
+  MOTIVAZIONE: La risposta evidenzia l'atto di creare qualcosa di proprio, la presentazione, legato all'attività svolta: enfasi sul processo creativo.
+  QUOTE:       ['Creare la presentazione.']
+
+================================================================================
+anthropic/claude-opus-5 | zero_shot | risposta 789
+TESTO:  FARE I GIOCHI
+UMANO:  Activity
+
+  RUN 1: Activity
+  MOTIVAZIONE: La risposta indica il contenuto specifico dell'attività svolta, ossia la realizzazione dei giochi, più che un generico processo del fare o uno strumento.
+  QUOTE:       ['FARE I GIOCHI']
+
+  RUN 2: Making
+  MOTIVAZIONE: La risposta enfatizza l'atto del fare/realizzare i giochi, quindi il processo del fare concreto durante l'attività.
+  QUOTE:       ['FARE I GIOCHI']
+
+  RUN 3: Making
+  MOTIVAZIONE: La risposta enfatizza l'attività concreta di realizzare i giochi; il verbo 'fare' indica il processo del fare applicato a un contenuto specifico. L'enfasi principale sembra sul fare/costruire i giochi.
+  QUOTE:       ['FARE I GIOCHI']
+
+================================================================================
+openai/gpt-5.6-luna | zero_shot | risposta 459
+TESTO:  l'astronave
+UMANO:  Activity
+
+  RUN 1: Tool
+  MOTIVAZIONE: La risposta indica come elemento preferito uno specifico oggetto o prodotto dell'attività.
+  QUOTE:       ["l'astronave"]
+
+  RUN 2: Tool
+  MOTIVAZIONE: La risposta indica un oggetto specifico dell'attività che è piaciuto maggiormente.
+  QUOTE:       ["l'astronave"]
+
+  RUN 3: Activity
+  MOTIVAZIONE: La risposta indica l'oggetto specifico dell'attività che è piaciuto di più.
+  QUOTE:       ["l'astronave"]
+
+================================================================================
+openai/gpt-5.6-luna | zero_shot | risposta 603
+TESTO:  Creare la presentazione.
+UMANO:  Activity
+
+  RUN 1: Making
+  MOTIVAZIONE: La risposta esprime apprezzamento per la realizzazione di un prodotto concreto nell'ambito dell'attività, con enfasi sul fare e sul processo di realizzazione.
+  QUOTE:       ['Creare la presentazione.']
+
+  RUN 2: Activity
+  MOTIVAZIONE: La risposta enfatizza l'attività specifica svolta, cioè la creazione della presentazione, senza riferimenti espliciti al processo creativo o ad altri aspetti dell'esperienza.
+  QUOTE:       ['Creare la presentazione.']
+
+  RUN 3: Making
+  MOTIVAZIONE: La risposta enfatizza il fare e realizzare concretamente una presentazione durante l'attività.
+  QUOTE:       ['Creare la presentazione.']
+
+================================================================================
+openai/gpt-5.6-luna | zero_shot | risposta 646
+TESTO:  Quando ho finito e ho rivisto tutto il lavoro
+UMANO:  Activity
+
+  RUN 1: Activity
+  MOTIVAZIONE: La risposta mette in evidenza la soddisfazione legata al completamento e alla revisione del lavoro svolto, quindi all'attività realizzata.
+  QUOTE:       ['Quando ho finito e ho rivisto tutto il lavoro']
+
+  RUN 2: Activity
+  MOTIVAZIONE: La risposta enfatizza la soddisfazione legata al completamento e alla revisione del lavoro svolto, quindi all'attività realizzata.
+  QUOTE:       ['Quando ho finito e ho rivisto tutto il lavoro']
+
+  RUN 3: Making
+  MOTIVAZIONE: La risposta enfatizza il momento conclusivo del fare, cioè aver terminato e rivisto il lavoro svolto.
+  QUOTE:       ['Quando ho finito e ho rivisto tutto il lavoro']
+
+Report salvato in: D:\Tesi\codifica_llm\results\piaciuto\check_baseline_01.txt

@@ -1,0 +1,379 @@
+﻿esperimento_id,modello,strategia,versione,categoria,precision,recall,f1,supporto,in_f1_macro
+baseline_01,claude-opus-5,zero_shot,principale,Social,1.0,1.0,1.0,1,True
+baseline_01,claude-opus-5,zero_shot,principale,Making,0.25,0.5,0.333,2,True
+baseline_01,claude-opus-5,zero_shot,principale,Creativity,0.0,0.0,0.0,0,False
+baseline_01,claude-opus-5,zero_shot,principale,Freedom,1.0,1.0,1.0,1,True
+baseline_01,claude-opus-5,zero_shot,principale,Activity,0.833,0.417,0.556,12,True
+baseline_01,claude-opus-5,zero_shot,principale,Tool,0.667,1.0,0.8,2,True
+baseline_01,claude-opus-5,zero_shot,principale,Time,0.0,0.0,0.0,0,False
+baseline_01,claude-opus-5,zero_shot,principale,Learning,0.0,0.0,0.0,0,False
+baseline_01,claude-opus-5,zero_shot,principale,Teacher,1.0,1.0,1.0,1,True
+baseline_01,claude-opus-5,zero_shot,principale,Flow,0.0,0.0,0.0,0,False
+baseline_01,claude-opus-5,zero_shot,principale,Love,0.0,0.0,0.0,1,True
+baseline_01,claude-opus-5,zero_shot,principale,Feeling+,0.0,0.0,0.0,0,False
+baseline_01,claude-opus-5,zero_shot,principale,Feeling-,0.0,0.0,0.0,0,False
+baseline_01,claude-opus-5,zero_shot,principale,Hate,0.0,0.0,0.0,0,False
+baseline_01,claude-opus-5,zero_shot,principale,Competence,0.0,0.0,0.0,0,False
+baseline_01,claude-opus-5,zero_shot,principale,Usefulness,0.0,0.0,0.0,0,False
+baseline_01,claude-opus-5,zero_shot,principale,hard fun,0.0,0.0,0.0,0,False
+baseline_01,claude-opus-5,zero_shot,principale,non classificabile,0.0,0.0,0.0,0,False
+baseline_01,claude-opus-5,zero_shot,controllo,Social,1.0,1.0,1.0,1,True
+baseline_01,claude-opus-5,zero_shot,controllo,Making,0.25,0.5,0.333,2,True
+baseline_01,claude-opus-5,zero_shot,controllo,Creativity,0.0,0.0,0.0,0,False
+baseline_01,claude-opus-5,zero_shot,controllo,Freedom,1.0,1.0,1.0,1,True
+baseline_01,claude-opus-5,zero_shot,controllo,Activity,0.833,0.417,0.556,12,True
+baseline_01,claude-opus-5,zero_shot,controllo,Tool,0.667,1.0,0.8,2,True
+baseline_01,claude-opus-5,zero_shot,controllo,Time,0.0,0.0,0.0,0,False
+baseline_01,claude-opus-5,zero_shot,controllo,Learning,0.0,0.0,0.0,0,False
+baseline_01,claude-opus-5,zero_shot,controllo,Teacher,1.0,1.0,1.0,1,True
+baseline_01,claude-opus-5,zero_shot,controllo,Flow,0.0,0.0,0.0,0,False
+baseline_01,claude-opus-5,zero_shot,controllo,Love,0.0,0.0,0.0,1,True
+baseline_01,claude-opus-5,zero_shot,controllo,Feeling+,0.0,0.0,0.0,0,False
+baseline_01,claude-opus-5,zero_shot,controllo,Feeling-,0.0,0.0,0.0,0,False
+baseline_01,claude-opus-5,zero_shot,controllo,Hate,0.0,0.0,0.0,0,False
+baseline_01,claude-opus-5,zero_shot,controllo,Competence,0.0,0.0,0.0,0,False
+baseline_01,claude-opus-5,zero_shot,controllo,Usefulness,0.0,0.0,0.0,0,False
+baseline_01,claude-opus-5,zero_shot,controllo,hard fun,0.0,0.0,0.0,0,False
+baseline_01,claude-opus-5,zero_shot,controllo,non classificabile,0.0,0.0,0.0,0,False
+baseline_01,claude-opus-5,zero_shot,confronto_modelli,Social,1.0,1.0,1.0,1,True
+baseline_01,claude-opus-5,zero_shot,confronto_modelli,Making,0.25,0.5,0.333,2,True
+baseline_01,claude-opus-5,zero_shot,confronto_modelli,Creativity,0.0,0.0,0.0,0,False
+baseline_01,claude-opus-5,zero_shot,confronto_modelli,Freedom,1.0,1.0,1.0,1,True
+baseline_01,claude-opus-5,zero_shot,confronto_modelli,Activity,0.833,0.417,0.556,12,True
+baseline_01,claude-opus-5,zero_shot,confronto_modelli,Tool,0.667,1.0,0.8,2,True
+baseline_01,claude-opus-5,zero_shot,confronto_modelli,Time,0.0,0.0,0.0,0,False
+baseline_01,claude-opus-5,zero_shot,confronto_modelli,Learning,0.0,0.0,0.0,0,False
+baseline_01,claude-opus-5,zero_shot,confronto_modelli,Teacher,1.0,1.0,1.0,1,True
+baseline_01,claude-opus-5,zero_shot,confronto_modelli,Flow,0.0,0.0,0.0,0,False
+baseline_01,claude-opus-5,zero_shot,confronto_modelli,Love,0.0,0.0,0.0,1,True
+baseline_01,claude-opus-5,zero_shot,confronto_modelli,Feeling+,0.0,0.0,0.0,0,False
+baseline_01,claude-opus-5,zero_shot,confronto_modelli,Feeling-,0.0,0.0,0.0,0,False
+baseline_01,claude-opus-5,zero_shot,confronto_modelli,Hate,0.0,0.0,0.0,0,False
+baseline_01,claude-opus-5,zero_shot,confronto_modelli,Competence,0.0,0.0,0.0,0,False
+baseline_01,claude-opus-5,zero_shot,confronto_modelli,Usefulness,0.0,0.0,0.0,0,False
+baseline_01,claude-opus-5,zero_shot,confronto_modelli,hard fun,0.0,0.0,0.0,0,False
+baseline_01,claude-opus-5,zero_shot,confronto_modelli,non classificabile,0.0,0.0,0.0,0,False
+baseline_01,gpt-5.6-luna,zero_shot,principale,Social,1.0,1.0,1.0,1,True
+baseline_01,gpt-5.6-luna,zero_shot,principale,Making,0.333,0.5,0.4,2,True
+baseline_01,gpt-5.6-luna,zero_shot,principale,Creativity,0.0,0.0,0.0,0,False
+baseline_01,gpt-5.6-luna,zero_shot,principale,Freedom,1.0,1.0,1.0,1,True
+baseline_01,gpt-5.6-luna,zero_shot,principale,Activity,0.875,0.583,0.7,12,True
+baseline_01,gpt-5.6-luna,zero_shot,principale,Tool,0.5,1.0,0.667,2,True
+baseline_01,gpt-5.6-luna,zero_shot,principale,Time,0.0,0.0,0.0,0,False
+baseline_01,gpt-5.6-luna,zero_shot,principale,Learning,0.0,0.0,0.0,0,False
+baseline_01,gpt-5.6-luna,zero_shot,principale,Teacher,1.0,1.0,1.0,1,True
+baseline_01,gpt-5.6-luna,zero_shot,principale,Flow,0.0,0.0,0.0,0,False
+baseline_01,gpt-5.6-luna,zero_shot,principale,Love,1.0,1.0,1.0,1,True
+baseline_01,gpt-5.6-luna,zero_shot,principale,Feeling+,0.0,0.0,0.0,0,False
+baseline_01,gpt-5.6-luna,zero_shot,principale,Feeling-,0.0,0.0,0.0,0,False
+baseline_01,gpt-5.6-luna,zero_shot,principale,Hate,0.0,0.0,0.0,0,False
+baseline_01,gpt-5.6-luna,zero_shot,principale,Competence,0.0,0.0,0.0,0,False
+baseline_01,gpt-5.6-luna,zero_shot,principale,Usefulness,0.0,0.0,0.0,0,False
+baseline_01,gpt-5.6-luna,zero_shot,principale,hard fun,0.0,0.0,0.0,0,False
+baseline_01,gpt-5.6-luna,zero_shot,principale,non classificabile,0.0,0.0,0.0,0,False
+baseline_01,gpt-5.6-luna,zero_shot,controllo,Social,1.0,1.0,1.0,1,True
+baseline_01,gpt-5.6-luna,zero_shot,controllo,Making,0.333,0.5,0.4,2,True
+baseline_01,gpt-5.6-luna,zero_shot,controllo,Creativity,0.0,0.0,0.0,0,False
+baseline_01,gpt-5.6-luna,zero_shot,controllo,Freedom,1.0,1.0,1.0,1,True
+baseline_01,gpt-5.6-luna,zero_shot,controllo,Activity,0.875,0.583,0.7,12,True
+baseline_01,gpt-5.6-luna,zero_shot,controllo,Tool,0.5,1.0,0.667,2,True
+baseline_01,gpt-5.6-luna,zero_shot,controllo,Time,0.0,0.0,0.0,0,False
+baseline_01,gpt-5.6-luna,zero_shot,controllo,Learning,0.0,0.0,0.0,0,False
+baseline_01,gpt-5.6-luna,zero_shot,controllo,Teacher,1.0,1.0,1.0,1,True
+baseline_01,gpt-5.6-luna,zero_shot,controllo,Flow,0.0,0.0,0.0,0,False
+baseline_01,gpt-5.6-luna,zero_shot,controllo,Love,1.0,1.0,1.0,1,True
+baseline_01,gpt-5.6-luna,zero_shot,controllo,Feeling+,0.0,0.0,0.0,0,False
+baseline_01,gpt-5.6-luna,zero_shot,controllo,Feeling-,0.0,0.0,0.0,0,False
+baseline_01,gpt-5.6-luna,zero_shot,controllo,Hate,0.0,0.0,0.0,0,False
+baseline_01,gpt-5.6-luna,zero_shot,controllo,Competence,0.0,0.0,0.0,0,False
+baseline_01,gpt-5.6-luna,zero_shot,controllo,Usefulness,0.0,0.0,0.0,0,False
+baseline_01,gpt-5.6-luna,zero_shot,controllo,hard fun,0.0,0.0,0.0,0,False
+baseline_01,gpt-5.6-luna,zero_shot,controllo,non classificabile,0.0,0.0,0.0,0,False
+baseline_01,gpt-5.6-luna,zero_shot,confronto_modelli,Social,1.0,1.0,1.0,1,True
+baseline_01,gpt-5.6-luna,zero_shot,confronto_modelli,Making,0.333,0.5,0.4,2,True
+baseline_01,gpt-5.6-luna,zero_shot,confronto_modelli,Creativity,0.0,0.0,0.0,0,False
+baseline_01,gpt-5.6-luna,zero_shot,confronto_modelli,Freedom,1.0,1.0,1.0,1,True
+baseline_01,gpt-5.6-luna,zero_shot,confronto_modelli,Activity,0.875,0.583,0.7,12,True
+baseline_01,gpt-5.6-luna,zero_shot,confronto_modelli,Tool,0.5,1.0,0.667,2,True
+baseline_01,gpt-5.6-luna,zero_shot,confronto_modelli,Time,0.0,0.0,0.0,0,False
+baseline_01,gpt-5.6-luna,zero_shot,confronto_modelli,Learning,0.0,0.0,0.0,0,False
+baseline_01,gpt-5.6-luna,zero_shot,confronto_modelli,Teacher,1.0,1.0,1.0,1,True
+baseline_01,gpt-5.6-luna,zero_shot,confronto_modelli,Flow,0.0,0.0,0.0,0,False
+baseline_01,gpt-5.6-luna,zero_shot,confronto_modelli,Love,1.0,1.0,1.0,1,True
+baseline_01,gpt-5.6-luna,zero_shot,confronto_modelli,Feeling+,0.0,0.0,0.0,0,False
+baseline_01,gpt-5.6-luna,zero_shot,confronto_modelli,Feeling-,0.0,0.0,0.0,0,False
+baseline_01,gpt-5.6-luna,zero_shot,confronto_modelli,Hate,0.0,0.0,0.0,0,False
+baseline_01,gpt-5.6-luna,zero_shot,confronto_modelli,Competence,0.0,0.0,0.0,0,False
+baseline_01,gpt-5.6-luna,zero_shot,confronto_modelli,Usefulness,0.0,0.0,0.0,0,False
+baseline_01,gpt-5.6-luna,zero_shot,confronto_modelli,hard fun,0.0,0.0,0.0,0,False
+baseline_01,gpt-5.6-luna,zero_shot,confronto_modelli,non classificabile,0.0,0.0,0.0,0,False
+baseline_02_citazione_singola,claude-opus-5,zero_shot,principale,Social,1.0,1.0,1.0,1,True
+baseline_02_citazione_singola,claude-opus-5,zero_shot,principale,Making,0.333,0.5,0.4,2,True
+baseline_02_citazione_singola,claude-opus-5,zero_shot,principale,Creativity,0.0,0.0,0.0,0,False
+baseline_02_citazione_singola,claude-opus-5,zero_shot,principale,Freedom,1.0,1.0,1.0,1,True
+baseline_02_citazione_singola,claude-opus-5,zero_shot,principale,Activity,0.857,0.5,0.632,12,True
+baseline_02_citazione_singola,claude-opus-5,zero_shot,principale,Tool,0.667,1.0,0.8,2,True
+baseline_02_citazione_singola,claude-opus-5,zero_shot,principale,Time,0.0,0.0,0.0,0,False
+baseline_02_citazione_singola,claude-opus-5,zero_shot,principale,Learning,0.0,0.0,0.0,0,False
+baseline_02_citazione_singola,claude-opus-5,zero_shot,principale,Teacher,1.0,1.0,1.0,1,True
+baseline_02_citazione_singola,claude-opus-5,zero_shot,principale,Flow,0.0,0.0,0.0,0,False
+baseline_02_citazione_singola,claude-opus-5,zero_shot,principale,Love,0.0,0.0,0.0,1,True
+baseline_02_citazione_singola,claude-opus-5,zero_shot,principale,Feeling+,0.0,0.0,0.0,0,False
+baseline_02_citazione_singola,claude-opus-5,zero_shot,principale,Feeling-,0.0,0.0,0.0,0,False
+baseline_02_citazione_singola,claude-opus-5,zero_shot,principale,Hate,0.0,0.0,0.0,0,False
+baseline_02_citazione_singola,claude-opus-5,zero_shot,principale,Competence,0.0,0.0,0.0,0,False
+baseline_02_citazione_singola,claude-opus-5,zero_shot,principale,Usefulness,0.0,0.0,0.0,0,False
+baseline_02_citazione_singola,claude-opus-5,zero_shot,principale,hard fun,0.0,0.0,0.0,0,False
+baseline_02_citazione_singola,claude-opus-5,zero_shot,principale,non classificabile,0.0,0.0,0.0,0,False
+baseline_02_citazione_singola,claude-opus-5,zero_shot,controllo,Social,1.0,1.0,1.0,1,True
+baseline_02_citazione_singola,claude-opus-5,zero_shot,controllo,Making,0.333,0.5,0.4,2,True
+baseline_02_citazione_singola,claude-opus-5,zero_shot,controllo,Creativity,0.0,0.0,0.0,0,False
+baseline_02_citazione_singola,claude-opus-5,zero_shot,controllo,Freedom,1.0,1.0,1.0,1,True
+baseline_02_citazione_singola,claude-opus-5,zero_shot,controllo,Activity,0.857,0.5,0.632,12,True
+baseline_02_citazione_singola,claude-opus-5,zero_shot,controllo,Tool,0.667,1.0,0.8,2,True
+baseline_02_citazione_singola,claude-opus-5,zero_shot,controllo,Time,0.0,0.0,0.0,0,False
+baseline_02_citazione_singola,claude-opus-5,zero_shot,controllo,Learning,0.0,0.0,0.0,0,False
+baseline_02_citazione_singola,claude-opus-5,zero_shot,controllo,Teacher,1.0,1.0,1.0,1,True
+baseline_02_citazione_singola,claude-opus-5,zero_shot,controllo,Flow,0.0,0.0,0.0,0,False
+baseline_02_citazione_singola,claude-opus-5,zero_shot,controllo,Love,0.0,0.0,0.0,1,True
+baseline_02_citazione_singola,claude-opus-5,zero_shot,controllo,Feeling+,0.0,0.0,0.0,0,False
+baseline_02_citazione_singola,claude-opus-5,zero_shot,controllo,Feeling-,0.0,0.0,0.0,0,False
+baseline_02_citazione_singola,claude-opus-5,zero_shot,controllo,Hate,0.0,0.0,0.0,0,False
+baseline_02_citazione_singola,claude-opus-5,zero_shot,controllo,Competence,0.0,0.0,0.0,0,False
+baseline_02_citazione_singola,claude-opus-5,zero_shot,controllo,Usefulness,0.0,0.0,0.0,0,False
+baseline_02_citazione_singola,claude-opus-5,zero_shot,controllo,hard fun,0.0,0.0,0.0,0,False
+baseline_02_citazione_singola,claude-opus-5,zero_shot,controllo,non classificabile,0.0,0.0,0.0,0,False
+baseline_02_citazione_singola,claude-opus-5,zero_shot,confronto_modelli,Social,1.0,1.0,1.0,1,True
+baseline_02_citazione_singola,claude-opus-5,zero_shot,confronto_modelli,Making,0.333,0.5,0.4,2,True
+baseline_02_citazione_singola,claude-opus-5,zero_shot,confronto_modelli,Creativity,0.0,0.0,0.0,0,False
+baseline_02_citazione_singola,claude-opus-5,zero_shot,confronto_modelli,Freedom,1.0,1.0,1.0,1,True
+baseline_02_citazione_singola,claude-opus-5,zero_shot,confronto_modelli,Activity,0.833,0.455,0.588,11,True
+baseline_02_citazione_singola,claude-opus-5,zero_shot,confronto_modelli,Tool,0.667,1.0,0.8,2,True
+baseline_02_citazione_singola,claude-opus-5,zero_shot,confronto_modelli,Time,0.0,0.0,0.0,0,False
+baseline_02_citazione_singola,claude-opus-5,zero_shot,confronto_modelli,Learning,0.0,0.0,0.0,0,False
+baseline_02_citazione_singola,claude-opus-5,zero_shot,confronto_modelli,Teacher,1.0,1.0,1.0,1,True
+baseline_02_citazione_singola,claude-opus-5,zero_shot,confronto_modelli,Flow,0.0,0.0,0.0,0,False
+baseline_02_citazione_singola,claude-opus-5,zero_shot,confronto_modelli,Love,0.0,0.0,0.0,1,True
+baseline_02_citazione_singola,claude-opus-5,zero_shot,confronto_modelli,Feeling+,0.0,0.0,0.0,0,False
+baseline_02_citazione_singola,claude-opus-5,zero_shot,confronto_modelli,Feeling-,0.0,0.0,0.0,0,False
+baseline_02_citazione_singola,claude-opus-5,zero_shot,confronto_modelli,Hate,0.0,0.0,0.0,0,False
+baseline_02_citazione_singola,claude-opus-5,zero_shot,confronto_modelli,Competence,0.0,0.0,0.0,0,False
+baseline_02_citazione_singola,claude-opus-5,zero_shot,confronto_modelli,Usefulness,0.0,0.0,0.0,0,False
+baseline_02_citazione_singola,claude-opus-5,zero_shot,confronto_modelli,hard fun,0.0,0.0,0.0,0,False
+baseline_02_citazione_singola,claude-opus-5,zero_shot,confronto_modelli,non classificabile,0.0,0.0,0.0,0,False
+baseline_02_citazione_singola,gpt-5.6-luna,zero_shot,principale,Social,1.0,1.0,1.0,1,True
+baseline_02_citazione_singola,gpt-5.6-luna,zero_shot,principale,Making,0.333,0.5,0.4,2,True
+baseline_02_citazione_singola,gpt-5.6-luna,zero_shot,principale,Creativity,0.0,0.0,0.0,0,False
+baseline_02_citazione_singola,gpt-5.6-luna,zero_shot,principale,Freedom,0.0,0.0,0.0,1,True
+baseline_02_citazione_singola,gpt-5.6-luna,zero_shot,principale,Activity,1.0,0.545,0.706,11,True
+baseline_02_citazione_singola,gpt-5.6-luna,zero_shot,principale,Tool,0.5,1.0,0.667,2,True
+baseline_02_citazione_singola,gpt-5.6-luna,zero_shot,principale,Time,0.0,0.0,0.0,0,False
+baseline_02_citazione_singola,gpt-5.6-luna,zero_shot,principale,Learning,0.0,0.0,0.0,0,False
+baseline_02_citazione_singola,gpt-5.6-luna,zero_shot,principale,Teacher,1.0,1.0,1.0,1,True
+baseline_02_citazione_singola,gpt-5.6-luna,zero_shot,principale,Flow,0.0,0.0,0.0,0,False
+baseline_02_citazione_singola,gpt-5.6-luna,zero_shot,principale,Love,1.0,1.0,1.0,1,True
+baseline_02_citazione_singola,gpt-5.6-luna,zero_shot,principale,Feeling+,0.0,0.0,0.0,0,False
+baseline_02_citazione_singola,gpt-5.6-luna,zero_shot,principale,Feeling-,0.0,0.0,0.0,0,False
+baseline_02_citazione_singola,gpt-5.6-luna,zero_shot,principale,Hate,0.0,0.0,0.0,0,False
+baseline_02_citazione_singola,gpt-5.6-luna,zero_shot,principale,Competence,0.0,0.0,0.0,0,False
+baseline_02_citazione_singola,gpt-5.6-luna,zero_shot,principale,Usefulness,0.0,0.0,0.0,0,False
+baseline_02_citazione_singola,gpt-5.6-luna,zero_shot,principale,hard fun,0.0,0.0,0.0,0,False
+baseline_02_citazione_singola,gpt-5.6-luna,zero_shot,principale,non classificabile,0.0,0.0,0.0,0,False
+baseline_02_citazione_singola,gpt-5.6-luna,zero_shot,controllo,Social,1.0,1.0,1.0,1,True
+baseline_02_citazione_singola,gpt-5.6-luna,zero_shot,controllo,Making,0.333,0.5,0.4,2,True
+baseline_02_citazione_singola,gpt-5.6-luna,zero_shot,controllo,Creativity,0.0,0.0,0.0,0,False
+baseline_02_citazione_singola,gpt-5.6-luna,zero_shot,controllo,Freedom,0.0,0.0,0.0,1,True
+baseline_02_citazione_singola,gpt-5.6-luna,zero_shot,controllo,Activity,1.0,0.5,0.667,12,True
+baseline_02_citazione_singola,gpt-5.6-luna,zero_shot,controllo,Tool,0.5,1.0,0.667,2,True
+baseline_02_citazione_singola,gpt-5.6-luna,zero_shot,controllo,Time,0.0,0.0,0.0,0,False
+baseline_02_citazione_singola,gpt-5.6-luna,zero_shot,controllo,Learning,0.0,0.0,0.0,0,False
+baseline_02_citazione_singola,gpt-5.6-luna,zero_shot,controllo,Teacher,1.0,1.0,1.0,1,True
+baseline_02_citazione_singola,gpt-5.6-luna,zero_shot,controllo,Flow,0.0,0.0,0.0,0,False
+baseline_02_citazione_singola,gpt-5.6-luna,zero_shot,controllo,Love,1.0,1.0,1.0,1,True
+baseline_02_citazione_singola,gpt-5.6-luna,zero_shot,controllo,Feeling+,0.0,0.0,0.0,0,False
+baseline_02_citazione_singola,gpt-5.6-luna,zero_shot,controllo,Feeling-,0.0,0.0,0.0,0,False
+baseline_02_citazione_singola,gpt-5.6-luna,zero_shot,controllo,Hate,0.0,0.0,0.0,0,False
+baseline_02_citazione_singola,gpt-5.6-luna,zero_shot,controllo,Competence,0.0,0.0,0.0,0,False
+baseline_02_citazione_singola,gpt-5.6-luna,zero_shot,controllo,Usefulness,0.0,0.0,0.0,0,False
+baseline_02_citazione_singola,gpt-5.6-luna,zero_shot,controllo,hard fun,0.0,0.0,0.0,0,False
+baseline_02_citazione_singola,gpt-5.6-luna,zero_shot,controllo,non classificabile,0.0,0.0,0.0,0,False
+baseline_02_citazione_singola,gpt-5.6-luna,zero_shot,confronto_modelli,Social,1.0,1.0,1.0,1,True
+baseline_02_citazione_singola,gpt-5.6-luna,zero_shot,confronto_modelli,Making,0.333,0.5,0.4,2,True
+baseline_02_citazione_singola,gpt-5.6-luna,zero_shot,confronto_modelli,Creativity,0.0,0.0,0.0,0,False
+baseline_02_citazione_singola,gpt-5.6-luna,zero_shot,confronto_modelli,Freedom,0.0,0.0,0.0,1,True
+baseline_02_citazione_singola,gpt-5.6-luna,zero_shot,confronto_modelli,Activity,1.0,0.545,0.706,11,True
+baseline_02_citazione_singola,gpt-5.6-luna,zero_shot,confronto_modelli,Tool,0.5,1.0,0.667,2,True
+baseline_02_citazione_singola,gpt-5.6-luna,zero_shot,confronto_modelli,Time,0.0,0.0,0.0,0,False
+baseline_02_citazione_singola,gpt-5.6-luna,zero_shot,confronto_modelli,Learning,0.0,0.0,0.0,0,False
+baseline_02_citazione_singola,gpt-5.6-luna,zero_shot,confronto_modelli,Teacher,1.0,1.0,1.0,1,True
+baseline_02_citazione_singola,gpt-5.6-luna,zero_shot,confronto_modelli,Flow,0.0,0.0,0.0,0,False
+baseline_02_citazione_singola,gpt-5.6-luna,zero_shot,confronto_modelli,Love,1.0,1.0,1.0,1,True
+baseline_02_citazione_singola,gpt-5.6-luna,zero_shot,confronto_modelli,Feeling+,0.0,0.0,0.0,0,False
+baseline_02_citazione_singola,gpt-5.6-luna,zero_shot,confronto_modelli,Feeling-,0.0,0.0,0.0,0,False
+baseline_02_citazione_singola,gpt-5.6-luna,zero_shot,confronto_modelli,Hate,0.0,0.0,0.0,0,False
+baseline_02_citazione_singola,gpt-5.6-luna,zero_shot,confronto_modelli,Competence,0.0,0.0,0.0,0,False
+baseline_02_citazione_singola,gpt-5.6-luna,zero_shot,confronto_modelli,Usefulness,0.0,0.0,0.0,0,False
+baseline_02_citazione_singola,gpt-5.6-luna,zero_shot,confronto_modelli,hard fun,0.0,0.0,0.0,0,False
+baseline_02_citazione_singola,gpt-5.6-luna,zero_shot,confronto_modelli,non classificabile,0.0,0.0,0.0,0,False
+exp03_zeroshot,claude-opus-5,zero_shot,principale,Social,1.0,0.919,0.958,37,True
+exp03_zeroshot,claude-opus-5,zero_shot,principale,Making,0.435,0.435,0.435,23,True
+exp03_zeroshot,claude-opus-5,zero_shot,principale,Creativity,0.576,0.905,0.704,21,True
+exp03_zeroshot,claude-opus-5,zero_shot,principale,Freedom,0.5,0.667,0.571,6,True
+exp03_zeroshot,claude-opus-5,zero_shot,principale,Activity,0.807,0.704,0.752,125,True
+exp03_zeroshot,claude-opus-5,zero_shot,principale,Tool,0.721,0.795,0.756,39,True
+exp03_zeroshot,claude-opus-5,zero_shot,principale,Time,0.0,0.0,0.0,0,False
+exp03_zeroshot,claude-opus-5,zero_shot,principale,Learning,0.722,0.867,0.788,15,True
+exp03_zeroshot,claude-opus-5,zero_shot,principale,Teacher,1.0,0.714,0.833,7,True
+exp03_zeroshot,claude-opus-5,zero_shot,principale,Flow,0.0,0.0,0.0,2,True
+exp03_zeroshot,claude-opus-5,zero_shot,principale,Love,1.0,0.818,0.9,11,True
+exp03_zeroshot,claude-opus-5,zero_shot,principale,Feeling+,0.0,0.0,0.0,0,False
+exp03_zeroshot,claude-opus-5,zero_shot,principale,Feeling-,0.0,0.0,0.0,1,True
+exp03_zeroshot,claude-opus-5,zero_shot,principale,Hate,0.5,1.0,0.667,2,True
+exp03_zeroshot,claude-opus-5,zero_shot,principale,Competence,0.0,0.0,0.0,0,False
+exp03_zeroshot,claude-opus-5,zero_shot,principale,Usefulness,0.0,0.0,0.0,0,False
+exp03_zeroshot,claude-opus-5,zero_shot,principale,hard fun,0.0,0.0,0.0,1,True
+exp03_zeroshot,claude-opus-5,zero_shot,principale,non classificabile,0.667,0.5,0.571,4,True
+exp03_zeroshot,claude-opus-5,zero_shot,controllo,Social,1.0,0.919,0.958,37,True
+exp03_zeroshot,claude-opus-5,zero_shot,controllo,Making,0.435,0.435,0.435,23,True
+exp03_zeroshot,claude-opus-5,zero_shot,controllo,Creativity,0.576,0.864,0.691,22,True
+exp03_zeroshot,claude-opus-5,zero_shot,controllo,Freedom,0.5,0.667,0.571,6,True
+exp03_zeroshot,claude-opus-5,zero_shot,controllo,Activity,0.807,0.677,0.736,130,True
+exp03_zeroshot,claude-opus-5,zero_shot,controllo,Tool,0.721,0.795,0.756,39,True
+exp03_zeroshot,claude-opus-5,zero_shot,controllo,Time,0.0,0.0,0.0,0,False
+exp03_zeroshot,claude-opus-5,zero_shot,controllo,Learning,0.722,0.867,0.788,15,True
+exp03_zeroshot,claude-opus-5,zero_shot,controllo,Teacher,1.0,0.714,0.833,7,True
+exp03_zeroshot,claude-opus-5,zero_shot,controllo,Flow,0.0,0.0,0.0,2,True
+exp03_zeroshot,claude-opus-5,zero_shot,controllo,Love,1.0,0.818,0.9,11,True
+exp03_zeroshot,claude-opus-5,zero_shot,controllo,Feeling+,0.0,0.0,0.0,0,False
+exp03_zeroshot,claude-opus-5,zero_shot,controllo,Feeling-,0.0,0.0,0.0,1,True
+exp03_zeroshot,claude-opus-5,zero_shot,controllo,Hate,0.5,1.0,0.667,2,True
+exp03_zeroshot,claude-opus-5,zero_shot,controllo,Competence,0.0,0.0,0.0,0,False
+exp03_zeroshot,claude-opus-5,zero_shot,controllo,Usefulness,0.0,0.0,0.0,0,False
+exp03_zeroshot,claude-opus-5,zero_shot,controllo,hard fun,0.0,0.0,0.0,1,True
+exp03_zeroshot,claude-opus-5,zero_shot,controllo,non classificabile,0.667,0.5,0.571,4,True
+exp03_zeroshot,claude-opus-5,zero_shot,confronto_modelli,Social,1.0,0.917,0.957,36,True
+exp03_zeroshot,claude-opus-5,zero_shot,confronto_modelli,Making,0.435,0.455,0.444,22,True
+exp03_zeroshot,claude-opus-5,zero_shot,confronto_modelli,Creativity,0.594,0.905,0.717,21,True
+exp03_zeroshot,claude-opus-5,zero_shot,confronto_modelli,Freedom,0.429,0.6,0.5,5,True
+exp03_zeroshot,claude-opus-5,zero_shot,confronto_modelli,Activity,0.808,0.7,0.75,120,True
+exp03_zeroshot,claude-opus-5,zero_shot,confronto_modelli,Tool,0.721,0.816,0.765,38,True
+exp03_zeroshot,claude-opus-5,zero_shot,confronto_modelli,Time,0.0,0.0,0.0,0,False
+exp03_zeroshot,claude-opus-5,zero_shot,confronto_modelli,Learning,0.722,0.867,0.788,15,True
+exp03_zeroshot,claude-opus-5,zero_shot,confronto_modelli,Teacher,1.0,0.714,0.833,7,True
+exp03_zeroshot,claude-opus-5,zero_shot,confronto_modelli,Flow,0.0,0.0,0.0,2,True
+exp03_zeroshot,claude-opus-5,zero_shot,confronto_modelli,Love,1.0,0.818,0.9,11,True
+exp03_zeroshot,claude-opus-5,zero_shot,confronto_modelli,Feeling+,0.0,0.0,0.0,0,False
+exp03_zeroshot,claude-opus-5,zero_shot,confronto_modelli,Feeling-,0.0,0.0,0.0,1,True
+exp03_zeroshot,claude-opus-5,zero_shot,confronto_modelli,Hate,0.5,1.0,0.667,2,True
+exp03_zeroshot,claude-opus-5,zero_shot,confronto_modelli,Competence,0.0,0.0,0.0,0,False
+exp03_zeroshot,claude-opus-5,zero_shot,confronto_modelli,Usefulness,0.0,0.0,0.0,0,False
+exp03_zeroshot,claude-opus-5,zero_shot,confronto_modelli,hard fun,0.0,0.0,0.0,1,True
+exp03_zeroshot,claude-opus-5,zero_shot,confronto_modelli,non classificabile,0.667,0.5,0.571,4,True
+exp03_zeroshot,gpt-5.6-luna,zero_shot,principale,Social,0.971,0.944,0.958,36,True
+exp03_zeroshot,gpt-5.6-luna,zero_shot,principale,Making,0.48,0.545,0.511,22,True
+exp03_zeroshot,gpt-5.6-luna,zero_shot,principale,Creativity,0.545,0.545,0.545,22,True
+exp03_zeroshot,gpt-5.6-luna,zero_shot,principale,Freedom,0.375,0.6,0.462,5,True
+exp03_zeroshot,gpt-5.6-luna,zero_shot,principale,Activity,0.766,0.661,0.71,124,True
+exp03_zeroshot,gpt-5.6-luna,zero_shot,principale,Tool,0.609,0.737,0.667,38,True
+exp03_zeroshot,gpt-5.6-luna,zero_shot,principale,Time,0.0,0.0,0.0,0,False
+exp03_zeroshot,gpt-5.6-luna,zero_shot,principale,Learning,0.706,0.8,0.75,15,True
+exp03_zeroshot,gpt-5.6-luna,zero_shot,principale,Teacher,1.0,0.429,0.6,7,True
+exp03_zeroshot,gpt-5.6-luna,zero_shot,principale,Flow,0.5,0.5,0.5,2,True
+exp03_zeroshot,gpt-5.6-luna,zero_shot,principale,Love,0.909,0.909,0.909,11,True
+exp03_zeroshot,gpt-5.6-luna,zero_shot,principale,Feeling+,0.0,0.0,0.0,0,False
+exp03_zeroshot,gpt-5.6-luna,zero_shot,principale,Feeling-,0.0,0.0,0.0,1,True
+exp03_zeroshot,gpt-5.6-luna,zero_shot,principale,Hate,0.667,1.0,0.8,2,True
+exp03_zeroshot,gpt-5.6-luna,zero_shot,principale,Competence,0.0,0.0,0.0,0,False
+exp03_zeroshot,gpt-5.6-luna,zero_shot,principale,Usefulness,0.0,0.0,0.0,0,False
+exp03_zeroshot,gpt-5.6-luna,zero_shot,principale,hard fun,0.0,0.0,0.0,1,True
+exp03_zeroshot,gpt-5.6-luna,zero_shot,principale,non classificabile,0.25,0.5,0.333,4,True
+exp03_zeroshot,gpt-5.6-luna,zero_shot,controllo,Social,0.971,0.919,0.944,37,True
+exp03_zeroshot,gpt-5.6-luna,zero_shot,controllo,Making,0.48,0.522,0.5,23,True
+exp03_zeroshot,gpt-5.6-luna,zero_shot,controllo,Creativity,0.545,0.545,0.545,22,True
+exp03_zeroshot,gpt-5.6-luna,zero_shot,controllo,Freedom,0.375,0.5,0.429,6,True
+exp03_zeroshot,gpt-5.6-luna,zero_shot,controllo,Activity,0.766,0.631,0.692,130,True
+exp03_zeroshot,gpt-5.6-luna,zero_shot,controllo,Tool,0.609,0.718,0.659,39,True
+exp03_zeroshot,gpt-5.6-luna,zero_shot,controllo,Time,0.0,0.0,0.0,0,False
+exp03_zeroshot,gpt-5.6-luna,zero_shot,controllo,Learning,0.706,0.8,0.75,15,True
+exp03_zeroshot,gpt-5.6-luna,zero_shot,controllo,Teacher,1.0,0.429,0.6,7,True
+exp03_zeroshot,gpt-5.6-luna,zero_shot,controllo,Flow,0.5,0.5,0.5,2,True
+exp03_zeroshot,gpt-5.6-luna,zero_shot,controllo,Love,0.909,0.909,0.909,11,True
+exp03_zeroshot,gpt-5.6-luna,zero_shot,controllo,Feeling+,0.0,0.0,0.0,0,False
+exp03_zeroshot,gpt-5.6-luna,zero_shot,controllo,Feeling-,0.0,0.0,0.0,1,True
+exp03_zeroshot,gpt-5.6-luna,zero_shot,controllo,Hate,0.667,1.0,0.8,2,True
+exp03_zeroshot,gpt-5.6-luna,zero_shot,controllo,Competence,0.0,0.0,0.0,0,False
+exp03_zeroshot,gpt-5.6-luna,zero_shot,controllo,Usefulness,0.0,0.0,0.0,0,False
+exp03_zeroshot,gpt-5.6-luna,zero_shot,controllo,hard fun,0.0,0.0,0.0,1,True
+exp03_zeroshot,gpt-5.6-luna,zero_shot,controllo,non classificabile,0.25,0.5,0.333,4,True
+exp03_zeroshot,gpt-5.6-luna,zero_shot,confronto_modelli,Social,0.971,0.944,0.958,36,True
+exp03_zeroshot,gpt-5.6-luna,zero_shot,confronto_modelli,Making,0.48,0.545,0.511,22,True
+exp03_zeroshot,gpt-5.6-luna,zero_shot,confronto_modelli,Creativity,0.6,0.571,0.585,21,True
+exp03_zeroshot,gpt-5.6-luna,zero_shot,confronto_modelli,Freedom,0.429,0.6,0.5,5,True
+exp03_zeroshot,gpt-5.6-luna,zero_shot,confronto_modelli,Activity,0.762,0.667,0.711,120,True
+exp03_zeroshot,gpt-5.6-luna,zero_shot,confronto_modelli,Tool,0.609,0.737,0.667,38,True
+exp03_zeroshot,gpt-5.6-luna,zero_shot,confronto_modelli,Time,0.0,0.0,0.0,0,False
+exp03_zeroshot,gpt-5.6-luna,zero_shot,confronto_modelli,Learning,0.706,0.8,0.75,15,True
+exp03_zeroshot,gpt-5.6-luna,zero_shot,confronto_modelli,Teacher,1.0,0.429,0.6,7,True
+exp03_zeroshot,gpt-5.6-luna,zero_shot,confronto_modelli,Flow,0.5,0.5,0.5,2,True
+exp03_zeroshot,gpt-5.6-luna,zero_shot,confronto_modelli,Love,0.909,0.909,0.909,11,True
+exp03_zeroshot,gpt-5.6-luna,zero_shot,confronto_modelli,Feeling+,0.0,0.0,0.0,0,False
+exp03_zeroshot,gpt-5.6-luna,zero_shot,confronto_modelli,Feeling-,0.0,0.0,0.0,1,True
+exp03_zeroshot,gpt-5.6-luna,zero_shot,confronto_modelli,Hate,0.667,1.0,0.8,2,True
+exp03_zeroshot,gpt-5.6-luna,zero_shot,confronto_modelli,Competence,0.0,0.0,0.0,0,False
+exp03_zeroshot,gpt-5.6-luna,zero_shot,confronto_modelli,Usefulness,0.0,0.0,0.0,0,False
+exp03_zeroshot,gpt-5.6-luna,zero_shot,confronto_modelli,hard fun,0.0,0.0,0.0,1,True
+exp03_zeroshot,gpt-5.6-luna,zero_shot,confronto_modelli,non classificabile,0.25,0.5,0.333,4,True
+legacy,gpt-5.6-luna,zero_shot,principale,Social,1.0,1.0,1.0,1,True
+legacy,gpt-5.6-luna,zero_shot,principale,Making,0.333,0.5,0.4,2,True
+legacy,gpt-5.6-luna,zero_shot,principale,Creativity,0.0,0.0,0.0,0,False
+legacy,gpt-5.6-luna,zero_shot,principale,Freedom,1.0,1.0,1.0,1,True
+legacy,gpt-5.6-luna,zero_shot,principale,Activity,1.0,0.583,0.737,12,True
+legacy,gpt-5.6-luna,zero_shot,principale,Tool,0.667,1.0,0.8,2,True
+legacy,gpt-5.6-luna,zero_shot,principale,Time,0.0,0.0,0.0,0,False
+legacy,gpt-5.6-luna,zero_shot,principale,Learning,0.0,0.0,0.0,0,False
+legacy,gpt-5.6-luna,zero_shot,principale,Teacher,1.0,1.0,1.0,1,True
+legacy,gpt-5.6-luna,zero_shot,principale,Flow,0.0,0.0,0.0,0,False
+legacy,gpt-5.6-luna,zero_shot,principale,Love,1.0,1.0,1.0,1,True
+legacy,gpt-5.6-luna,zero_shot,principale,Feeling+,0.0,0.0,0.0,0,False
+legacy,gpt-5.6-luna,zero_shot,principale,Feeling-,0.0,0.0,0.0,0,False
+legacy,gpt-5.6-luna,zero_shot,principale,Hate,0.0,0.0,0.0,0,False
+legacy,gpt-5.6-luna,zero_shot,principale,Competence,0.0,0.0,0.0,0,False
+legacy,gpt-5.6-luna,zero_shot,principale,Usefulness,0.0,0.0,0.0,0,False
+legacy,gpt-5.6-luna,zero_shot,principale,hard fun,0.0,0.0,0.0,0,False
+legacy,gpt-5.6-luna,zero_shot,principale,non classificabile,0.0,0.0,0.0,0,False
+legacy,gpt-5.6-luna,zero_shot,controllo,Social,1.0,1.0,1.0,1,True
+legacy,gpt-5.6-luna,zero_shot,controllo,Making,0.333,0.5,0.4,2,True
+legacy,gpt-5.6-luna,zero_shot,controllo,Creativity,0.0,0.0,0.0,0,False
+legacy,gpt-5.6-luna,zero_shot,controllo,Freedom,1.0,1.0,1.0,1,True
+legacy,gpt-5.6-luna,zero_shot,controllo,Activity,1.0,0.583,0.737,12,True
+legacy,gpt-5.6-luna,zero_shot,controllo,Tool,0.667,1.0,0.8,2,True
+legacy,gpt-5.6-luna,zero_shot,controllo,Time,0.0,0.0,0.0,0,False
+legacy,gpt-5.6-luna,zero_shot,controllo,Learning,0.0,0.0,0.0,0,False
+legacy,gpt-5.6-luna,zero_shot,controllo,Teacher,1.0,1.0,1.0,1,True
+legacy,gpt-5.6-luna,zero_shot,controllo,Flow,0.0,0.0,0.0,0,False
+legacy,gpt-5.6-luna,zero_shot,controllo,Love,1.0,1.0,1.0,1,True
+legacy,gpt-5.6-luna,zero_shot,controllo,Feeling+,0.0,0.0,0.0,0,False
+legacy,gpt-5.6-luna,zero_shot,controllo,Feeling-,0.0,0.0,0.0,0,False
+legacy,gpt-5.6-luna,zero_shot,controllo,Hate,0.0,0.0,0.0,0,False
+legacy,gpt-5.6-luna,zero_shot,controllo,Competence,0.0,0.0,0.0,0,False
+legacy,gpt-5.6-luna,zero_shot,controllo,Usefulness,0.0,0.0,0.0,0,False
+legacy,gpt-5.6-luna,zero_shot,controllo,hard fun,0.0,0.0,0.0,0,False
+legacy,gpt-5.6-luna,zero_shot,controllo,non classificabile,0.0,0.0,0.0,0,False
+legacy,gpt-5.6-luna,zero_shot,confronto_modelli,Social,1.0,1.0,1.0,1,True
+legacy,gpt-5.6-luna,zero_shot,confronto_modelli,Making,0.333,0.5,0.4,2,True
+legacy,gpt-5.6-luna,zero_shot,confronto_modelli,Creativity,0.0,0.0,0.0,0,False
+legacy,gpt-5.6-luna,zero_shot,confronto_modelli,Freedom,1.0,1.0,1.0,1,True
+legacy,gpt-5.6-luna,zero_shot,confronto_modelli,Activity,1.0,0.583,0.737,12,True
+legacy,gpt-5.6-luna,zero_shot,confronto_modelli,Tool,0.667,1.0,0.8,2,True
+legacy,gpt-5.6-luna,zero_shot,confronto_modelli,Time,0.0,0.0,0.0,0,False
+legacy,gpt-5.6-luna,zero_shot,confronto_modelli,Learning,0.0,0.0,0.0,0,False
+legacy,gpt-5.6-luna,zero_shot,confronto_modelli,Teacher,1.0,1.0,1.0,1,True
+legacy,gpt-5.6-luna,zero_shot,confronto_modelli,Flow,0.0,0.0,0.0,0,False
+legacy,gpt-5.6-luna,zero_shot,confronto_modelli,Love,1.0,1.0,1.0,1,True
+legacy,gpt-5.6-luna,zero_shot,confronto_modelli,Feeling+,0.0,0.0,0.0,0,False
+legacy,gpt-5.6-luna,zero_shot,confronto_modelli,Feeling-,0.0,0.0,0.0,0,False
+legacy,gpt-5.6-luna,zero_shot,confronto_modelli,Hate,0.0,0.0,0.0,0,False
+legacy,gpt-5.6-luna,zero_shot,confronto_modelli,Competence,0.0,0.0,0.0,0,False
+legacy,gpt-5.6-luna,zero_shot,confronto_modelli,Usefulness,0.0,0.0,0.0,0,False
+legacy,gpt-5.6-luna,zero_shot,confronto_modelli,hard fun,0.0,0.0,0.0,0,False
+legacy,gpt-5.6-luna,zero_shot,confronto_modelli,non classificabile,0.0,0.0,0.0,0,False
