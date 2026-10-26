@@ -1,0 +1,4 @@
+﻿versione,descrizione
+principale,solo risposte con etichetta modale (con copertura)
+controllo,"tutte le risposte, quelle senza etichetta modale contate come errore"
+confronto_modelli,solo risposte con etichetta modale per tutti i modelli

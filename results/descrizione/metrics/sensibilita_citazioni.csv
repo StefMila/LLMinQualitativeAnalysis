@@ -1,0 +1,17 @@
+﻿esperimento_id,set,modello,strategia,soglia,citazioni_totali,esatte,approssimate,non_trovate
+exp10_zeroShot_nM_high_q2,valutazione,claude-haiku-5-5,zero_shot,80,2821,2817,0,4
+exp10_zeroShot_nM_high_q2,valutazione,claude-haiku-5-5,zero_shot,85,2821,2817,0,4
+exp10_zeroShot_nM_high_q2,valutazione,claude-haiku-5-5,zero_shot,90,2821,2817,0,4
+exp10_zeroShot_nM_high_q2,valutazione,claude-haiku-5-5,zero_shot,95,2821,2817,0,4
+exp10_zeroShot_nM_high_q2,valutazione,gpt-5.6-luna,zero_shot,80,2839,2839,0,0
+exp10_zeroShot_nM_high_q2,valutazione,gpt-5.6-luna,zero_shot,85,2839,2839,0,0
+exp10_zeroShot_nM_high_q2,valutazione,gpt-5.6-luna,zero_shot,90,2839,2839,0,0
+exp10_zeroShot_nM_high_q2,valutazione,gpt-5.6-luna,zero_shot,95,2839,2839,0,0
+exp10_zeroShot_nM_high_q2_prova,valutazione,claude-haiku-5-5,zero_shot,80,2,2,0,0
+exp10_zeroShot_nM_high_q2_prova,valutazione,claude-haiku-5-5,zero_shot,85,2,2,0,0
+exp10_zeroShot_nM_high_q2_prova,valutazione,claude-haiku-5-5,zero_shot,90,2,2,0,0
+exp10_zeroShot_nM_high_q2_prova,valutazione,claude-haiku-5-5,zero_shot,95,2,2,0,0
+exp10_zeroShot_nM_high_q2_prova,valutazione,gpt-5.6-luna,zero_shot,80,2,2,0,0
+exp10_zeroShot_nM_high_q2_prova,valutazione,gpt-5.6-luna,zero_shot,85,2,2,0,0
+exp10_zeroShot_nM_high_q2_prova,valutazione,gpt-5.6-luna,zero_shot,90,2,2,0,0
+exp10_zeroShot_nM_high_q2_prova,valutazione,gpt-5.6-luna,zero_shot,95,2,2,0,0

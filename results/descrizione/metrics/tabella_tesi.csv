@@ -1,0 +1,3 @@
+﻿modello,strategia,copertura_principale,kappa_cohen_principale,accordo_percentuale_principale,f1_macro_principale,kappa_cohen_controllo,kappa_cohen_confronto_modelli,ta_at_n,kappa_fleiss,tasso_citazioni_approssimate,tasso_citazioni_non_trovate
+claude-haiku-5-5,zero_shot,0.96,0.404,0.562,0.341,0.385,0.407,0.783,0.885,0.0,0.001
+gpt-5.6-luna,zero_shot,0.97,0.401,0.57,0.31,0.384,0.412,0.809,0.888,0.0,0.0
