@@ -52,5 +52,21 @@ class ReasoningLevelTests(unittest.TestCase):
         self.assertEqual(client.request["output_config"]["effort"], "high")
 
 
+class OutputAlignmentTests(unittest.TestCase):
+    def test_same_schema_and_token_limit_for_both_providers(self):
+        openai, anthropic = FakeOpenAIClient(), FakeAnthropicClient()
+        run.chiama_openai(openai, "gpt-5.6-luna", [], None, "medium")
+        run.chiama_anthropic(anthropic, "claude-haiku-5-5", [], None, "medium")
+
+        formato_openai = openai.request["response_format"]
+        self.assertEqual(formato_openai["type"], "json_schema")
+        self.assertTrue(formato_openai["json_schema"]["strict"])
+        self.assertEqual(
+            formato_openai["json_schema"]["schema"],
+            anthropic.request["output_config"]["format"]["schema"],
+        )
+        self.assertEqual(openai.request["max_completion_tokens"], anthropic.request["max_tokens"])
+
+
 if __name__ == "__main__":
     unittest.main()

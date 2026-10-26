@@ -1,4 +1,4 @@
-"""Analisi della revisione umana sulla valutazione dell'esperimento attivo (nessuna chiamata ai modelli).
+"""Quali risposte mandare a revisione umana: regole a confronto sull'esperimento attivo (nessuna chiamata API).
 
 Versione di controllo: una risposta senza etichetta modale conta come disaccordo con l'umano.
 Gruppi di stabilità da common.GRUPPI_STABILITA. Richiede due modelli in config.yaml.
@@ -13,17 +13,17 @@ import pandas as pd
 from common import ABBASTANZA_STABILE, INSTABILE, METRICS, RESULTS, STABILE, carica_config, nome_file
 from metriche import gruppo_stabilita
 
-STRATEGIA = carica_config()["strategie"][0]  # una sola strategia per esperimento
 N_SIMULAZIONI = 10_000  # estrazioni per la revisione casuale (regola f)
 
 cfg = carica_config()
 esperimento_id = cfg["esperimento_id"]
+strategia = cfg["strategie"][0]  # una sola strategia per esperimento
 modelli = [m["nome"] for m in cfg["modelli"]]
 if len(modelli) != 2:
     raise SystemExit("L'analisi richiede esattamente due modelli in config.yaml")
 
-agg = pd.read_csv(RESULTS / "aggregated.csv", sep=None, engine="python", encoding="utf-8-sig")
-agg = agg[(agg["esperimento_id"] == esperimento_id) & (agg["strategia"] == STRATEGIA)]
+agg = pd.read_csv(RESULTS / "aggregated.csv", encoding="utf-8-sig")
+agg = agg[(agg["esperimento_id"] == esperimento_id) & (agg["strategia"] == strategia)]
 agg["gruppo_stabilita"] = [
     gruppo_stabilita(e, q) for e, q in zip(agg["etichetta_modale"], agg["quota_modale"])
 ]

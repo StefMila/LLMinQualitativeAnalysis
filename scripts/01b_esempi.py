@@ -15,7 +15,7 @@ import re
 
 import pandas as pd
 
-from common import DOMANDA, PROMPTS, SPLITS, carica_config, tutte_le_etichette
+from common import DOMANDA, PROMPTS, carica_config, leggi_split, tutte_le_etichette
 
 ESEMPI = PROMPTS / "esempi" / DOMANDA
 N_ESEMPI = {"one_shot": 1, "few_shot": 3}
@@ -52,8 +52,7 @@ if __name__ == "__main__":
     cfg = carica_config()
     etichette = tutte_le_etichette(cfg)
     seed = cfg["esempi"]["seed"]
-    serbatoio = pd.read_csv(SPLITS / "serbatoio.csv", dtype={"id": str}, encoding="utf-8-sig")
-    valutazione = pd.read_csv(SPLITS / "valutazione.csv", dtype={"id": str}, encoding="utf-8-sig")
+    serbatoio, valutazione = leggi_split("serbatoio"), leggi_split("valutazione")
 
     ordine, esclusi = ordine_esempi(serbatoio, valutazione, etichette, seed)
     assert not set(ordine["id"]) & set(valutazione["id"]), "Un esempio è nel campione di valutazione!"

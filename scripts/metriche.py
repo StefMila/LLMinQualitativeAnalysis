@@ -1,9 +1,11 @@
-"""Regole condivise per etichetta modale, gruppi di stabilità e accordo con la codifica umana.
+"""Regole condivise per etichetta modale, stabilità, accordo con la codifica umana ed errori di formato.
 
-Le usano 04_aggregate.py, 05_metrics.py e report_serbatoio.py, così le regole sono le stesse ovunque.
+Definite una volta sola qui, così 04_aggregate.py, 05_metrics.py e gli script di analisi usano le stesse regole.
 """
+import re
 import warnings
 
+import numpy as np
 import pandas as pd
 from sklearn.metrics import cohen_kappa_score, precision_recall_fscore_support
 
@@ -21,7 +23,7 @@ VERSIONI = {
 
 
 def etichetta_modale(categorie_valide, n_run_attese):
-    """Regole M4: etichetta solo con maggioranza stretta sulle run previste e nessuna run mancante."""
+    """Etichetta solo con maggioranza stretta sulle run previste e nessuna run mancante."""
     conteggi = pd.Series(categorie_valide, dtype=object).value_counts()
     massimo = int(conteggi.iloc[0]) if len(conteggi) else 0
     pareggio = len(conteggi) > 1 and conteggi.iloc[0] == conteggi.iloc[1]
@@ -83,7 +85,7 @@ def accordo(g, etichette, versione, id_comuni=None):
         "y_llm": y_llm,
     }
     if not len(g):
-        zeri = pd.Series([0.0] * len(etichette)).to_numpy()
+        zeri = np.zeros(len(etichette))
         return risultato | {"kappa": float("nan"), "po": float("nan"), "pe": float("nan"),
                             "accordo_percentuale": float("nan"), "precision": zeri,
                             "recall": zeri, "f1": zeri, "supporto": zeri.astype(int),
@@ -111,4 +113,67 @@ def accordo(g, etichette, versione, id_comuni=None):
         "supporto": supporto,
         # F1 macro solo sulle categorie con almeno un caso umano nell'insieme considerato
         "f1_macro": f1[presenti].mean() if presenti.any() else float("nan"),
+    }
+
+
+def fleiss_e_ta(conteggi, run_attese):
+    """κ di Fleiss e TA@R (quota di risposte con tutte le run d'accordo).
+
+    conteggi: una riga per risposta con tutte le run valide, una colonna per categoria.
+    """
+    if not len(conteggi) or run_attese <= 1:
+        return float("nan"), float("nan")
+    accordo_per_risposta = (conteggi.pow(2).sum(axis=1) - run_attese) / (run_attese * (run_attese - 1))
+    proporzioni = conteggi.sum(axis=0) / (len(conteggi) * run_attese)
+    atteso = (proporzioni**2).sum()
+    kappa = (accordo_per_risposta.mean() - atteso) / (1 - atteso) if atteso < 1 else float("nan")
+    return kappa, (conteggi.max(axis=1) == run_attese).mean()
+
+
+# ---------------------------------------------------------------- errori di formato
+# Fonti del dato, una per chiamata (colonna fonte_errori_formato del riepilogo):
+FONTE_CAMPO = "campo errori_formato"
+FONTE_MESSAGGI = "lista errori (messaggi classificati)"
+FONTE_ASSENTE = "non disponibile"
+# In "errori" 03_run.py scrive gli errori API come "NomeEccezione: messaggio" (es. "NotFoundError:
+# Error code: 404"); quelli di formato vengono da valida() o dal rifiuto del modello e iniziano con
+# una frase (es. "categoria non ammessa: ''"). Serve solo per le chiamate senza errori_formato.
+_ERRORE_API = re.compile(r"^[A-Za-z_][\w.]*: ")
+
+
+def errore_di_formato(messaggio):
+    return not _ERRORE_API.match(str(messaggio))
+
+
+def errori_formato_chiamata(record):
+    """(errori di formato, fonte) di una chiamata; (None, FONTE_ASSENTE) se il dato manca."""
+    campo = record.get("errori_formato")
+    if campo is not None and not pd.isna(campo):
+        return int(campo), FONTE_CAMPO
+    errori = record.get("errori")
+    if isinstance(errori, list):
+        return sum(errore_di_formato(e) for e in errori), FONTE_MESSAGGI
+    return None, FONTE_ASSENTE
+
+
+def tasso_errori_formato(calls):
+    """Tasso di errori di formato di un gruppo di chiamate (tutte, anche quelle poi ritentate).
+
+    Denominatore: risposte ricevute dal modello = errori di formato + chiamate valide.
+    Errori API e 429 non arrivano al modello e restano fuori da entrambi i termini.
+    """
+    n_errori = n_risposte = 0
+    fonti = set()
+    for record in calls.to_dict("records"):
+        n, fonte = errori_formato_chiamata(record)
+        fonti.add(fonte)
+        if n is None:
+            continue
+        n_errori += n
+        n_risposte += n + bool(record.get("valido"))
+    return {
+        "n_errori_formato": n_errori,
+        "n_risposte_modello": n_risposte,
+        "tasso_errori_formato": n_errori / n_risposte if n_risposte else float("nan"),
+        "fonte_errori_formato": " + ".join(sorted(fonti)) if fonti else FONTE_ASSENTE,
     }

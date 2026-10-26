@@ -1,9 +1,10 @@
 pandas
+numpy
 openpyxl
 pyyaml
 python-dotenv
 openai
-scikit-learn
 anthropic
+scikit-learn
 ftfy
 rapidfuzz

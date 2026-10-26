@@ -13,7 +13,10 @@ SCRIPTS = ROOT / "scripts"
 sys.path.insert(0, str(SCRIPTS))
 
 import common
-from metriche import accordo, etichetta_modale, gruppo_stabilita, id_con_etichetta_per_tutti
+from metriche import (
+    FONTE_ASSENTE, FONTE_CAMPO, FONTE_MESSAGGI, accordo, errore_di_formato, etichetta_modale,
+    gruppo_stabilita, id_con_etichetta_per_tutti, tasso_errori_formato,
+)
 
 from common import ABBASTANZA_STABILE, INSTABILE, STABILE
 ETICHETTE = ["Social", "Making", "non classificabile"]
@@ -133,7 +136,11 @@ class SerbatoioFuoriDalleMetricheTests(unittest.TestCase):
                         "set": set_nome, "provider": "mock", "modello": "modello_test",
                         "strategia": "zero_shot", "run": run, "id": id_, "n_run": 10,
                         "valido": True, "categoria": categoria, "quote": "", "motivazione": "test",
+                        "errori_formato": 0,
                     })
+        # una chiamata fallita per formato e rifatta dopo: esce dalle metriche di accordo
+        # (drop_duplicates tiene l'ultima) ma i suoi 3 errori contano nel tasso
+        records.insert(0, records[0] | {"valido": False, "categoria": None, "errori_formato": 3})
 
         original = {name: getattr(common, name)
                     for name in ("carica_config", "leggi_calls", "SPLITS", "RESULTS", "METRICS")}
@@ -189,9 +196,60 @@ class SerbatoioFuoriDalleMetricheTests(unittest.TestCase):
                     self.assertAlmostEqual(summary[f"kappa_cohen_{versione}"], 1.0)
                 self.assertEqual(int(stability.loc[stability["gruppo_stabilita"] == STABILE, "n_gruppo"].iloc[0]), 2)
                 self.assertEqual(int(per_category.groupby("versione")["supporto"].sum().max()), 2)
+                # solo valutazione (20 chiamate valide) + la chiamata fallita con 3 errori
+                self.assertEqual(int(summary["n_errori_formato"]), 3)
+                self.assertEqual(int(summary["n_risposte_modello"]), 23)
+                self.assertAlmostEqual(summary["tasso_errori_formato"], round(3 / 23, 3))
+                self.assertEqual(summary["fonte_errori_formato"], FONTE_CAMPO)
         finally:
             for name, value in original.items():
                 setattr(common, name, value)
+
+
+class ErroriFormatoTests(unittest.TestCase):
+    def test_messaggi_dei_vecchi_esperimenti(self):
+        self.assertTrue(errore_di_formato("categoria non ammessa: ''"))
+        self.assertTrue(errore_di_formato("JSON non valido: Expecting value: line 1 column 1"))
+        self.assertTrue(errore_di_formato("chiave mancante: quote"))
+        self.assertTrue(errore_di_formato("il modello ha rifiutato: None"))
+        self.assertFalse(errore_di_formato("NotFoundError: Error code: 404 - {'error': {}}"))
+        self.assertFalse(errore_di_formato("APITimeoutError: Request timed out."))
+        self.assertFalse(errore_di_formato("InternalServerError: Error code: 500"))
+
+    def test_campo_nuovo_ha_la_precedenza(self):
+        calls = pd.DataFrame([
+            {"valido": True, "errori_formato": 1, "errori": ["categoria non ammessa: ''", "APITimeoutError: x"]},
+            {"valido": False, "errori_formato": 0, "errori": ["APITimeoutError: x"] * 3},
+            {"valido": True, "errori_formato": 0, "errori": []},
+        ])
+        r = tasso_errori_formato(calls)
+        self.assertEqual((r["n_errori_formato"], r["n_risposte_modello"]), (1, 3))
+        self.assertAlmostEqual(r["tasso_errori_formato"], 1 / 3)
+        self.assertEqual(r["fonte_errori_formato"], FONTE_CAMPO)
+
+    def test_vecchi_esperimenti_usano_la_lista_errori(self):
+        calls = pd.DataFrame([
+            {"valido": True, "errori": ["categoria non ammessa: ''"]},
+            {"valido": True, "errori": ["NotFoundError: Error code: 404"]},  # API: non conta
+            {"valido": True, "errori": []},
+        ])
+        r = tasso_errori_formato(calls)
+        self.assertEqual((r["n_errori_formato"], r["n_risposte_modello"]), (1, 4))
+        self.assertEqual(r["fonte_errori_formato"], FONTE_MESSAGGI)
+
+    def test_gruppo_misto_e_dato_assente(self):
+        misto = pd.DataFrame([
+            {"valido": True, "errori_formato": 0, "errori": []},
+            {"valido": True, "errori_formato": None, "errori": ["chiave mancante: quote"]},
+        ])
+        r = tasso_errori_formato(misto)
+        self.assertEqual(r["n_errori_formato"], 1)
+        self.assertEqual(r["fonte_errori_formato"], f"{FONTE_CAMPO} + {FONTE_MESSAGGI}")
+
+        r = tasso_errori_formato(pd.DataFrame([{"valido": True}]))
+        self.assertEqual(r["fonte_errori_formato"], FONTE_ASSENTE)
+        self.assertEqual(r["n_risposte_modello"], 0)
+        self.assertTrue(pd.isna(r["tasso_errori_formato"]))
 
 
 if __name__ == "__main__":

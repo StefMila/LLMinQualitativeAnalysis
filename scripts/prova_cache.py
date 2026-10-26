@@ -18,8 +18,8 @@ from datetime import datetime, timezone
 import pandas as pd
 from dotenv import load_dotenv
 
-from common import RESULTS, ROOT, SPLITS, carica_config, tutte_le_etichette
-from metriche import etichetta_modale
+from common import RESULTS, ROOT, carica_config, leggi_calls, leggi_split, tutte_le_etichette
+from metriche import etichetta_modale, fleiss_e_ta
 
 run = importlib.import_module("03_run")
 costruisci_messaggi = importlib.import_module("02_prompt").costruisci_messaggi
@@ -52,20 +52,13 @@ def costo(record):
     ) / 1e6
 
 
-def leggi_log():
-    if not LOG.exists():
-        return []
-    with open(LOG, encoding="utf-8") as f:
-        return [json.loads(riga) for riga in f if riga.strip()]
-
-
 def esegui(lavori, esperimento_id, cfg, etichette):
     """lavori = [(run, riga, cache)]; scrive un record per chiamata, come 03_run.py."""
     modello = next(m for m in cfg["modelli"] if m["provider"] == "anthropic")
     clienti = run.crea_clienti({"modelli": [modello]})
     fatte = {
         (r["run"], r["id"], r["cache_enabled"])
-        for r in leggi_log() if r["esperimento_id"] == esperimento_id and r["valido"]
+        for r in leggi_calls(LOG) if r["esperimento_id"] == esperimento_id and r["valido"]
     }
     lavori = [l for l in lavori if (l[0], str(l[1].id), l[2]) not in fatte]
     print(f"{esperimento_id}: da fare {len(lavori)} chiamate")
@@ -122,24 +115,16 @@ def esegui(lavori, esperimento_id, cfg, etichette):
     return nuovi
 
 
-def fleiss_e_ta(gruppo, etichette, run_attese):
-    """Stesse formule di 05_metrics.py: solo risposte con tutte le run valide."""
+def conteggi_run_complete(gruppo, etichette, run_attese):
+    """Categorie per risposta, solo risposte con tutte le run valide (come in 05_metrics.py)."""
     valide = gruppo[gruppo["valido"]]
     n_per_id = valide.groupby("id")["run"].nunique()
     complete = valide[valide["id"].isin(n_per_id[n_per_id == run_attese].index)]
-    conteggi = pd.crosstab(complete["id"], complete["categoria"]).reindex(columns=etichette, fill_value=0)
-    if conteggi.empty:
-        return float("nan"), float("nan"), 0
-    per_risposta = (conteggi.pow(2).sum(axis=1) - run_attese) / (run_attese * (run_attese - 1))
-    proporzioni = conteggi.sum(axis=0) / (len(conteggi) * run_attese)
-    atteso = (proporzioni**2).sum()
-    kappa = (per_risposta.mean() - atteso) / (1 - atteso) if atteso < 1 else float("nan")
-    ta = (conteggi.max(axis=1) == run_attese).mean()
-    return kappa, ta, len(conteggi)
+    return pd.crosstab(complete["id"], complete["categoria"]).reindex(columns=etichette, fill_value=0)
 
 
 def analisi(etichette):
-    log = pd.DataFrame(leggi_log())
+    log = pd.DataFrame(leggi_calls(LOG))
     log = log[log["esperimento_id"] == "prova_cache_equivalenza"]
     if log.empty:
         raise SystemExit("Nessuna chiamata di equivalenza nel log.")
@@ -151,7 +136,8 @@ def analisi(etichette):
             id_: etichetta_modale(list(gr.loc[gr["valido"], "categoria"]), N_RUN)["etichetta_modale"]
             for id_, gr in g.groupby("id")
         }
-        kappa, ta, n_complete = fleiss_e_ta(g, etichette, N_RUN)
+        conteggi = conteggi_run_complete(g, etichette, N_RUN)
+        kappa, ta = fleiss_e_ta(conteggi, N_RUN)
         righe.append({
             "condizione": nome,
             "chiamate": len(g),
@@ -160,7 +146,7 @@ def analisi(etichette):
             "risposte_con_etichetta_modale": sum(v is not None for v in modali[cache].values()),
             "TA@10": round(ta, 3),
             "kappa_fleiss": round(kappa, 3),
-            "risposte_complete": n_complete,
+            "risposte_complete": len(conteggi),
             "token_in_medi": round(g["token_in"].mean(), 1),
             "cache_scrittura_medi": round(g["token_cache_scrittura"].mean(), 1),
             "cache_lettura_medi": round(g["token_cache_lettura"].mean(), 1),
@@ -190,8 +176,7 @@ def main():
     cfg = carica_config()
     etichette = tutte_le_etichette(cfg)
     fase = sys.argv[1] if len(sys.argv) > 1 else ""
-    serbatoio = pd.read_csv(SPLITS / "serbatoio.csv", dtype={"id": str}, encoding="utf-8-sig")
-    valutazione = pd.read_csv(SPLITS / "valutazione.csv", dtype={"id": str}, encoding="utf-8-sig")
+    serbatoio, valutazione = leggi_split("serbatoio"), leggi_split("valutazione")
     assert not set(serbatoio["id"]) & set(valutazione["id"]), "serbatoio e valutazione si sovrappongono"
 
     if fase == "verifica":

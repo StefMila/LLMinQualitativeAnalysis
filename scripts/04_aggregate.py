@@ -1,160 +1,112 @@
-"""Passo 4: aggregazioni di valutazione e verifica delle citazioni per set.
+"""Passo 4: etichetta modale per risposta e verifica delle citazioni.
 
-Colonne principali di results/<domanda>/aggregated.csv:
-  etichetta_modale   categoria più frequente tra le run valide
-  quota_modale       frazione di run (su tutte quelle fatte) che hanno dato l'etichetta modale
-  gruppo_stabilita   stabile, abbastanza_stabile o instabile (common.GRUPPI_STABILITA)
-  pareggio           True se due categorie hanno la stessa frequenza massima
-    quota_risposte_con_tutte_le_citazioni_verificate
-                                         frazione di run valide in cui TUTTE le citazioni si trovano nel testo
-citazioni.csv       una riga per citazione e run valida, con esito e span raw simile
+Output in results/<domanda>/:
+  aggregated.csv       una riga per esperimento, modello, strategia e risposta di valutazione:
+                       etichetta_modale, quota_modale (run con l'etichetta modale / run previste),
+                       gruppo_stabilita, distribuzione delle etichette nelle run e
+                       quota_risposte_con_tutte_le_citazioni_verificate (quota di run valide in cui
+                       tutte le citazioni si trovano nel testo)
+  citazioni.csv        una riga per citazione e run valida, con esito e tratto più simile del testo
+  citazioni_da_esaminare.csv, citazioni_da_esaminare_serbatoio.csv
+                       citazioni non esatte, con una colonna giudizio_umano da compilare
+  metrics/sensibilita_citazioni.csv
+                       esiti delle citazioni al variare della soglia (descrittivo)
 """
 import pandas as pd
 
 from common import (
-    CHIAVE,
-    METRICS,
-    RESULTS,
-    SPLITS,
-    carica_config,
-    citazioni_non_vuote,
-    leggi_calls,
-    verifica_citazione,
+    CHIAVE, METRICS, RESULTS, carica_config, citazioni_non_vuote, leggi_split, tabella_calls, verifica_citazione
 )
 from metriche import etichetta_modale, gruppo_stabilita
 
 cfg = carica_config()
 verifica_cfg = cfg["verifica_citazioni"]
-versione_verifica = verifica_cfg["versione_verifica"]
 soglia = float(verifica_cfg["soglia_somiglianza"])
 
-calls = pd.DataFrame(leggi_calls())
+calls = tabella_calls()
 if calls.empty:
     raise SystemExit("calls.jsonl è vuoto: lancia prima 03_run.py")
+calls = calls.drop_duplicates(CHIAVE, keep="last")  # chiamata ritentata: conta l'ultimo tentativo
 
-# Se una combinazione è stata ritentata, tieni l'ultimo tentativo
-if "esperimento_id" not in calls:
-    calls["esperimento_id"] = "legacy"
-else:
-    calls["esperimento_id"] = calls["esperimento_id"].fillna("legacy")
-if "set" not in calls:
-    calls["set"] = "valutazione"
-else:
-    calls["set"] = calls["set"].fillna("valutazione")
-calls = calls.drop_duplicates(CHIAVE, keep="last")
+split = {nome: leggi_split(nome) for nome in ("valutazione", "serbatoio")}
+testi = {nome: dict(zip(df["id"], df["testo"])) for nome, df in split.items()}
+umani = dict(zip(split["valutazione"]["id"], split["valutazione"]["umano"]))
 
-testi_per_set = {}
-for set_nome in ("valutazione", "serbatoio"):
-    percorso = SPLITS / f"{set_nome}.csv"
-    dati = pd.read_csv(percorso, dtype={"id": str}, encoding="utf-8-sig")
-    testi_per_set[set_nome] = dict(zip(dati["id"], dati["testo"]))
-val = pd.read_csv(SPLITS / "valutazione.csv", dtype={"id": str}, encoding="utf-8-sig")
-umani = dict(zip(val["id"], val["umano"]))
-run_massimi = calls.groupby(["esperimento_id", "set", "modello", "strategia"])["run"].max()
-
-
-def esito_citazione(citazione, testo):
-    esito, punteggio, tratto, trovata = verifica_citazione(citazione, testo, soglia)
-    return esito, punteggio, tratto, trovata
-
-
-def quote_trovate(riga):
-    if not riga["valido"]:
-        return None
-    quote = citazioni_non_vuote(riga["quote"])
-    if not quote:
-        return None  # nessuna citazione (es. "non classificabile"): non verificabile
-    set_nome = riga.get("set", "valutazione")
-    testo = testi_per_set[set_nome][str(riga["id"])]
-    return all(esito_citazione(q, testo)[3] for q in quote)
-
-
-calls["quote_ok"] = calls.apply(quote_trovate, axis=1)
-
-righe_citazioni = []
+# ---------------------------------------------------------------- citazioni
+righe_citazioni, quote_ok = [], []
 for record in calls.to_dict("records"):
-    if not record["valido"]:
-        continue
-    quote = citazioni_non_vuote(record["quote"])
-    set_nome = record.get("set", "valutazione")
-    testo = testi_per_set[set_nome].get(str(record["id"]), "")
-    for indice, citazione in enumerate(quote, 1):
-        citazione = str(citazione).strip()
-        if not citazione:
-            continue
-        esito, punteggio, tratto, trovata = esito_citazione(citazione, testo)
-        righe_citazioni.append({
-            "esperimento_id": record["esperimento_id"],
-            "id": str(record["id"]),
-            "set": set_nome,
-            "provider": record["provider"],
-            "modello": record["modello"],
-            "strategia": record["strategia"],
-            "run": record["run"],
-            "indice_citazione": indice,
-            "citazione": citazione,
-            "punteggio_somiglianza": punteggio,
-            "esito": esito,
-            "versione_verifica": versione_verifica,
-            "tratto_simile": tratto,
-            "trovata": trovata,
-        })
+    trovate = []
+    if record["valido"]:
+        testo = testi[record["set"]].get(str(record["id"]), "")
+        for indice, citazione in enumerate(citazioni_non_vuote(record["quote"]), 1):
+            esito, punteggio, tratto, trovata = verifica_citazione(citazione, testo, soglia)
+            trovate.append(trovata)
+            righe_citazioni.append({
+                "esperimento_id": record["esperimento_id"],
+                "id": str(record["id"]),
+                "set": record["set"],
+                "provider": record["provider"],
+                "modello": record["modello"],
+                "strategia": record["strategia"],
+                "run": record["run"],
+                "indice_citazione": indice,
+                "citazione": citazione,
+                "punteggio_somiglianza": punteggio,
+                "esito": esito,
+                "versione_verifica": verifica_cfg["versione_verifica"],
+                "tratto_simile": tratto,
+                "trovata": trovata,
+            })
+    # None = non verificabile (chiamata non valida o senza citazioni, es. "non classificabile")
+    quote_ok.append(all(trovate) if trovate else None)
+calls["quote_ok"] = quote_ok
 
 citazioni = pd.DataFrame(righe_citazioni, columns=[
-    "esperimento_id", "id", "set", "provider", "modello", "strategia", "run",
-    "indice_citazione", "citazione", "punteggio_somiglianza", "esito",
-    "versione_verifica", "tratto_simile", "trovata",
+    "esperimento_id", "id", "set", "provider", "modello", "strategia", "run", "indice_citazione",
+    "citazione", "punteggio_somiglianza", "esito", "versione_verifica", "tratto_simile", "trovata",
 ])
 citazioni.to_csv(RESULTS / "citazioni.csv", index=False, encoding="utf-8-sig")
 
-colonne_revisione = [
-    "id", "set", "citazione", "tratto_simile", "punteggio_somiglianza", "esito"
-]
-for set_nome, nome_file in (("valutazione", "citazioni_da_esaminare.csv"),
-                            ("serbatoio", "citazioni_da_esaminare_serbatoio.csv")):
-    da_esaminare = citazioni[
-        (citazioni["set"] == set_nome) & (citazioni["esito"] != "esatta")
-    ][colonne_revisione].copy()
-    da_esaminare["giudizio_umano"] = ""
-    da_esaminare.to_csv(RESULTS / nome_file, index=False, encoding="utf-8-sig")
+for set_nome, nome in (("valutazione", "citazioni_da_esaminare.csv"),
+                       ("serbatoio", "citazioni_da_esaminare_serbatoio.csv")):
+    da_esaminare = citazioni[(citazioni["set"] == set_nome) & (citazioni["esito"] != "esatta")]
+    da_esaminare = da_esaminare[["id", "set", "citazione", "tratto_simile", "punteggio_somiglianza", "esito"]]
+    da_esaminare.assign(giudizio_umano="").to_csv(RESULTS / nome, index=False, encoding="utf-8-sig")
 
 sensibilita = []
-citazioni_sensibilita = citazioni
-for (esperimento_id, set_nome, modello, strategia), gruppo in citazioni_sensibilita.groupby(
+for (esperimento_id, set_nome, modello, strategia), g in citazioni.groupby(
     ["esperimento_id", "set", "modello", "strategia"]
 ):
-    esatte = gruppo["esito"] == "esatta"
+    esatte = g["esito"] == "esatta"
     for soglia_test in verifica_cfg["soglie_sensibilita"]:
-        approssimate = (~esatte) & (gruppo["punteggio_somiglianza"] >= soglia_test)
-        non_trovate = (~esatte) & (~approssimate)
+        approssimate = ~esatte & (g["punteggio_somiglianza"] >= soglia_test)
         sensibilita.append({
             "esperimento_id": esperimento_id,
             "set": set_nome,
             "modello": modello,
             "strategia": strategia,
             "soglia": soglia_test,
-            "citazioni_totali": len(gruppo),
+            "citazioni_totali": len(g),
             "esatte": int(esatte.sum()),
             "approssimate": int(approssimate.sum()),
-            "non_trovate": int(non_trovate.sum()),
+            "non_trovate": int((~esatte & ~approssimate).sum()),
         })
 METRICS.mkdir(parents=True, exist_ok=True)
-pd.DataFrame(sensibilita).to_csv(
-    METRICS / "sensibilita_citazioni.csv", index=False, encoding="utf-8-sig"
-)
+pd.DataFrame(sensibilita).to_csv(METRICS / "sensibilita_citazioni.csv", index=False, encoding="utf-8-sig")
 
+# ---------------------------------------------------------------- etichetta modale
+# Run previste: n_run salvato nei record; i primi log non l'hanno e si usa la run più alta
+run_massime = calls.groupby(["esperimento_id", "set", "modello", "strategia"])["run"].max()
 righe = []
-calls_val = calls[calls["set"] == "valutazione"]
-for (esperimento_id, modello, strategia, id_), g in calls_val.groupby(
+for (esperimento_id, modello, strategia, id_), g in calls[calls["set"] == "valutazione"].groupby(
     ["esperimento_id", "modello", "strategia", "id"]
 ):
     valide = g[g["valido"]]
     verificabili = valide["quote_ok"].dropna()
-    n_run_attese = (
-        int(g["n_run"].dropna().max())
-        if "n_run" in g and g["n_run"].notna().any()
-        else int(run_massimi.get((esperimento_id, g["set"].iloc[0], modello, strategia), cfg["n_run"]))
-    )
+    if "n_run" in g and g["n_run"].notna().any():
+        n_run_attese = int(g["n_run"].dropna().max())
+    else:
+        n_run_attese = int(run_massime.get((esperimento_id, "valutazione", modello, strategia), cfg["n_run"]))
     moda = etichetta_modale(valide["categoria"].tolist(), n_run_attese)
     righe.append({
         "esperimento_id": esperimento_id,
@@ -175,7 +127,7 @@ for (esperimento_id, modello, strategia, id_), g in calls_val.groupby(
         "quota_risposte_con_tutte_le_citazioni_verificate": (
             verificabili.astype(float).mean() if len(verificabili) else None
         ),
-        "testo": testi_per_set["valutazione"].get(str(id_)),
+        "testo": testi["valutazione"].get(str(id_)),
     })
 
 agg = pd.DataFrame(righe)

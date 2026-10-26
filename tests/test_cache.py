@@ -95,5 +95,67 @@ class CacheTests(unittest.TestCase):
         self.assertNotIn("cache_control", str(messaggi))
 
 
+class FakeOpenAIClient:
+    def __init__(self):
+        self.request = None
+        self.chat = SimpleNamespace(completions=self)
+
+    def create(self, **kwargs):
+        self.request = kwargs
+        return SimpleNamespace(
+            model="gpt-5.6-luna-test",
+            usage=SimpleNamespace(prompt_tokens=12, completion_tokens=4),
+            choices=[SimpleNamespace(message=SimpleNamespace(content="{}"))],
+        )
+
+
+def testo_inviato_openai(request):
+    return "\n".join(
+        f"===== {m['role']} =====\n{prompt_mod.testo_messaggio(m['content'])}\n" for m in request["messages"]
+    )
+
+
+class FewShotDueModelliTests(unittest.TestCase):
+    """Con il config di exp05 lo stesso prompt few-shot arriva a GPT e a Claude nelle stesse condizioni."""
+
+    def test_stesso_testo_schema_limite_e_ragionamento(self):
+        cfg = common.carica_config() | {"livello_ragionamento": {"openai": "medium", "anthropic": "medium"},
+                                       "cache": {"anthropic": True, "openai": False}}
+        riga = pd.read_csv(common.SPLITS / "valutazione.csv", encoding="utf-8-sig").iloc[0]
+        messaggi = prompt_mod.costruisci_messaggi(riga["testo"], "few_shot", cfg)
+        clienti = {"openai": FakeOpenAIClient(), "anthropic": FakeAnthropicClient()}
+        etichette = common.tutte_le_etichette(cfg)
+        for m in ({"provider": "openai", "nome": "gpt-5.6-luna"},
+                  {"provider": "anthropic", "nome": "claude-haiku-5-5"}):
+            run.chiama(m, clienti, messaggi, cfg, riga["testo"], etichette)
+        gpt, claude = clienti["openai"].request, clienti["anthropic"].request
+
+        congelato = (common.PROMPTS / "esempi" / common.DOMANDA / "prompt_esempio_few_shot.txt").read_text(
+            encoding="utf-8"
+        )
+        self.assertEqual(testo_inviato_openai(gpt), congelato)
+        self.assertEqual(testo_inviato(claude), congelato)
+        self.assertEqual(gpt["response_format"]["json_schema"]["schema"], run.SCHEMA_JSON)
+        self.assertTrue(gpt["response_format"]["json_schema"]["strict"])
+        self.assertEqual(claude["output_config"]["format"]["schema"], run.SCHEMA_JSON)
+        self.assertEqual(gpt["max_completion_tokens"], claude["max_tokens"])
+        self.assertEqual(gpt["max_completion_tokens"], run.MAX_TOKEN_OUT)
+        self.assertEqual(gpt["reasoning_effort"], "medium")
+        self.assertEqual(claude["output_config"]["effort"], "medium")
+        # cache: segnaposto solo sul blocco degli esempi di Claude, niente per GPT
+        self.assertEqual(claude["messages"][0]["content"][0]["cache_control"], {"type": "ephemeral"})
+        self.assertNotIn("cache_control", str(gpt))
+
+
+class ProvaBreveTests(unittest.TestCase):
+    def test_prova_cambia_solo_risposte_run_e_id(self):
+        cfg = common.carica_config()
+        prova = run.applica_prova(cfg)
+        diversi = {k for k in cfg if cfg[k] != prova[k]}
+        self.assertEqual(diversi, {"n_risposte", "n_run", "esperimento_id"})
+        self.assertEqual((prova["n_risposte"], prova["n_run"]), (2, 1))
+        self.assertEqual(prova["esperimento_id"], f"{cfg['esperimento_id']}_prova")
+
+
 if __name__ == "__main__":
     unittest.main()

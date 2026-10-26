@@ -1,20 +1,17 @@
-"""Report descrittivo del pilota sul serbatoio: risposte senza etichetta modale e gruppi di stabilità.
+"""Report descrittivo della calibrazione sul serbatoio: risposte senza etichetta modale e gruppi di stabilità.
 
-Non entra nelle metriche della tesi. Usa le stesse regole di 04_aggregate.py (metriche.py).
+Non entra nelle metriche. Usa le stesse regole di 04_aggregate.py (metriche.py).
 Output: results/<domanda>/serbatoio_stabilita.csv
 """
 import pandas as pd
 
-from common import CHIAVE, GRUPPI_STABILITA, RESULTS, carica_config, leggi_calls
+from common import CHIAVE, GRUPPI_STABILITA, RESULTS, carica_config, tabella_calls
 from metriche import etichetta_modale, gruppo_stabilita
 
 cfg = carica_config()
 esperimento_id = cfg["esperimento_id"]
 
-calls = pd.DataFrame(leggi_calls())
-calls["esperimento_id"] = calls.get("esperimento_id", pd.Series(dtype=object)).fillna("legacy")
-calls["set"] = calls.get("set", pd.Series(dtype=object)).fillna("valutazione")
-calls = calls.drop_duplicates(CHIAVE, keep="last")
+calls = tabella_calls().drop_duplicates(CHIAVE, keep="last")
 calls = calls[(calls["set"] == "serbatoio") & (calls["esperimento_id"] == esperimento_id)]
 if calls.empty:
     raise SystemExit(f"Nessuna chiamata del serbatoio per {esperimento_id}")

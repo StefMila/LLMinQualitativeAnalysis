@@ -5,7 +5,7 @@ valutazione.csv, così puoi controllare cosa riceve il modello.
 """
 import pandas as pd
 
-from common import DOMANDA, PROMPTS, SPLITS, carica_config
+from common import DOMANDA, PROMPTS, carica_config, leggi_split
 
 
 def codebook(cfg):
@@ -65,7 +65,7 @@ def testo_messaggio(contenuto):
 if __name__ == "__main__":
     cfg = carica_config()
     strategia = cfg["strategie"][0]
-    riga = pd.read_csv(SPLITS / "valutazione.csv", encoding="utf-8-sig").iloc[0]
+    riga = leggi_split("valutazione").iloc[0]
     prompt = "\n".join(
         f"===== {m['role']} =====\n{testo_messaggio(m['content'])}\n"
         for m in costruisci_messaggi(riga["testo"], strategia, cfg)
