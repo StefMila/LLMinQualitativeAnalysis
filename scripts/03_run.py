@@ -54,6 +54,7 @@ MAX_TOKEN_OUT = 16000
 
 
 def chiama_openai(client, modello, messaggi, temperatura, livello_ragionamento):
+    """Una chiamata a GPT con output JSON vincolato. Restituisce (testo, versione del modello, token)."""
     extra = {} if temperatura is None else {"temperature": temperatura}
     risp = client.chat.completions.create(
         model=modello,
@@ -96,6 +97,7 @@ def con_cache(system, messaggi):
 
 
 def chiama_anthropic(client, modello, messaggi, temperatura, livello_ragionamento, cache=False):
+    """Una chiamata a Claude con output JSON vincolato. Restituisce (testo, versione del modello, token)."""
     # Claude vuole il system prompt a parte, non dentro messages
     system = "\n\n".join(m["content"] for m in messaggi if m["role"] == "system")
     messaggi = [m for m in messaggi if m["role"] != "system"]
@@ -257,6 +259,7 @@ _jitter = random.Random()  # generatore a parte: non tocca random usato dal mock
 
 
 def e_429(e):
+    """True se l'eccezione è un errore di quota superata (HTTP 429)."""
     return getattr(e, "status_code", None) == 429
 
 
@@ -410,6 +413,7 @@ def applica_prova(cfg):
 
 
 def main():
+    """Pianifica le chiamate mancanti, le esegue e scrive ogni record in calls.jsonl."""
     parser = argparse.ArgumentParser(description=__doc__)
     parser.add_argument("--prova", action="store_true",
                         help="prova breve (2 risposte, 1 run) con id <esperimento_id>_prova")

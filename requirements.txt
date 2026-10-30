@@ -1,10 +1,12 @@
-pandas
-numpy
-openpyxl
-pyyaml
-python-dotenv
-openai
-anthropic
-scikit-learn
-ftfy
-rapidfuzz
+# Python 3.11 o successivo. Versioni minime: quelle con cui il progetto è stato provato.
+anthropic>=2.3.0
+ftfy>=6.3.1
+matplotlib>=3.11.2   # solo per scripts/grafici.py
+numpy>=2.5.4
+openai>=3.37.0
+openpyxl>=3.1.5
+pandas>=3.1.0
+python-dotenv>=1.2.4
+pyyaml>=6.0.3
+rapidfuzz>=3.14.6
+scikit-learn>=1.9.1

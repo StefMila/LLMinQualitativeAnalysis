@@ -1,3 +1,0 @@
-﻿condizione,chiamate,valide,errori_formato,risposte_con_etichetta_modale,TA@10,kappa_fleiss,risposte_complete,token_in_medi,cache_scrittura_medi,cache_lettura_medi,token_out_medi,ragionamento_medi,costo_totale_usd,costo_per_chiamata_usd
-senza cache,500,500,0,49,0.9,0.953,50,2219.0,0.0,0.0,165.2,71.3,7.613,0.01523
-con cache,500,500,0,50,0.9,0.951,50,2219.0,0.0,2167.0,166.6,72.2,2.7548,0.00551

@@ -1,3 +1,44 @@
+# Segreti (chiavi ed endpoint): si parte da .env.example
 .env
+.env.*
+!.env.example
+
+# Ambienti virtuali
 .venv/
+venv/
+env/
+
+# Python
 __pycache__/
+*.py[cod]
+.pytest_cache/
+.ipynb_checkpoints/
+
+# Dati reali: contengono risposte di studenti e restano solo in locale.
+# data/esempio/ (dati sintetici) è invece nel repository.
+data/raw/*
+!data/raw/.gitkeep
+data/splits/
+
+# Risultati e output generati dagli script
+results/
+output/
+*.log
+
+# Script locali per la tesi, non parte della pipeline
+scripts/prova_cache.py
+scripts/token_tesi.py
+scripts/verifica_costi.py
+scripts/verifica_tempi.py
+
+# Documenti della tesi
+*.pdf
+Copia di Tesi*
+
+# Editor e sistema operativo
+.vscode/
+.idea/
+*.code-workspace
+.DS_Store
+Thumbs.db
+desktop.ini

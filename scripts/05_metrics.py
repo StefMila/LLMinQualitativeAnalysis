@@ -43,10 +43,12 @@ METRICS.mkdir(parents=True, exist_ok=True)
 
 
 def arrotonda(x):
+    """Arrotonda a 3 decimali; None se il valore manca."""
     return round(float(x), 3) if pd.notna(x) else None
 
 
 def gruppo(df, esperimento_id, modello, strategia):
+    """Le righe di un esperimento, modello e strategia."""
     return df[(df["esperimento_id"] == esperimento_id) & (df["modello"] == modello) & (df["strategia"] == strategia)]
 
 

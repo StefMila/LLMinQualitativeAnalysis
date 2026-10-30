@@ -28,6 +28,7 @@ GRUPPI_STABILITA = {STABILE: 1.0, ABBASTANZA_STABILE: 0.8, INSTABILE: 0.0}
 
 
 def carica_config():
+    """Legge config.yaml dalla cartella del progetto."""
     with open(ROOT / "config.yaml", encoding="utf-8") as f:
         return yaml.safe_load(f)
 
@@ -41,10 +42,12 @@ METRICS = RESULTS / "metrics"
 
 
 def tutte_le_etichette(cfg):
+    """Categorie del codebook più l'etichetta "non classificabile"."""
     return list(cfg["categorie"]) + [cfg["non_classificabile"]]
 
 
 def leggi_split(nome):
+    """Uno split della domanda attiva (serbatoio, valutazione o resto) come DataFrame."""
     return pd.read_csv(SPLITS / f"{nome}.csv", dtype={"id": str}, encoding="utf-8-sig")
 
 

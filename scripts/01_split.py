@@ -54,6 +54,7 @@ else:
 
 
 def colonna(lettera):
+    """La colonna dell'Excel indicata con la lettera (es. "BD")."""
     return df.iloc[:, column_index_from_string(lettera) - 1]
 
 

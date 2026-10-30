@@ -36,6 +36,7 @@ def blocco_esempi(strategia):
 
 
 def costruisci_messaggi(testo, strategia, cfg):
+    """Messaggi (system + utente) per codificare una risposta con la strategia indicata."""
     # replace e non format: il prompt contiene le graffe dell'esempio JSON
     system = (PROMPTS / "system.txt").read_text(encoding="utf-8").replace("{codebook}", codebook(cfg))
     domanda = cfg["dati"]["domande"][DOMANDA]["testo_domanda"]

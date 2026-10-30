@@ -142,6 +142,7 @@ _ERRORE_API = re.compile(r"^[A-Za-z_][\w.]*: ")
 
 
 def errore_di_formato(messaggio):
+    """True se un messaggio di errore riguarda il formato dell'output e non l'API."""
     return not _ERRORE_API.match(str(messaggio))
 
 

@@ -1,142 +1,169 @@
-# codifica_llm
+# Codifica qualitativa con LLM
 
-Codifica qualitativa di risposte aperte con modelli linguistici (LLM), confrontata con la codifica umana.
+Questo progetto usa due modelli linguistici (LLM) per codificare le risposte aperte di un questionario e
+confronta il loro lavoro con quello di una codificatrice umana. Serve a chi fa analisi qualitativa e vuole capire
+quanto ci si può fidare di un LLM come codificatore, e quali risposte conviene comunque far rivedere a una persona.
 
-## Il problema
+## Cosa fa
 
-Nei questionari le domande aperte ("Cosa ti è piaciuto di più?") danno risposte libere che, per essere analizzate,
-vanno **codificate**: un codificatore umano legge ogni risposta e le assegna una categoria di un *codebook*
-(es. `Social`, `Learning`, `Tool`). È un lavoro lento e in parte soggettivo.
+In un questionario le domande aperte ("Cosa ti è piaciuto di più?") producono testi liberi. Per analizzarli
+qualcuno deve **codificarli**: leggere ogni risposta e assegnarle una categoria di un *codebook* (per esempio
+`Social`, `Learning`, `Tool`). È un lavoro lento e in parte soggettivo.
 
-Questo progetto misura quanto un LLM si avvicina a una codificatrice umana sullo stesso compito. I dati sono le
-risposte di studenti a un questionario dopo un laboratorio scolastico (tecnologie, robotica, programmazione, scienze).
-Il modello riceve il codebook, la domanda e una risposta, e restituisce in JSON una categoria, una breve motivazione
-e una citazione letterale della risposta che giustifica la scelta.
+La pipeline:
 
-Il confronto riguarda:
+1. legge le risposte e la codifica umana da un file Excel;
+2. chiede a ciascun modello di codificare ogni risposta, più volte (*run*). Il modello restituisce in JSON una
+   categoria, una breve motivazione e una citazione letterale dal testo;
+3. per ogni risposta sceglie l'etichetta della maggioranza delle run (**etichetta modale**);
+4. confronta l'etichetta modale con la codifica umana (κ di Cohen, accordo percentuale, F1). Misura anche quanto
+   il modello è stabile tra le run (κ di Fleiss) e se le citazioni compaiono davvero nel testo.
 
-- **due modelli**: `gpt-5.6-luna` (Azure OpenAI) e `claude-haiku-5-5` (Azure AI Foundry);
-- **tre strategie di prompt**: *zero-shot* (solo codebook), *one-shot* (un esempio per categoria) e
-  *few-shot* (fino a tre esempi per categoria);
-- **due livelli di ragionamento** dei modelli (`medium` e `high`).
+I modelli usati sono `gpt-5.6-luna` (Azure OpenAI) e `claude-haiku-5-5` (Claude su Azure AI Foundry). Le
+strategie di prompt sono tre: *zero-shot* (solo il codebook), *one-shot* (un esempio per categoria) e
+*few-shot* (fino a tre esempi per categoria).
 
-Ogni risposta è codificata 10 volte (*run*) per misurare la stabilità del modello. L'etichetta finale è quella della
-maggioranza delle run (**etichetta modale**) e viene confrontata con la prima codifica umana (`Coding 1`) tramite
-κ di Cohen, accordo percentuale e F1. Si misurano anche la stabilità tra le run (κ di Fleiss, TA@10), gli errori di
-formato e quante citazioni si ritrovano davvero nel testo.
-
-## Struttura
+## Struttura del repository
 
 ```
-config.yaml          unico punto di controllo: dati, codebook, modelli, strategia, esperimento
-prompts/system.txt   prompt di sistema ({codebook} viene sostituito dalle categorie di config.yaml)
-prompts/esempi/      esempi one/few-shot scelti per ogni domanda e un prompt di esempio
-data/raw/            Excel con risposte e codifica umana
-data/splits/         serbatoio / valutazione / resto per ogni domanda
-scripts/             pipeline (01–05) e script di analisi
-results/<domanda>/   log delle chiamate, aggregazioni e metriche
-tests/               test automatici
+config.yaml                 unico punto di controllo: dati, codebook, modelli, strategie, esperimento
+.env.example                modello per il file .env con chiavi ed endpoint delle API
+prompts/system.txt          prompt di sistema ({codebook} viene sostituito dalle categorie di config.yaml)
+prompts/esempi/             esempi one/few-shot scelti per ogni domanda
+data/esempio/               Excel con risposte inventate, per provare la pipeline
+data/raw/                   qui va l'Excel con i dati reali (non incluso)
+scripts/01_split.py … 05_metrics.py   i passi della pipeline, da lanciare in ordine
+scripts/common.py, metriche.py        funzioni condivise
+scripts/analisi_revisione.py          quali risposte mandare a revisione umana
+scripts/discordanti.py                risposte su cui le run non sono d'accordo
+scripts/report_serbatoio.py           stabilità dopo una calibrazione sul serbatoio
+tests/                      test automatici
 ```
 
-## Installazione
+Gli script scrivono split e risultati in `data/splits/` e `results/`, che non sono nel repository.
+
+## Requisiti e installazione
 
 Serve Python 3.11 o successivo.
 
 ```bash
+git clone https://github.com/StefMila/LLMinQualitativeAnalysis.git
+cd LLMinQualitativeAnalysis
 python -m venv .venv
-source .venv/Scripts/activate      # Windows (Git Bash); su Linux/macOS: source .venv/bin/activate
+source .venv/bin/activate          # Windows (PowerShell): .venv\Scripts\Activate.ps1
 pip install -r requirements.txt
-cp .env.example .env               # poi inserisci in .env chiavi ed endpoint
 ```
 
-Per provare la pipeline senza API e senza costi, in `config.yaml` metti `provider: mock` a entrambi i modelli:
-il modello finto risponde con categorie casuali, quindi l'accordo sarà vicino a zero.
+Per usare i modelli veri copia `.env.example` in `.env` e inserisci chiavi ed endpoint:
 
-## Uso
+```bash
+cp .env.example .env
+```
 
-Gli script si lanciano dalla cartella del progetto, uno dopo l'altro. Ognuno legge l'output del precedente:
-se qualcosa va storto si rilancia solo quel passo.
+Per l'esempio qui sotto il file `.env` non serve.
 
-| Passo | Script | Cosa fa | Scrive |
-|---|---|---|---|
-| 1 | `python scripts/01_split.py` | legge l'Excel, scarta le risposte vuote o non codificate, mescola con seed fisso e divide in serbatoio (50), valutazione (300) e resto | `data/splits/<domanda>/` |
-| 1b | `python scripts/01b_esempi.py` | sceglie gli esempi one/few-shot dal serbatoio con una regola fissa (vedi sotto) | `prompts/esempi/<domanda>/` |
-| 2 | `python scripts/02_prompt.py` | mostra il prompt completo per la prima risposta, per controllarlo | `prompt_esempio_<strategia>.txt` |
-| 3 | `python scripts/03_run.py` | chiama i modelli: ogni modello × strategia × run × risposta | `results/<domanda>/calls.jsonl` |
-| 4 | `python scripts/04_aggregate.py` | etichetta modale per risposta e verifica delle citazioni | `aggregated.csv`, `citazioni*.csv` |
-| 5 | `python scripts/05_metrics.py` | metriche di accordo per esperimento, modello e strategia | `results/<domanda>/metrics/` |
+## Esempio minimo (senza API e senza costi)
 
-### Un nuovo esperimento
+Il provider `mock` risponde con categorie casuali. Serve a provare tutta la pipeline senza chiamare nessuna API:
+l'accordo con la codifica umana sarà quindi vicino a zero.
 
-1. In `config.yaml` scegli domanda (`dati.domanda_attiva`), modelli, strategia (`strategie`) e livello di
-   ragionamento, e assegna un **nuovo** `esperimento_id`. L'id viene salvato in ogni chiamata e tiene separati
-   i risultati degli esperimenti.
-2. Fai una prova breve: `python scripts/03_run.py --prova` (2 risposte, 1 run, id `<esperimento_id>_prova`).
-3. Lancia `03_run.py`, poi `04_aggregate.py` e `05_metrics.py`.
+1. In `config.yaml` usa i dati di esempio e il modello finto:
+
+   ```yaml
+   dati:
+     excel: data/esempio/risposte_esempio.xlsx
+   ...
+   modelli:
+     - provider: mock
+       nome: gpt-5.6-luna
+     - provider: mock
+       nome: claude-haiku-5-5
+   ```
+
+2. Lancia i passi dalla cartella del progetto:
+
+   ```bash
+   python scripts/01_split.py       # divide le risposte in serbatoio (50), valutazione (300) e resto
+   python scripts/01b_esempi.py     # sceglie gli esempi one/few-shot dal serbatoio
+   python scripts/02_prompt.py      # mostra il prompt completo della prima risposta
+   python scripts/03_run.py         # codifica: modello × strategia × run × risposta
+   python scripts/04_aggregate.py   # etichetta modale e verifica delle citazioni
+   python scripts/05_metrics.py     # metriche di accordo
+   ```
+
+3. Apri `results/piaciuto/metrics/riepilogo.csv`: c'è una riga per esperimento, modello e strategia.
+
+`01b_esempi.py` riscrive `prompts/esempi/<domanda>/`. Per tornare agli esempi originali:
+`git checkout prompts/esempi`.
+
+## Uso con i modelli veri
+
+1. Metti l'Excel in `data/raw/` e indica in `config.yaml` il foglio e le colonne (con la lettera di Excel) di
+   ogni domanda. L'`id` di una risposta è il suo numero di riga.
+2. In `config.yaml` scegli domanda (`dati.domanda_attiva`), modelli, strategie e livello di ragionamento, e assegna
+   un **nuovo** `esperimento_id`. L'id viene salvato in ogni chiamata e tiene separati gli esperimenti. Le opzioni
+   possibili sono scritte nei commenti del file.
+3. Fai una prova breve (2 risposte, 1 run):
+
+   ```bash
+   python scripts/03_run.py --prova
+   ```
+
+4. Lancia `03_run.py`, poi `04_aggregate.py` e `05_metrics.py`.
 
 `03_run.py` scrive ogni chiamata appena arriva. Se si interrompe, rilancialo: salta le chiamate già riuscite e
-rifà quelle fallite. Con `n_thread` > 1 fa più chiamate in parallelo, sempre indipendenti tra loro.
+rifà quelle fallite. Con `n_thread` > 1 fa più chiamate in parallelo.
 
-### Un'altra domanda
+Per analizzare un'altra domanda cambia `dati.domanda_attiva` e riparti da `01_split.py`: split e risultati di ogni
+domanda stanno in cartelle separate.
 
-Cambia `dati.domanda_attiva` (`descrizione`, `piaciuto`, `non_piaciuto`, `diversamente`) e rilancia da
-`01_split.py`. Split, esempi e risultati di ogni domanda stanno in cartelle separate e non si mescolano.
+### Output
 
-### Script di analisi
+In `results/<domanda>/`:
 
-Non chiamano i modelli e lavorano sull'esperimento indicato in `config.yaml`.
+- `calls.jsonl`: una riga per chiamata, con parametri, categoria, motivazione, citazione, errori e token.
+  Il file cresce e non viene mai riscritto.
+- `aggregated.csv`: etichetta modale e distribuzione delle run per ogni risposta.
+- `metrics/riepilogo.csv`: tutte le metriche, una riga per esperimento, modello e strategia.
+- `metrics/per_categoria.csv`, `metrics/stabilita.csv`, `metrics/confusione_*.csv`: metriche per categoria,
+  per gruppo di stabilità e matrici di confusione.
 
-| Script | Cosa fa |
-|---|---|
-| `analisi_revisione.py` | confronta regole per scegliere quali risposte far rivedere a una persona (es. "instabile per almeno un modello oppure modelli in disaccordo") con una revisione casuale della stessa quantità |
-| `discordanti.py` | elenca le risposte in cui le run danno categorie diverse, con motivazione e citazione di ogni run |
-| `report_serbatoio.py` | stabilità sul serbatoio dopo una calibrazione (`calibrazione_serbatoio: true`) |
-| `prova_cache.py` | verifica che la prompt caching di Claude non cambi le risposte (`verifica`, `equivalenza` e `analisi`; le prime due chiamano l'API) |
+### Regole principali
 
-### Test
+- **Etichetta modale**: una risposta la riceve solo se una categoria ha la maggioranza stretta delle run e nessuna
+  run manca. Altrimenti resta senza etichetta.
+- **Stabilità**: `stabile` = 10/10 run uguali, `abbastanza_stabile` = 8–9/10, `instabile` = 7/10 o meno.
+- **Citazioni**: `esatta` se compare nel testo (a meno di maiuscole, spazi e apostrofi), `approssimata` se la
+  somiglianza (`rapidfuzz.partial_ratio`) è almeno 90, altrimenti `non_trovata`.
+- **Esempi**: si scelgono solo dal serbatoio, mai tra le risposte usate per la valutazione.
+
+## Riprodurre i risultati
+
+I risultati non sono nel repository perché contengono le risposte degli studenti. Per rigenerarli servono l'Excel
+originale (in `data/raw/risposte.xlsx`, disponibile solo al gruppo di ricerca) e l'accesso alle API.
+
+Ogni esperimento si ottiene impostando `config.yaml` come in tabella e lanciando i passi 03–05. Tutti usano 10 run
+su 300 risposte di valutazione, salvo dove indicato.
+
+| Esperimento (`esperimento_id`) | Domanda | Strategia | Ragionamento |
+|---|---|---|---|
+| `exp07_zeroShot_nM` | piaciuto | zero_shot | medium |
+| `exp06_oneShot_nM` | piaciuto | one_shot | medium |
+| `exp05_fewShot_nM` | piaciuto | few_shot | medium |
+| `exp08_zeroShot_nM_high` | piaciuto | zero_shot | high |
+| `exp11_fewShot_nM_high` | piaciuto | few_shot | high |
+| `exp10_zeroShot_nM_high_q2` | descrizione | zero_shot | medium |
+| `exp12_resto_zeroShot_nM` | piaciuto, set `resto` (778 risposte) | zero_shot | medium |
+
+Seed fissi (`seed` ed `esempi.seed`) rendono uguali split ed esempi. Le risposte dei modelli possono comunque
+variare da una chiamata all'altra: per questo ogni risposta è codificata 10 volte.
+
+## Test
 
 ```bash
 python -m unittest discover -s tests
 ```
 
-## Scelte di metodo
+## Licenza
 
-- **Dati.** Le colonne dell'Excel si indicano con la lettera (`col_testo`, `col_umano`) e l'`id` di una risposta
-  è il suo numero di riga. Il riferimento è `Coding 1`: `Coding 2` e `Coding 3` sono codici aggiuntivi della stessa
-  codificatrice (fino a tre per risposta) e non entrano nel confronto. In `Coding 1` "-" vuol dire non ancora
-  codificata (risposta esclusa) e la cella vuota vuol dire `non classificabile`.
-- **Esempi.** Si scelgono solo dal serbatoio, escludendo i testi identici a una risposta di valutazione. Per ogni
-  categoria si mescolano le risposte con `esempi.seed`: il one-shot prende la prima, il few-shot le prime tre.
-  Gli esempi sono un blocco fisso prima della risposta da codificare, uguale in ogni chiamata.
-- **Chiamate.** Ogni chiamata è indipendente e non ha cronologia. I due modelli ricevono lo stesso prompt, lo stesso
-  schema JSON e lo stesso limite di token. Un output non valido (JSON errato o categoria inesistente) viene
-  ritentato e conta come errore di formato. Gli errori di quota (429) sono contati a parte.
-- **Etichetta modale.** Una risposta riceve l'etichetta solo se una categoria ha la maggioranza stretta delle run
-  previste e nessuna run manca. Altrimenti resta senza etichetta (`da_revisionare`).
-- **Stabilità.** `stabile` = 10/10 run uguali, `abbastanza_stabile` = 8–9/10, `instabile` = 7/10 o meno, oppure
-  nessuna etichetta modale.
-- **Tre versioni delle metriche.** `principale` usa solo le risposte con etichetta modale e riporta la copertura;
-  `controllo` usa tutte le risposte e conta come errore quelle senza etichetta; `confronto_modelli` usa solo le
-  risposte con etichetta per tutti i modelli. Il F1 macro considera solo le categorie presenti nella codifica umana.
-- **Citazioni.** Una citazione è `esatta` se compare nel testo dopo aver uniformato maiuscole, spazi, apostrofi e
-  virgolette. Altrimenti si confronta per somiglianza (`rapidfuzz.partial_ratio`): è `approssimata` con un punteggio
-  di almeno 90, `non_trovata` sotto.
-
-## Output principali
-
-In `results/<domanda>/`:
-
-- `calls.jsonl`: una riga per chiamata, con esperimento, modello, parametri, categoria, motivazione, citazione,
-  errori e token (input, output, cache, ragionamento). Il file si aggiunge e non si riscrive mai. Le righe dei
-  primi esperimenti hanno meno campi e restano leggibili.
-- `aggregated.csv`: una riga per esperimento, modello, strategia e risposta, con l'etichetta modale e la
-  distribuzione delle run.
-- `metrics/riepilogo.csv`: tutte le metriche, una riga per esperimento, modello e strategia.
-  `metrics/tabella_tesi.csv` ne riporta le colonne principali.
-- `metrics/per_categoria.csv`, `metrics/stabilita.csv` e `metrics/confusione_*.csv`: metriche per categoria e per
-  gruppo di stabilità, e matrici di confusione.
-
-## Dati
-
-Le risposte sono testi liberi scritti da studenti e possono contenere nomi propri. Non vanno diffuse fuori dal
-gruppo di ricerca, e lo stesso vale per i file in `results/` che riportano i testi.
+MIT, vedi [LICENSE](LICENSE).

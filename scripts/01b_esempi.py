@@ -22,6 +22,7 @@ N_ESEMPI = {"one_shot": 1, "few_shot": 3}
 
 
 def normalizza_testo(testo):
+    """Minuscole e spazi compattati: per riconoscere testi uguali."""
     return re.sub(r"\s+", " ", str(testo).lower()).strip()
 
 

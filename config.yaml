@@ -5,6 +5,7 @@ seed: 42
 # --- Dati ---------------------------------------------------------------
 dati:
   excel: data/raw/risposte.xlsx   # Excel delle risposte (non si modifica mai)
+                                  # dati sintetici per provare la pipeline: data/esempio/risposte_esempio.xlsx
   foglio: QL Coding               # contiene sia le risposte sia la codifica umana
   # Le colonne si indicano con la LETTERA di Excel; l'id di una risposta è il suo numero di riga.
   # col_umano = Coding 1, il riferimento. Le due colonne successive (Coding 2 e 3) sono codici
@@ -12,7 +13,7 @@ dati:
   # In Coding 1: "-" = non ancora codificata (riga esclusa), cella vuota = non classificabile.
   non_codificato: "-"
 
-  domanda_attiva: piaciuto        # quale domanda analizzare
+  domanda_attiva: piaciuto        # quale domanda analizzare: descrizione, piaciuto, non_piaciuto o diversamente
   domande:
     descrizione:
       testo_domanda: "Se dovessi descrivere in una frase quest'attività a un compagno, cosa diresti?"
@@ -61,19 +62,19 @@ non_classificabile: non classificabile   # risposte vuote, "non so", rumore, fuo
 # --- Esperimento --------------------------------------------------------
 # Un esperimento_id nuovo per ogni configurazione diversa (domanda, modelli, strategia, ragionamento...):
 # separa i risultati in calls.jsonl e nelle metriche. Prova breve: python scripts/03_run.py --prova
-esperimento_id: exp12_resto_zeroShot_nM
-set_esecuzione: resto   # valutazione (300) o resto (778, verifica su dati mai usati)
-n_risposte: 778         # risposte del set da codificare (le prime n)
+esperimento_id: esempio_zero_shot
+set_esecuzione: valutazione  # valutazione (n_valutazione risposte) o resto (verifica su risposte mai usate)
+n_risposte: 300         # risposte del set da codificare (le prime n)
 n_run: 10               # run ripetute per modello, strategia e risposta
 temperatura: null       # null = default del modello (alcuni modelli di ragionamento non accettano 0)
 max_tentativi: 3        # tentativi se l'output non è valido o l'API dà errore (429 esclusi)
 max_tentativi_429: 8    # tentativi per quota superata (429): attesa Retry-After + jitter
 n_thread: 8             # chiamate in parallelo; 1 = una alla volta
-livello_ragionamento:   # stesso nome di livello per i due provider (le scale interne non coincidono)
+livello_ragionamento:   # low, medium o high; stesso nome per i due provider (le scale interne non coincidono)
   openai: medium
   anthropic: medium
 
-cache:                  # prompt caching esplicita (cache_control); GPT usa comunque quella automatica
+cache:                  # true/false: prompt caching esplicita (cache_control); GPT usa comunque quella automatica
   anthropic: true
   openai: false
 
@@ -89,7 +90,7 @@ modelli:
   - provider: anthropic   # Claude su Azure AI Foundry
     nome: claude-haiku-5-5
 
-strategie:              # zero_shot, one_shot o few_shot
+strategie:              # zero_shot, one_shot e/o few_shot (una o più voci)
   - zero_shot
 
 esempi:
