@@ -26,6 +26,8 @@ output/
 *.log
 
 # Script locali per la tesi, non parte della pipeline
+scripts/grafici.py
+scripts/metriche_resto.py
 scripts/prova_cache.py
 scripts/token_tesi.py
 scripts/verifica_costi.py
