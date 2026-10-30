@@ -212,7 +212,12 @@ def valida(grezzo, etichette):
 # ---------------------------------------------------------------- piano
 def pianifica(cfg, storico):
     """Set, risposte, strategie, chiamate previste e quelle ancora da fare. Non chiama nessun modello."""
-    set_esecuzione = "serbatoio" if cfg.get("calibrazione_serbatoio", False) else "valutazione"
+    if cfg.get("calibrazione_serbatoio", False):
+        set_esecuzione = "serbatoio"
+    else:
+        set_esecuzione = cfg.get("set_esecuzione", "valutazione")  # valutazione o resto
+        if set_esecuzione not in ("valutazione", "resto"):
+            raise ValueError(f"set_esecuzione non valido: {set_esecuzione!r}")
     if set_esecuzione == "serbatoio":
         if "zero_shot" not in cfg["strategie"]:
             raise ValueError("La calibrazione sul serbatoio richiede la strategia zero_shot")

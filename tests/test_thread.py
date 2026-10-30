@@ -25,7 +25,7 @@ def config(n_thread=1, **altro):
     cfg = copy.deepcopy(common.carica_config())
     cfg.update(
         modelli=MODELLI, strategie=["zero_shot"], n_risposte=4, n_run=2, n_thread=n_thread,
-        esperimento_id="test_thread", calibrazione_serbatoio=False, max_tentativi=3,
+        esperimento_id="test_thread", calibrazione_serbatoio=False, set_esecuzione="valutazione", max_tentativi=3,
         max_tentativi_429=8,
     )
     cfg.update(altro)

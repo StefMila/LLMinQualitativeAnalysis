@@ -156,6 +156,8 @@ class SerbatoioFuoriDalleMetricheTests(unittest.TestCase):
                 pd.DataFrame([{"id": "825", "testo": "x", "umano": "Making"},
                               {"id": "s1", "testo": "y", "umano": "Making"}]).to_csv(
                     splits / "serbatoio.csv", index=False, encoding="utf-8-sig")
+                pd.DataFrame(columns=["id", "testo", "umano"]).to_csv(
+                    splits / "resto.csv", index=False, encoding="utf-8-sig")
                 common.carica_config = lambda: cfg
                 common.leggi_calls = lambda: records
                 common.SPLITS, common.RESULTS, common.METRICS = splits, results, metrics

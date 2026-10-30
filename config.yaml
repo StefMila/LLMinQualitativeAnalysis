@@ -61,16 +61,17 @@ non_classificabile: non classificabile   # risposte vuote, "non so", rumore, fuo
 # --- Esperimento --------------------------------------------------------
 # Un esperimento_id nuovo per ogni configurazione diversa (domanda, modelli, strategia, ragionamento...):
 # separa i risultati in calls.jsonl e nelle metriche. Prova breve: python scripts/03_run.py --prova
-esperimento_id: exp11_fewShot_nM_high
-n_risposte: 300         # risposte del campione di valutazione da codificare
+esperimento_id: exp12_resto_zeroShot_nM
+set_esecuzione: resto   # valutazione (300) o resto (778, verifica su dati mai usati)
+n_risposte: 778         # risposte del set da codificare (le prime n)
 n_run: 10               # run ripetute per modello, strategia e risposta
 temperatura: null       # null = default del modello (alcuni modelli di ragionamento non accettano 0)
 max_tentativi: 3        # tentativi se l'output non è valido o l'API dà errore (429 esclusi)
 max_tentativi_429: 8    # tentativi per quota superata (429): attesa Retry-After + jitter
 n_thread: 8             # chiamate in parallelo; 1 = una alla volta
 livello_ragionamento:   # stesso nome di livello per i due provider (le scale interne non coincidono)
-  openai: high
-  anthropic: high
+  openai: medium
+  anthropic: medium
 
 cache:                  # prompt caching esplicita (cache_control); GPT usa comunque quella automatica
   anthropic: true
@@ -89,7 +90,7 @@ modelli:
     nome: claude-haiku-5-5
 
 strategie:              # zero_shot, one_shot o few_shot
-  - few_shot
+  - zero_shot
 
 esempi:
   seed: 42              # ordine casuale delle risposte del serbatoio dentro ogni categoria (01b_esempi.py)

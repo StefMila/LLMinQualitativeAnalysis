@@ -28,7 +28,7 @@ if calls.empty:
     raise SystemExit("calls.jsonl è vuoto: lancia prima 03_run.py")
 calls = calls.drop_duplicates(CHIAVE, keep="last")  # chiamata ritentata: conta l'ultimo tentativo
 
-split = {nome: leggi_split(nome) for nome in ("valutazione", "serbatoio")}
+split = {nome: leggi_split(nome) for nome in ("valutazione", "serbatoio", "resto")}
 testi = {nome: dict(zip(df["id"], df["testo"])) for nome, df in split.items()}
 umani = dict(zip(split["valutazione"]["id"], split["valutazione"]["umano"]))
 
